@@ -1,0 +1,63 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<p>
+<span style="font-size: 20px;">
+<strong>
+<span style="font-family: Arial;">
+Important Dates
+</span>
+</strong>
+</span>
+</p>
+
+<ul>
+    
+<li>
+<span style="font-family: Arial;">
+<span style="font-size: 14px;">
+Deadline for Submission of Abstracts:  February 15
+<sup>
+th
+</sup>
+, 2011
+</span>
+</span>
+</li>
+
+</ul>
+
+<ul>
+    
+<li>
+<span style="font-family: Arial;">
+<span style="font-size: 14px;">
+<span style="font-size: 14px;">
+Abstract Acceptance Notification:   February 28
+<sup>
+th
+</sup>
+, 2011
+</span>
+</span>
+</span>
+</li>
+    
+<li>
+<span style="font-family: Arial;">
+<span style="font-size: 14px;">
+Deadline for Early Bird Registration: March 15
+<sup>
+th
+</sup>
+, 2011
+</span>
+</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>

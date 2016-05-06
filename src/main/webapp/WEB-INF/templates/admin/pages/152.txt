@@ -1,0 +1,285 @@
+<div class="block-top">
+ 
+</div>
+
+<div class="block-body color">
+
+<div class="anniu">
+
+<div class="anniu_1">
+<D_Link href="9" class="DPage" title="如何创建会议？">
+建会指南
+</D_Link>
+</div>
+
+<div class="anniu_2">
+<D_Link href="65550" class="DPage" title="常见问题">
+常见问题
+</D_Link>
+</div>
+
+<div class="anniu_3">
+<D_Link href="65565" class="DPage" title="用户手册">
+用户手册
+</D_Link>
+</div>
+
+<div class="anniu_4">
+<D_Link href="http://bbs.cnic.cn/bbs/forumdisplay.php?fid=36" class="DPage">
+交流讨论
+</D_Link>
+</div>
+
+</div>
+
+<h1>
+创建会议  只需四步
+</h1>
+
+<div class="tutor-overview">
+ 
+</div>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<h2>
+<span class="tutor-1">
+注册用户
+</span>
+</h2>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td width="350">
+            
+<p>
+ 填写简单的注册表单，即可注册成为CSP平台用户。使用这个账户，您不仅可以创建和管理自己的会议，还可以参加CSP平台上的其他会议。
+</p>
+            
+<p>
+ 
+</p>
+            
+<p>
+CSP平台账户是由Duckling通行证支持的，所以您使用该账户，也可以直接登录Duckling的其他运营平台，例如：科研在线。
+</p>
+            
+</td>
+            
+<td class="tutor-register">
+ 
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<h2>
+<span class="tutor-2">
+填写信息，自动创建网站
+</span>
+</h2>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td colspan="2">
+            
+<p>
+使用CSP账户登录后，您只需要填写会议的基本信息，提交申请后需等待平台管理员审批。审批通过后，系统即自动为您创建站点，并通过email通知您。您就可以访问会议网站了。
+</p>
+            
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="tutor-confinfo" colspan="2">
+ 
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="tutor-success" width="370">
+ 
+</td>
+            
+<td>
+            
+<p>
+一键式创建会议网站，您只需有浏览器。
+</p>
+            
+<p>
+您不需要准备服务器，不需要安装软件，不需要支付网络流量费用，不需要为网站运维操心，不需要编写计算机程序，……
+</p>
+            
+<p>
+尽享云时代的便捷！
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<h2>
+<span class="tutor-3">
+等待审批
+</span>
+</h2>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+创建会议后，我们会收到新用户创建会议邮件通知，管理员将第一时间联系您并与您确认后，批准您创建的会议
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=10499" height="61" width="456"/>
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<h2>
+<span class="tutor-3a">
+编辑/发布会议通知和相关信息
+</span>
+</h2>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+供用户浏览查看的会议信息页面如何做？您使用所见即所得的编辑器在线编辑网页内容，实时发布。
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<h2>
+<span class="tutor-3b">
+配置/定制会议交互页面（注册、投稿、酒店预订、支付、邮件等）
+</span>
+</h2>
+
+<table width="850" align="center" class="portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+会议主办方如何收集参会代表的各项个人信息和参会信息？如何管理参会代表的所有信息？如何与参会代表互动沟通？您进入会议配置页面，可以详细了解每项功能，并为自己的会议作出最合适的配置。
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="tutor-confadmin">
+ 
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td>
+            
+<p>
+在浏览站点时，通过页面底部的“Conference Admin”链接即可进入会议管理界面。
+</p>
+            
+<p>
+而在管理过程中，您若对功能的内容不太了解，则可以通过下方的“说明”链接查看相关的信息。
+</p>
+            
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="tutor-confhelp">
+ 
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<p>
+ 
+</p>
+
+<hr/>
+
+<p align="center">
+ 
+</p>
+
+</div>
+
+<div class="block-bottom">
+ 
+</div>
+
+<p align="right">
+<D_Link href="baseurl://page/15" class="DPage learnMore">
+功能特性
+</D_Link>
+ 
+<D_Link href="baseurl://page/6" class="DPage learnMore">
+经典案例
+</D_Link>
+<span class="learnMore">
+如何创建会议？
+</span>
+</p>

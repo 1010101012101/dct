@@ -1,0 +1,29 @@
+.DCT_banner {
+	width: 100%;
+	height: 128px;
+	background: url(REPLCAE_MIDDLE_BANNER);
+}
+
+.DCT_banner_right {
+	width: 100%;
+	height: 128px;
+	background: url(REPLACE_RIGHT_BANNER) right no-repeat;
+}
+
+.DCT_banner_font {
+	width: 100%;
+	height: 128px;
+	margin-left:20px;
+	background: url(REPLACE_LEFT_BANNER) no-repeat left;
+}
+.DCT_banner_font_setting{
+	width: 100%;
+	font-family:SimHei;
+	height: 128px;
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	position: relative; 
+	left: 100px;
+	}
+

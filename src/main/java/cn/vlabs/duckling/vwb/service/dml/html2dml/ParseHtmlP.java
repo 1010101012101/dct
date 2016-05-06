@@ -1,0 +1,74 @@
+/*
+ * Copyright (c) 2008-2016 Computer Network Information Center (CNIC), Chinese Academy of Sciences.
+ * 
+ * This file is part of Duckling project.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License. 
+ *
+ */
+
+package cn.vlabs.duckling.vwb.service.dml.html2dml;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+
+import org.jdom.Element;
+import org.jdom.JDOMException;
+
+/**
+ * Introduction Here.
+ * 
+ * @date 2010-3-8
+ * @author 狄 diyanliang@cnic.cn
+ */
+public class ParseHtmlP extends AbstractParseHtmlElement {
+	@Override
+	public void printAttribute(Element e, Html2DmlEngine html2dmlengine) {
+		Map<String, String> map = new ForgetNullValuesLinkedHashMap();
+		map.put("style", e.getAttributeValue("style"));
+		map.put("class", e.getAttributeValue("class"));
+		map.put("align", e.getAttributeValue("align"));
+		if (map.size() > 0) {
+			for (Map.Entry<String, String> entry : map.entrySet()) {
+				PrintWriter out = html2dmlengine.getM_out();
+				out.printf(" %s=\"%s\"", entry.getKey(),entry.getValue());
+			}
+		}
+	}
+
+	@Override
+	public void printElement(Element e, Html2DmlEngine html2dmlengine) {
+		PrintWriter out = html2dmlengine.getM_out();
+		out.print("<p");
+		printAttribute(e, html2dmlengine);
+		if (html2dmlengine.getPreType() > 0) {
+			out.print(">");
+		} else {
+			out.println(">");
+		}
+		try {
+			h2d.getChildren(e, html2dmlengine);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		} catch (JDOMException e1) {
+			e1.printStackTrace();
+		}
+		if (html2dmlengine.getPreType() > 0) {
+			out.print("</p>");
+		} else {
+			out.println("</p>");
+		}
+	}
+
+}

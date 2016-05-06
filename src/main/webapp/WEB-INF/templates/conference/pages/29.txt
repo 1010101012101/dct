@@ -1,0 +1,17 @@
+<h1>
+<strong>
+Hotel Reservation 
+</strong>
+</h1>
+
+<ul>
+    
+<li>
+Click 
+<D_Link href="65553" title="CSPHotel">
+here
+</D_Link>
+(require login) to book hotel.
+</li>
+
+</ul>

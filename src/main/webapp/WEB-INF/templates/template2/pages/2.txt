@@ -1,0 +1,137 @@
+<div class="days">
+
+<h3>
+<span class="days-dot">
+</span>
+Important Days
+</h3>
+
+<ul class="day">
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month">
+Aug,2014
+</div>
+    
+<div class="date">
+28
+</div>
+    
+</div>
+    
+<div class="hit">
+Deadline for
+<br/>
+    Submission of Abstracts
+</div>
+    
+</li>
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month sec">
+Sep,2014
+</div>
+    
+<div class="date">
+5
+</div>
+    
+</div>
+    
+<div class="hit">
+Abstract Acceptance 
+<br/>
+    Notification
+</div>
+    
+</li>
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month third">
+Sep,2014
+</div>
+    
+<div class="date">
+20
+</div>
+    
+</div>
+    
+<div class="hit">
+Deadline for
+<br/>
+    Early Bird Registration
+</div>
+    
+</li>
+
+</ul>
+
+</div>
+
+<ul class="blocks">
+    
+<li>
+<D_Link href="65558" class="Portal" title="Submission">
+Submission
+</D_Link>
+</li>
+    
+<li class="block-right">
+<D_Link href="65554" class="Portal" title="CSPRegistration">
+Registration
+</D_Link>
+</li>
+    
+<li>
+<D_Link href="65573" class="Portal" title="CSPPayment">
+Payment
+</D_Link>
+</li>
+    
+<li class="block-right">
+<D_Link href="65559" class="DPage" title="Hotelreservation">
+Hotel Reservation
+</D_Link>
+</li>
+
+</ul>
+
+<div class="days">
+
+<h3>
+<span class="days-dot">
+</span>
+Organizer
+</h3>
+
+<ul class="days-list">
+    
+<li class="org_1">
+ 
+</li>
+    
+<li class="org_2">
+ 
+</li>
+    
+<li class="org_1">
+ 
+</li>
+    
+<li class="org_2">
+ 
+</li>
+
+</ul>
+
+</div>

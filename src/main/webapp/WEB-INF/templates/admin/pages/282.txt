@@ -1,0 +1,191 @@
+<div class="zhongxin_center_cen">
+<div class="zhongxin_center_cen_right">
+<div class="right_top">
+<div class="right_top_t">
+通知公告
+</div>
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+</div>
+<div class="right_center">
+<ul>
+<li>
+<D_Link href="65578" class="DPage" title="会议服务平台升级内容通知20110901">
+<span style="color: rgb(0,0,255)">
+会议服务平台升级内容通知2011-09-01。
+</span>
+</D_Link>
+</li>
+<li>
+<D_Link href="#">
+会议服务平台将进行不定期的升级，每次升级系统前我们会在此页面进行通知。
+</D_Link>
+</li>
+<li>
+<D_Link href="#">
+会议服务平台将进行不定期的升级，每次升级系统前我们会在此页面进行通知。
+</D_Link>
+</li>
+<li>
+<D_Link href="#">
+会议服务平台将进行不定期的升级，每次升级系统前我们会在此页面进行通知。
+</D_Link>
+</li>
+</ul>
+</div>
+<div class="right_top_2">
+<div class="right_top_t">
+办会流程
+</div>
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+</div>
+<div class="right_center">
+<div class="banhui_1">
+<D_Link href="#">
+帐号注册
+</D_Link>
+</div>
+<div class="banhui_2">
+<D_Link href="#">
+填写会议信息自动建站
+</D_Link>
+</div>
+<div class="banhui_3">
+<D_Link href="#">
+等待审批
+</D_Link>
+</div>
+<div class="banhui_4">
+<div class="banhui_4a">
+<D_Link href="#">
+查看会议网站
+</D_Link>
+</div>
+<div class="banhui_4b">
+<D_Link href="#">
+查看会议网站
+</D_Link>
+</div>
+</div>
+<div class="banhui_5">
+<D_Link href="#">
+会议网站发布
+</D_Link>
+</div>
+<div class="banhui_5">
+<D_Link href="#">
+会议信息管理
+</D_Link>
+</div>
+<div class="banhui_6">
+<D_Link href="#">
+会议信息备份
+</D_Link>
+</div>
+<div class="clear">
+ 
+</div>
+</div>
+<div class="right_top_2">
+<div class="right_top_t">
+常见问题
+</div>
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+</div>
+<div class="right_center">
+<div class="liebiao_l">
+<ul>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+忘记密码，如何找回？
+</D_Link>
+</li>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+独立域名，如何设置？
+</D_Link>
+</li>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+注册功能，如何开放？
+</D_Link>
+</li>
+</ul>
+</div>
+<div class="liebiao_r">
+<ul>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+页面设计，如何排版？
+</D_Link>
+</li>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+会务邮箱，如何配置？
+</D_Link>
+</li>
+<li>
+<D_Link href="65574" class="DPage" title="常见问题">
+页面链接，如何制作?
+</D_Link>
+</li>
+</ul>
+</div>
+<div class="clear">
+ 
+</div>
+</div>
+<div class="kuaisu">
+<div class="kuaisu_1">
+<div class="kuaisu_a">
+<D_Link href="65571" class="DPage" title="帐号管理">
+帐号管理
+</D_Link>
+</div>
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+</div>
+<div class="kuaisu_2">
+<div class="kuaisu_a">
+<D_Link href="65572" class="DPage" title="我要办会">
+我要办会
+</D_Link>
+</div>
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+</div>
+<div class="kuaisu_2">
+<div class="kuaisu_a">
+<D_Link href="65573" class="DPage" title="我要参会">
+我要参会
+</D_Link>
+</div>
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+</div>
+</div>
+</div>
+<div class="clear">
+ 
+</div>
+</div>

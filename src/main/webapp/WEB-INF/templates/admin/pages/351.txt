@@ -1,0 +1,381 @@
+<div class="block-top">
+ 
+</div>
+
+<div class="block-body color">
+
+<h1>
+功能特性
+</h1>
+
+<p class="subTitle">
+会议信息化管理云平台，改变传统办会模式。
+</p>
+
+</div>
+
+<div class="block-body" id="click">
+<hr/>
+
+<h2>
+一键式创建会议网站
+</h2>
+
+<table width="900" border="0" cellspacing="0" align="center" class="DCT_oldtable portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td width="300">
+            
+<h3>
+自动建站
+</h3>
+            
+<p style="text-align: justify;">
+只需要填写基本的会议信息，系统将自动为您创建会议网站。自动创建的会议系统包含网站基本框架页面，方便易用的编辑器，让信息发布更加迅速便捷，自由选择系统风格模板，让会议网站具有自己的特色。 
+</p>
+            
+<h3>
+云服务
+</h3>
+            
+<p style="text-align: justify;">
+中科院计算机网络信息中心(CNIC)拥有强大的技术支撑，以云服务方式搭建的在线会议系统，无需提供单独的服务器，只需接入互联网，轻点鼠标即可进行会议系统的编辑和管理，随时掌握会议进展和会务动态。
+</p>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+自定义域名
+</h3>
+            
+<p style="text-align: justify;">
+作为专业的会议系统网站建设与服务平台，
+<span style="color: rgb(0, 0, 255); ">
+我们免费提供***.csp.escience.cn的网站域名（***是自定义的会议名称）
+</span>
+。
+</p>
+            
+<p style="text-align: justify;">
+同时，
+<span style="color: rgb(0, 0, 255); ">
+我们提供绑定独立域名的免费服务。
+</span>
+</p>
+            
+<div class="fig domain">
+ 
+</div>
+            
+<h3>
+会议服务平台通行证
+</h3>
+            
+<p style="text-align: justify;">
+会议服务平台通行证是会议服务平台的通用帐号，实现一次注册多次访问的功能。可以方便查看在平台上以往参加的会议和组织的会议。
+</p>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+网站永久珍藏
+</h3>
+            
+<p>
+会议虽然结束，网站却会永久开放，为会务组织者、为参会者珍藏美好回忆。
+</p>
+            
+<p>
+会议资料日积月累，构成您宝贵的知识库；系列会议连接起每一届会议网站，记录发展和成长历程，助您打造会议品牌。
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<h2>
+服务会议全周期，灵活定制
+</h2>
+
+<table width="900" border="0" cellspacing="0" align="center" class="DCT_oldtable portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td width="300">
+            
+<h3>
+丰富的功能设定
+</h3>
+            
+<p style="text-align: justify;">
+以会议流程为核心，CSP平台为您提供了丰富的会议管理功能。这些功能涵盖了会议全周期，包括在线注册、提交摘要、在线审稿、酒店预订、旅游和社会活动、在线支付等。
+</p>
+            
+<h3>
+灵活定制流程
+</h3>
+            
+<p style="text-align: justify;">
+为了满足不同组织者和不同类型会议的用户需求，CSP会议服务平台提供了灵活多样的自定义功能，可以根据用户需要实现完美定制，打造个性化的会议网站和参会流程。
+</p>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+在线注册
+</h3>
+            
+<p style="text-align: justify;">
+用户登录到会议系统后可进行在线注册，填写组织者要求的基本参会信息。注册确认信息将通过邮件方式发送给会议组织者。
+</p>
+            
+<h3>
+个性化注册表单
+</h3>
+            
+<p>
+为会议设置个性化的注册表单，注册流程中收集您办会所需要的信息。例如参会者的餐饮禁忌和特殊需求，为参会者提供最贴心的服务。
+</p>
+            
+<h3>
+在线提问和自定义的邮件通知
+</h3>
+            
+<p>
+参会者提交信息后，系统自动邮件通知。办会者可以定制确认邮件模板。还可以群发邮件给参会者。参会者可以在线提问，办会者在线反馈和提供帮助。通过及时有效的邮件系统让您和参会者时时保持畅通交流。
+</p>
+            
+<p>
+ 
+</p>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+稿件提交和在线审稿
+</h3>
+            
+<p>
+在线稿件提交功能，支持摘要/全文提交，还可填写作者信息、关键词、投稿意图、投稿类别等信息。
+</p>
+            
+<p>
+管理员设置论文评审专家，专家在线评审提交意见，主办方根据多个专家的评审意见决定论文是否录用，并将录用情况邮件通知稿件作者。参会者可以方便及时地查看自己论文的审阅和接受情况。
+</p>
+            
+<h3>
+酒店预订
+</h3>
+            
+<p>
+在系统管理后台通过配置酒店和房间信息，参会者注册完成后即可进行房间预定，提供可选择的单价与合计、入住和离开时间、房间和床位数量等信息。预订成功后系统发送确认邮件，以备查询。
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<h2>
+外观设计和信息发布
+</h2>
+
+<table width="900" border="0" cellspacing="0" align="center" class="DCT_oldtable portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td width="300">
+            
+<h3>
+“所见即所得”的信息发布方式
+</h3>
+            
+<p>
+“所见即所得”的网页编辑功能，无需使用复杂的网页编辑方式，就像使用word一样，让您随时更新会议网站的文字、图片、附件及视频等会议信息。
+</p>
+            
+<div class="fig edit">
+ 
+</div>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+自由更换外观
+</h3>
+            
+<p style="text-align: justify;">
+CSP会议服务平台提供了丰富的网站外观样式，组织者可根据自己的偏好选择标志性图片。
+</p>
+            
+<div class="fig skin">
+ 
+</div>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+个性化的外观设计服务
+</h3>
+            
+<p>
+<span style="color: rgb(0, 0, 255); ">
+根据您的设计需求，我们有专业的设计师为您量身打造网站外观，让您的网站与众不同。
+</span>
+</p>
+            
+<p>
+如需网站外观设计服务，请与我们的技术支持人员联系（010-58812345）。
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<h2>
+多种支付方式
+</h2>
+
+<table width="900" border="0" cellspacing="0" align="center" class="DCT_oldtable portal-layout">
+    
+<tbody>
+        
+<tr>
+            
+<td width="300">
+            
+<h3>
+支持多种支付方式
+</h3>
+            
+<ul>
+                
+<li>
+在线支付
+</li>
+                
+<li>
+银行转账
+</li>
+                
+<li>
+邮局汇款
+</li>
+                
+<li>
+会议现场缴费
+</li>
+            
+</ul>
+            
+</td>
+            
+<td width="300">
+            
+<h3>
+方便快捷的在线支付
+</h3>
+            
+<p>
+<span style="color: rgb(0, 0, 255); ">
+我们为参会者提供网上银行支付功能，几乎涵盖所有大中型银行发行的银行卡。
+</span>
+</p>
+            
+<p>
+<span style="color: rgb(0, 0, 255); ">
+我们也支持包括美元在内的全球多种货币进行支付。
+</span>
+</p>
+            
+</td>
+            
+<td width="300">
+            
+<p>
+ 
+</p>
+            
+<p>
+ 
+</p>
+            
+<p>
+如需开通在线支付功能，请与我们的技术支持人员联系（010-58812345）。
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+</div>
+
+<div class="block-bottom">
+ 
+</div>
+
+<p style="text-align: right;">
+<span class="learnMore">
+功能特性
+</span>
+ 
+<D_Link href="baseurl://page/6" class="DPage learnMore">
+经典案例
+</D_Link>
+ 
+<D_Link href="baseurl://page/9" class="DPage learnMore">
+如何创建会议？
+</D_Link>
+<D_Link href="http://csp.escience.cn/dct/page/65543" class="createConf">
+创建会议
+</D_Link>
+</p>

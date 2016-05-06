@@ -1,0 +1,97 @@
+<div style="border-bottom: rgb(241,240,240) 1px solid; border-left: rgb(241,240,240) 1px solid; height: auto; border-top: rgb(241,240,240) 1px solid; border-right: rgb(241,240,240) 1px solid" class="zhongxin_center_cen_right">
+
+<h1 style="text-align: center">
+<span style="color: rgb(0,0,0)">
+创建会议
+</span>
+</h1>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第一步：
+</strong>
+</span>
+</span>
+<span style="color: rgb(0,0,0)">
+<span style="font-size: 14px">
+<strong>
+需要注册平台帐号（如何获取帐号，请阅读帐号管理）
+</strong>
+</span>
+</span>
+</h4>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第二步：
+</strong>
+</span>
+</span>
+找到创建会议入口
+</h4>
+
+<p style="text-align: center">
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=11827" height="230" width="700"/>
+</p>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第三步：
+</strong>
+</span>
+</span>
+填写会议信息，
+<span style="font-size: 14px">
+<strong>
+完成提交
+</strong>
+</span>
+</h4>
+
+<p style="text-align: center">
+<span style="font-size: 14px">
+<strong>
+<img style="width: 700px; height: 403px" src="http://clb.csp.escience.cn/getCachedDocument.do?docid=11828"/>
+</strong>
+</span>
+</p>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第四步：
+</strong>
+</span>
+</span>
+等待审批，
+<span style="font-size: 14px">
+<strong>
+完成创建
+</strong>
+</span>
+</h4>
+
+<p style="text-align: center">
+<span style="font-size: 14px">
+<strong>
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=11830" height="90" width="700"/>
+</strong>
+</span>
+</p>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

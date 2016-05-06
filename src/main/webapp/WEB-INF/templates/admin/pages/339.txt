@@ -1,0 +1,234 @@
+<div class="block-top">
+ 
+</div>
+
+<div class="block-body color">
+
+<h1>
+经典案例
+</h1>
+
+<p class="subTitle">
+<D_Link href="baseurl://page/65537/__rpcsp0x2Main!65537|0_action/confListMainView" class="learnMore">
+查看所有会议
+</D_Link>
+</p>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<table width="974" border="0" cellspacing="0" align="center" class="DCT_oldtable portal-layout exhibit">
+    
+<tbody>
+        
+<tr>
+            
+<td width="480">
+            
+<h2>
+第28届IAU大会
+</h2>
+            
+<p>
+北京2012年国际天文大会(IAU XXVIII General Assembly)网站使用精心设计的外观“皮肤”，呈现出精彩绝伦的视觉效果。让参会者第一眼所见，就能感受到会议的品质以及组织者尽心尽力的态度。
+</p>
+            
+<p>
+在默认外观的基础上，我们协助IAU的组织者更换了标题图片（系统中称之为“Banner”），并对导航栏、菜单栏、文字和标题等进行了精致的设计和调整，使整个站点透露出天空的静谧与深邃，展现出国际天文大会的独特气质。
+</p>
+            
+<p>
+<D_Link href="http://www.astronomy2012.org" target="_blank">
+查看 第28届IAU大会
+</D_Link>
+</p>
+            
+</td>
+            
+<td class="conf-iau">
+ 
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="conf-pragma">
+            
+<h2>
+PRAGMA 20
+</h2>
+            
+<p>
+ 简单整洁的界面同样能够获得大家的喜爱。将于香港召开的PRAGMA 20会议就采取了这种方案。
+</p>
+            
+<p>
+去除了顶部的导航栏，而将站点所有的页面和功能放在左侧菜单，营造了简洁的页面风格。他们颇花心思地于细节处营造精致的形象，通过内容页面的组织、标志和小图片的运用，使站点成为“简约而不简单”的杰作。
+</p>
+            
+<p>
+<D_Link href="http://pragma20.pragma-grid.net/dct/page/65560" target="_blank">
+查看 PRAGMA 20
+</D_Link>
+</p>
+            
+</td>
+            
+<td class="conf-yotc">
+            
+<h2>
+YOTC International Science Symposium &amp; 8th AMY International Workshop 
+</h2>
+            
+<p>
+会议的组织者为自己设计了更具特色的页面：他们将导航菜单移到了页面右侧。同时，他们还在菜单的底部添加了会议联系人信息和国内天气的链接。这些实用的设计使得他们的参会者不用再在页面间寻找，就可以看到他们感兴趣的信息；同时，这样的设计也恰恰契合了会议的主题。
+</p>
+            
+<p>
+我们的服务人员自然十分支持这样的独特的创意，经过认真的工作终于将一个独特的会议站点呈现出来。
+</p>
+            
+<p>
+<D_Link href="http://yotc-amy-2011.csp.escience.cn/dct/page/1" target="_blank">
+查看 YOTC会议网站
+</D_Link>
+</p>
+            
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="conf-bismis">
+            
+<h2>
+ BISMiS Conference
+</h2>
+            
+<p>
+BISMiS的会议组织者在页面中加入了视频，以此向参会者全方位地宣传会议。作为一个国际性会议，BISMiS为会议搭建了中英文两套网站，分别服务不同国家的参会者。
+</p>
+            
+<p>
+<D_Link href="http://www.bismis.org/dct/page/1" target="_blank">
+查看 BISMiS Conference
+</D_Link>
+</p>
+            
+</td>
+            
+<td class="conf-icome">
+            
+<h2>
+ ICOME 微纳光学工程国际会议
+</h2>
+            
+<p>
+"Content is King." ICOME微纳光学工程国际会议的组织者十分注重会议站点内容的经营。在默认的会议模板外，他们添加了许多有用的页面，以呈现丰富的会议信息。
+</p>
+            
+<p>
+基于Duckling的CSP系统很好地支持了他们的需求：“所见即所得”的在线编辑帮助ICOME搭建出内容丰富、格式多样的会议网站。
+</p>
+            
+<p>
+<D_Link href="http://icome2011.csp.escience.cn/dct/page/1" target="_blank">
+查看 ICOME 微纳光学工程国际会议
+</D_Link>
+</p>
+            
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td>
+            
+<h2>
+ Hadoop中国2010云计算大会
+</h2>
+            
+<p>
+由中科院计算所主办的Hadoop中国2010计算大会参会人数达到600人。这也是CSP上举办的较大规模的会议了，也是已经举办过的最成功的会议之一。短短一天的会议过后，组织者继续在站点中添加各种会议资料、现场照片等等，为参会者提供重要的支持服务。他们也将这次会议与往届大会的资料连接起来，形成对会议发展的完整记录。
+</p>
+            
+<p>
+如今，Hadoop会议已经举办完成数月，但您仍然可以从会议网站中找到有用的资料。这是我们提供的云服务和永久保留会议站点所带来的便利。
+</p>
+            
+<p>
+<D_Link href="http://hic2010.hadooper.cn/dct/page/1" target="_blank">
+查看 Hadoop中国2010云计算大会
+</D_Link>
+</p>
+            
+</td>
+            
+<td class="conf-hadoop">
+ 
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td>
+ 
+</td>
+            
+<td>
+ 
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+</div>
+
+<div class="block-body">
+<hr/>
+
+<p style="text-indent: 2em; width: 40em; color: rgb(102, 102, 102); margin-left: auto; margin-right: auto;">
+中科院国际会议服务平台（CSP）运行着各类会议，其中不乏会议管理和网站设计的杰作。以上列举的只是撷取这些经典中特色之作，希望为您更好地了解CSP提供生动的案例，也希望这些会议能为您自己会议站点的搭建提供灵感和帮助。
+</p>
+
+<p style="text-align: right; text-indent: 2em; width: 40em; margin-left: auto; margin-right: auto;">
+<D_Link href="baseurl://page/65537/__rpcsp0x2Main!65537|0_action/confListMainView" class="Portal learnMore">
+查看所有会议
+</D_Link>
+</p>
+
+<div class="fig slideshow">
+ 
+</div>
+
+</div>
+
+<div class="block-bottom">
+ 
+</div>
+
+<p style="text-align: right;">
+<D_Link href="baseurl://page/15" class="DPage learnMore">
+功能特性
+</D_Link>
+ 
+<span class="learnMore">
+经典案例
+</span>
+ 
+<D_Link href="baseurl://page/9" class="DPage learnMore">
+如何创建会议？
+</D_Link>
+<D_Link href="http://csp.escience.cn/dct/page/65543" class="createConf">
+创建会议
+</D_Link>
+</p>

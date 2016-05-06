@@ -1,0 +1,127 @@
+<div class="welcome">
+
+<h3>
+<span class="dot">
+</span>
+Welcome Letter
+</h3>
+
+<p class="welcome_content">
+It is our great honour to welcome you to the Third Annual Meeting of the Global Research Council (GRC), hosted jointly by the Chinese Academy of Sciences (CAS), the National Natural Science Foundation of China (NSFC) and the Natural Sciences and Engineering Research Council of Canada (NSERC). This year’s meeting brings together over 70 high-ranking guests from research funding and performing organizations from around the world.Our meeting in Beijing will continue the important work of the GRC and its commitment to removing barriers to international research collaboration. This year, the Annual Meeting will focus on two key topics: the endorsement of the Statement of Principles and Actions for Shaping the Future – Supporting the Next Generation of Researchers, and an update and report on the status of the implementation of the GRC Action Plan on Open Access to Publications, including the results of the recent open access survey exercise undertaken by the CAS National Science Library. To ensure a globally consultative process, five GRC Regional Meetings were held between October and December of this past year, to gather input from funding agencies and interested stakeholders. Sincerely,
+</p>
+
+</div>
+
+<div class="right_nav">
+
+<div class="days">
+
+<h3>
+<span class="days-dot">
+</span>
+Important Days
+</h3>
+
+<ul class="day">
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month">
+Aug 2014
+</div>
+    
+<div class="date">
+28
+</div>
+    
+</div>
+    
+<div class="hit">
+Deadline for
+<br/>
+    Submission of Abstracts
+</div>
+    
+</li>
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month sec">
+Sep 2014
+</div>
+    
+<div class="date">
+5
+</div>
+    
+</div>
+    
+<div class="hit">
+Deadline for
+<br/>
+    Submission of Abstracts
+</div>
+    
+</li>
+    
+<li>
+    
+<div class="cell">
+    
+<div class="month third">
+Oct 2014
+</div>
+    
+<div class="date">
+18
+</div>
+    
+</div>
+    
+<div class="hit">
+Deadline for
+<br/>
+    Submission of Abstracts
+</div>
+    
+</li>
+
+</ul>
+
+</div>
+
+<div class="days">
+
+<h3>
+<span class="days-dot">
+</span>
+Organizer
+</h3>
+
+<ul class="days-list">
+    
+<li class="org_1">
+ 
+</li>
+    
+<li class="org_2">
+ 
+</li>
+    
+<li class="org_3">
+ 
+</li>
+    
+<li class="org_4">
+ 
+</li>
+
+</ul>
+
+</div>
+
+</div>

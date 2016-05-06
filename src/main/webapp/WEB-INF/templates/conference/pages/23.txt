@@ -1,0 +1,41 @@
+<h1>
+<strong>
+Travel Information
+</strong>
+</h1>
+
+<p>
+<strong>
+<u>
+Reservation: xxxx
+</u>
+</strong>
+<strong>
+<u>
+ attendees are  responsible for making their own hotel reservations
+</u>
+</strong>
+. 
+<br/>
+By  phone: please call 1-xxx-237-5211, and reference "xxxx". 
+<br/>
+By  email: Ms. Theresa Wieand, 
+<span style="text-decoration: underline;">
+contactus@sample.com
+</span>
+. 
+<br/>
+
+<strong>
+<br/>
+Rate:  
+</strong>
+<strong>
+The reservations and rates ($149/night + tax) are  valid until February 12, 2010 at 5:00pm PST
+</strong>
+.
+<strong>
+ 
+</strong>
+The  discounted rate is only available by contacting the hotel directly by  telephone or email. When calling for reservations, an American Express,  Visa, Diner's Club, Master Card, Discover Card or Carte Blanche credit  card number, with the expiration date, will be required to guarantee the  reservation. Reservations and deposits received after the cut-off date  will be confirmed on a space available basis at published rates.
+</p>

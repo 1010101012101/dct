@@ -1,0 +1,97 @@
+<h1>
+<strong>
+Committees
+</strong>
+</h1>
+
+<p>
+<strong>
+Chair:
+</strong>
+</p>
+
+<p>
+Dr.xxxx
+</p>
+
+<p>
+<strong>
+Vice-chairs:
+</strong>
+</p>
+
+<ul>
+    
+<li>
+Dr. Dong-Hong Cheng, China Association for Science and Technology
+</li>
+    
+<li>
+Dr. xxxx
+</li>
+
+</ul>
+
+<p>
+<strong>
+Members：
+</strong>
+</p>
+
+<ul>
+    
+<li>
+Dr. Jacques-Henry Weil, International Union of Biochemistry and  Molecular Biology
+</li>
+    
+<li>
+Dr. Knut-JanAndersen, International Union of Biochemistry and  Molecular Biology
+</li>
+    
+<li>
+Dr. John de Jersey, Federation of Asian and Oceania Biochemists  and Molecular Biologists
+</li>
+    
+<li>
+Dr. xxxx
+</li>
+
+</ul>
+
+<p>
+<b>
+Secretary General:
+</b>
+</p>
+
+<ul>
+    
+<li>
+Dr. xxxx
+</li>
+    
+<li>
+Dr. yyy
+</li>
+
+</ul>
+
+<p>
+<b>
+Deputy Secretary General:
+</b>
+</p>
+
+<ul>
+    
+<li>
+Dr. xxxx
+</li>
+
+</ul>
+
+<p>
+<b>
+        
+</b>
+</p>

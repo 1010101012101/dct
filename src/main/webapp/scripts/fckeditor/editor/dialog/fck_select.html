@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * Link dialog window.
+-->
+<html>
+	<head>
+		<title>Upload Document</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex, nofollow" />
+		<script src="common/fck_dialog_common.js?version=dct4.5" type="text/javascript"></script>
+		<script src="fck_select/fck_select.js?version=dct4.5" type="text/javascript"></script>
+		<script type="text/javascript" src="../../../ajax/ajax.js?version=dct4.5"></script>
+        <script type="text/javascript" src="../../../ajax/upload.js?version=dct4.5"></script>
+	</head>
+	<body class="InnerBody" scroll="no" style="OVERFLOW: hidden">
+		<div id="divUpload" style="DISPLAY: none">
+			<form id="frmUpload" name="frmUpload" method="post" target="UploadWindow" enctype="multipart/form-data" action="" onsubmit="return CheckUpload();">
+				<br/><br/>
+				<span fckLang="DlgUploadFile">Upload</span><br />
+				<div id ="uploadedFileWrapper">
+				<input id="txtUploadFile" style="WIDTH: 100%" type="file" size="40" name="NewFile" onchange="fckFileSelectAvoidDuplication()"/>
+				</div>
+				<br />
+
+				<br/>				
+				<input type="checkbox" id="signature" name="signature" value="on" onclick="changeCookie()"/>
+				<label for="signature"  fckLang="DlgUploadSignature">Document Signature</label>
+				<input type="hidden" id="pageName" name="pageName" value="123" />
+				<br/>
+				<!--<input id="btnUpload" type="button" value="Send it to the Server" fckLang="DlgLnkBtnUpload" onclick="CheckUpload()"/>-->
+				<script type="text/javascript">
+					document.write( '<iframe name="UploadWindow" style="display: none" src="' + FCKTools.GetVoidUrl() + '"><\/iframe>' ) ;
+				</script>
+			</form>
+		</div>
+	</body>
+<script language="javascript">refreshCookie();</script>  	
+</html>

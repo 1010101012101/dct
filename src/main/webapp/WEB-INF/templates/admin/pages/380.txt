@@ -1,0 +1,29 @@
+<table width="90%" border="0" cellspacing="1" cellpadding="1" align="center" class="DCT_oldtable">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+            
+<p>
+  			 
+<D_plugin src="$baseurlscripts/fckeditor/editor/images/pluginimages/SubPageFilterPlugin_big.gif" >
+<D_parameter styleclass=""/>
+<D_parameter dataformat="MM-dd"/>
+<D_parameter resourceid=""/>
+<D_parameter nextpage="true"/>
+<D_parameter name="SubDpageFilterPlugin"/>
+<D_parameter pagesize="5"/>
+<D_parameter hastitle="true"/>
+</D_plugin>
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+

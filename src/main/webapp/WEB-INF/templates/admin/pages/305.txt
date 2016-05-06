@@ -1,0 +1,60 @@
+<div style="border: 1px solid rgb(241, 240, 240); height: auto;" class="zhongxin_center_cen_right">
+
+<h2 style="text-align: center;">
+<D_Link href="65585" title="基本配置">
+基本配置
+</D_Link>
+<span style="color: rgb(0, 0, 255);">
+      
+</span>
+<D_Link href="65586" title="注册配置">
+注册配置
+</D_Link>
+<span style="color: rgb(0, 0, 255);">
+      
+</span>
+<D_Link href="65587" title="投稿配置">
+投稿配置
+</D_Link>
+<span style="color: rgb(0, 0, 255);">
+      
+</span>
+<D_Link href="65588" title="酒店配置">
+酒店配置
+</D_Link>
+<span style="color: rgb(0, 0, 255);">
+      
+</span>
+<D_Link href="65589" title="支付配置">
+支付配置
+</D_Link>
+<span style="color: rgb(0, 0, 255);">
+       
+</span>
+<D_Link href="65590" title="邮箱配置">
+邮箱配置
+</D_Link>
+</h2>
+
+<br/>
+
+<br/>
+
+<p style="text-align: center;">
+<span style="font-size: 14px;">
+<strong>
+<br/>
+
+</strong>
+</span>
+</p>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

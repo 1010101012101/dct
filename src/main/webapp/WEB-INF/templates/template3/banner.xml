@@ -1,0 +1,54 @@
+<list>
+  <Banner>
+    <id>26</id>
+    <name>默认方案一</name>
+    <status>1</status>
+    <type>3</type>
+    <creator>admin@root.umt</creator>
+    <createdTime>2010-05-11 06:40:56.0 UTC</createdTime>
+    <pageId>0</pageId>
+    <ownedtype>system</ownedtype>
+    <bannerProfile>{&quot;firstTitle&quot;:&quot;template 3- green test none banner here to see two lines as well haha please&quot;,&quot;thirdTitle&quot;:&quot;qingdao&quot;,&quot;secondTitle&quot;:&quot;2014-08-30--2014-08-31&quot;,&quot;dirName&quot;:&quot;dctDefaultSecond&quot;,&quot;leftName&quot;:&quot;banner.jpg&quot;}</bannerProfile>
+    <firstTitle>template 3- green test none banner here to see two lines as well haha please</firstTitle>
+    <secondTitle>2014-08-30--2014-08-31</secondTitle>
+    <thirdTitle>qingdao</thirdTitle>
+    <dirName>dctDefaultSecond</dirName>
+    <leftName>banner.jpg</leftName>
+  </Banner>
+  <Banner>
+    <id>27</id>
+    <name>默认方案二</name>
+    <status>1</status>
+    <type>1</type>
+    <creator>system</creator>
+    <createdTime>2010-05-11 06:40:56.0 UTC</createdTime>
+    <pageId>0</pageId>
+    <ownedtype>system</ownedtype>
+    <bannerProfile>{&quot;middleName&quot;:&quot;filledBanner.gif&quot;,&quot;rightName&quot;:&quot;rightBanner.gif&quot;,&quot;firstTitle&quot;:&quot;&quot;,&quot;thirdTitle&quot;:&quot;&quot;,&quot;secondTitle&quot;:&quot;&quot;,&quot;dirName&quot;:&quot;dctDefaultFirst&quot;,&quot;leftName&quot;:&quot;leftBanner.gif&quot;}</bannerProfile>
+    <firstTitle></firstTitle>
+    <secondTitle></secondTitle>
+    <thirdTitle></thirdTitle>
+    <dirName>dctDefaultFirst</dirName>
+    <leftName>leftBanner.gif</leftName>
+    <rightName>rightBanner.gif</rightName>
+    <middleName>filledBanner.gif</middleName>
+  </Banner>
+  <Banner>
+    <id>28</id>
+    <name>默认方案三</name>
+    <status>1</status>
+    <type>4</type>
+    <creator>system</creator>
+    <createdTime>2010-05-11 06:40:56.0 UTC</createdTime>
+    <pageId>0</pageId>
+    <ownedtype>system</ownedtype>
+    <bannerProfile>{&quot;middleName&quot;:&quot;banner_d_01.gif&quot;,&quot;rightName&quot;:&quot;science_banner_01.gif&quot;,&quot;firstTitle&quot;:&quot;&quot;,&quot;thirdTitle&quot;:&quot;&quot;,&quot;secondTitle&quot;:&quot;&quot;,&quot;dirName&quot;:&quot;dctDefaultThird&quot;,&quot;leftName&quot;:&quot;logo_03.PNG&quot;}</bannerProfile>
+    <firstTitle></firstTitle>
+    <secondTitle></secondTitle>
+    <thirdTitle></thirdTitle>
+    <dirName>dctDefaultThird</dirName>
+    <leftName>logo_03.PNG</leftName>
+    <rightName>science_banner_01.gif</rightName>
+    <middleName>banner_d_01.gif</middleName>
+  </Banner>
+</list>

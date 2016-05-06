@@ -1,0 +1,41 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h3>
+会议网站的banner如何上传？
+</h3>
+
+<p>
+答：首先应用管理员帐号登陆网站，
+</p>
+
+<ol>
+    
+<li>
+点击页面底部的“Conference   Admin”按钮
+</li>
+    
+<li>
+在会议的通用配置项里面有网站Banner设置，在此处可以上传本地的图片到服务器上
+</li>
+    
+<li>
+提交之后，后台会有此banner方案，然后可以对所有页面或某一页面应用此方案
+</li>
+
+</ol>
+
+<p>
+ 
+</p>
+
+<p style="text-align: center;">
+<D_Link href="../../../page/65550" class="DPage">
+返回问题列表&gt;&gt;
+</D_Link>
+</p>
+
+</div>
+
+</div>

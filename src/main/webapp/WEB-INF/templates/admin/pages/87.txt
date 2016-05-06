@@ -1,0 +1,45 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h3>
+如何进行参会人员会议注册的选项设置？
+</h3>
+
+<p>
+答：首先应用管理员帐号登陆网站，点击页面底部的 “Conference Admin”按钮，在会议的注册配置里面可以设置以下几项：
+</p>
+
+<ol>
+    
+<li>
+设置注册的起止日期
+</li>
+    
+<li>
+设置大会是否需要缴 费
+</li>
+    
+<li>
+是否需要注册的确认信
+</li>
+    
+<li>
+定制参会人注册项：国家、职位、注册费用、会议的session等
+</li>
+
+</ol>
+
+<p>
+ 
+</p>
+
+<p style="text-align: center;">
+<D_Link href="../../../page/65550" class="DPage">
+返回问题列表&gt;&gt;
+</D_Link>
+</p>
+
+</div>
+
+</div>

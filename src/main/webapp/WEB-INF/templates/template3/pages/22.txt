@@ -1,0 +1,12 @@
+
+    <div class="building_main">
+    	<div class="b_top">网站即将发布</div>
+		<div class="b_mid">
+			网站正在建设中<br />如有需要请联系<span id="b_support">help@cnic.cn</span>
+		</div>
+		<div class="b_bot">
+                       <div class="b_bot_date">会议时间：</div><div id="b_date">2012.1.22-1.29</div>
+			<div class="b_bot_location">会议地点：</div><div id="b_location">Hangzhou</div>
+		</div>
+    </div>
+

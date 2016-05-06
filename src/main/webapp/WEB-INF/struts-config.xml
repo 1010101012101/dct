@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="skinForm" type="cn.vlabs.duckling.vwb.ui.form.SkinForm" />
+    <form-bean name="SharePageForm" type="cn.vlabs.duckling.vwb.ui.form.SharePageForm" />
+	<form-bean name="clbUploadsActionForm" type="cn.vlabs.duckling.vwb.ui.accclb.ClbUploadsActionForm" />
+    <form-bean name="sysCommonConfigActionForm" type="cn.vlabs.duckling.vwb.ui.form.SysCommonConfigActionForm" />
+    <form-bean name="updateCLBForm" type="cn.vlabs.duckling.vwb.ui.accclb.UpdateCLBForm" />
+    <form-bean name="propertiesForm" type="cn.vlabs.duckling.vwb.ui.form.PropertiesForm" />
+    
+    <form-bean name="pageInfoForm"
+		type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="page" type="java.lang.String" />
+		<form-property name="pageName" type="java.lang.String" />
+		<form-property name="creator" type="java.lang.String" />
+		<form-property name="returnUrl" type="java.lang.String" />
+		<form-property name="emails" type="java.lang.String" />
+		<form-property name="hour" type="java.lang.String" />
+		<form-property name="deleteESubId" type="java.lang.String" />
+	</form-bean>
+	
+	<form-bean name="bannerForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="backgroundColor"       type="java.lang.String" />
+      <form-property name="bannerId"       type="java.lang.String" />
+      <form-property name="publicBanner"       type="java.lang.Boolean" />
+      <form-property name="bannerTitle"       type="java.lang.String" />      
+      <form-property name="bannerName"     type="java.lang.String" />
+      <form-property name="bannerType"     type="java.lang.String" />
+      <form-property name="bannerDir"     type="java.lang.String" />
+      <form-property name="leftFile"       type="org.apache.struts.upload.FormFile" />
+      <form-property name="rightFile"      type="org.apache.struts.upload.FormFile" />
+      <form-property name="middleFile"     type="org.apache.struts.upload.FormFile" />
+      <form-property name="defaultBanner"     type="java.lang.String" />
+      <form-property name="cancelPublish"     type="java.lang.String[]" />
+      <form-property name="publish"     type="java.lang.String[]" />
+      <form-property name="firstTitle"     type="java.lang.String" />
+      <form-property name="secondTitle"     type="java.lang.String" />
+      <form-property name="thirdTitle"     type="java.lang.String" />
+    </form-bean>
+    <form-bean name="newPageForm" type="org.apache.struts.validator.DynaValidatorForm">
+	      <form-property name="page"        type="java.lang.String" />
+	      <form-property name="parentPage"        type="java.lang.String" />
+	      <form-property name="newPage"        type="java.lang.String" />
+   </form-bean>
+   
+   <form-bean name="appDeployForm"
+		type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="warName" type="java.lang.String" />
+		<form-property name="warAlias" type="java.lang.String" />
+		<form-property name="deleteAppId" type="java.lang.String" />
+		<form-property name="deletePageId" type="java.lang.String" />
+		<form-property name="contextPath" type="java.lang.String" />
+	</form-bean>
+	
+	<form-bean name="policyManageForm"
+		type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="delPolicyId" type="java.lang.String" />
+		<form-property name="addPrincipal" type="java.lang.String" />
+		<form-property name="addPermission" type="java.lang.String" />
+		<form-property name="addOperation1" type="java.lang.String" />
+		<form-property name="addOperation2" type="java.lang.String[]" />
+		<form-property name="addResource" type="java.lang.String" />
+		<form-property name="addResourceContent" type="java.lang.String" />
+		<form-property name="templateId" type="java.lang.String" />
+	</form-bean>
+    <form-bean name="subscribeForm" type="cn.vlabs.duckling.vwb.ui.form.SubscribeForm" />
+    <form-bean name="pluginForm" type="cn.vlabs.duckling.vwb.ui.form.PluginForm" />
+	
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+     <action parameter="method" path="/portalSettingPortlet" validate="false"
+     	scope="request"
+     	type="cn.vlabs.duckling.vwb.ui.action.page.PortalPageAction">
+     </action>
+     <action name="bannerForm" parameter="method" path="/banner" scope="request" validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.BannerAction">
+	  </action>
+    <action
+      input="/form/viewPage.jsp"
+      path="/viewPage"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.ViewPageAction" />
+      
+      
+      <action 
+      parameter="action" 
+      path="/editPage"
+      scope="request"
+      validate="false"
+      type="cn.vlabs.duckling.vwb.ui.action.EditPageAction">
+      </action>
+
+      <action 
+      parameter="cmd" 
+      path="/savePage"
+      scope="request"
+      validate="false"
+      type="cn.vlabs.duckling.vwb.ui.action.SavePageAction">
+      </action>
+      
+
+      
+    <action
+      parameter="method"
+      attribute="skinForm"
+      name="skinForm"
+      path="/skin"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.SkinAction">
+      <forward name="skin" path="/jsp/skin.jsp" />
+    </action>
+    
+    <action
+      attribute="SharePageForm"
+      name="SharePageForm"
+      parameter="method"
+      path="/sharePage"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.page.SharePageAction">
+      <forward name="share" path="/jsp/sharePage.jsp" />
+      <forward name="vo" path="/jsp/emailnotify/voTree/voTree.jsp"/>
+      <forward name="content" path="/jsp/shareContent.jsp"/>
+    </action>
+    
+    <action 
+      name="voTreeForm"          
+      path="/voTreeaction"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.services.share.votree.VotreeAction">
+      <forward name="voTree" path="/jsp/emailnotify/voTree/voTree.jsp" />
+    </action>
+     
+      <action
+      attribute="subscribeForm"
+      name="subscribeForm"
+      parameter="act"
+      path="/subscribePage"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.emailnotify.EmailSubscribeSettingAction">
+      <forward
+        name="subscribe"
+        path="/jsp/emailnotify/emailnotify_create.jsp"
+        contextRelative="true" />
+    </action>
+       
+	 <action
+      attribute="clbUploadsActionForm"
+      name="clbUploadsActionForm"      
+      path="/clbUploadsAction"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.accclb.ClbUploadsAction" /> 
+      
+     <action
+      attribute="clbUploadsActionForm"
+      name="clbUploadsActionForm"      
+      path="/clbReferenceAction"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.accclb.ClbUploadsAction" />
+      
+	  <action
+      attribute="sysCommonConfigActionForm"
+      name="sysCommonConfigActionForm"      
+      path="/sysCommonConfig"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.SysCommonConfigAction" />
+      
+      <action parameter="method" name="pageInfoForm"
+		path="/emailSubscribe" scope="request" validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.emailnotify.EmailSubscribeSettingAction">
+		<forward name="show_page_subscribe"
+			path="/jsp/emailnotify/emailnotify_create.jsp"
+			contextRelative="true" />
+	  </action>
+
+	  <action parameter="method" name="pageInfoForm"
+		path="/emailManage" scope="request" validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.emailnotify.EmailSubscribeManageAction">
+		<forward name="show_page_subscribe"
+			path="/jsp/emailnotify/emailnotify_list.jsp"
+			contextRelative="true" />
+	  </action>
+      
+      <action parameter="method" name="pageInfoForm"
+		path="/emailAdmin" scope="request" validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.emailnotify.EmailSubscribeAdminAction">
+		<forward name="show_page_subscribe"
+			path="/jsp/emailnotify/emailnotify_all.jsp"
+			contextRelative="true" />
+	  </action>
+	  
+      <action
+      	parameter="a"
+      	path="/diffPage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.PageDifferenceAction">
+      	<forward name="success" path="/jsp/InfoContent.jsp" />
+     </action>
+     <action
+      	parameter="a"
+      	path="/delPage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.PageDifferenceAction">
+     </action>
+     <action
+		path="/myPage" 
+		scope="request" 
+		validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.MyPageAction">
+		<forward name="show_edited_page"
+			path="/jsp/personalization/my_page.jsp"
+			contextRelative="true" />
+	 </action>
+	 
+	<action
+		path="/pageManageFrame" 
+		scope="request" 
+		validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.PageManageFrameAction">
+		<forward name="success"
+			path="/jsp/PageManage.jsp"
+			contextRelative="true" />
+	 </action>
+	 
+	 <action
+		path="/pageManage" 
+		scope="request" 
+		validate="false"
+		type="cn.vlabs.duckling.vwb.ui.action.PageManageAction">
+		<forward name="success"
+			path="/jsp/PageManage.jsp"
+			contextRelative="true" />
+	 </action>
+	 
+     <action
+      	parameter="a"
+      	path="/infoPage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.PageDifferenceAction">
+      	<forward name="success" path="/jsp/InfoContent.jsp" />
+     </action>
+     
+    <action
+      	path="/createPage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.CreatePageAction">
+    </action>
+
+     <action
+      	parameter="method"
+      	path="/settingPage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.PageSettingAction">
+     </action>
+     <action
+      	parameter="method"
+      	path="/settingPortlet"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.PageSettingAction">
+     </action>
+     <action
+      	parameter="method"
+      	path="/allPages"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.AllPagesAction">
+     </action>
+     
+     
+     
+     <action
+      	parameter="method"
+      	path="/allresource"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.AllResourceAction">
+     </action>
+     
+      <action
+      	parameter="method"
+      	path="/receiveLoginInfo"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.ReceiveLoginInfoAction">
+     </action>
+     
+     <action
+		path="/search" 
+		scope="request" 
+		validate="false"
+		parameter="act"
+		type="cn.vlabs.duckling.vwb.ui.action.SearchAction">
+		<forward name="ajax"
+			path="/jsp/AJAXSearch.jsp"
+			contextRelative="true" />
+	 </action>
+	 
+     <action
+      	parameter="method"
+      	path="/privilegePage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.PrivsAction">
+     </action>
+     <action
+      	parameter="method"
+      	path="/privilegePortlet"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.page.PrivsAction">
+     </action>
+     <action
+         path="/VOTree"
+         scope="request"
+         type="cn.vlabs.duckling.vwb.ui.action.VOTreeAction">
+     </action>
+     <action
+	      parameter="method"
+	      name="newPageForm"
+	      path="/newPage"
+	      scope="request"
+	      validate="false"
+	      type="cn.vlabs.duckling.vwb.ui.action.page.NewPageAction"> 
+	 </action>
+     <action
+      attribute="updateCLBForm"
+      name="updateCLBForm"
+      path="/updateCLB"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.accclb.UpdateCLBAction">
+      <forward name="updateFckAttach" path="/jsp/clb/updateFckAttach.jsp" contextRelative="true"/>
+    </action>
+    <action
+	      path="/createSelfMain"
+	      scope="request"
+	      validate="false"
+	      type="cn.vlabs.duckling.vwb.ui.action.page.createSeflMainAction"> 
+	</action> 
+	<action
+	      path="/createMySpace"
+	      scope="request"
+	      validate="false"
+	      type="cn.vlabs.duckling.vwb.ui.action.page.CreateMySpaceAction"> 
+	</action>
+  	
+	 <action 
+	  name="propertiesForm"
+	  parameter="type" 
+  	  path="/VWBProperties"
+  	  scope="request" 
+  	  type="cn.vlabs.duckling.vwb.ui.action.VWBPropertiesAction">
+  	  <forward name="sucess" path="/jsp/vwbproperties/main.jsp"/>
+  	</action>
+	 
+     <action
+      	parameter="method"
+      	path="/SiteManage"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.SiteManageAction">
+      		<forward name="manage" path="/jsp/SiteManage.jsp" />
+     </action>
+
+     <action
+      	parameter="method"
+      	path="/SiteCreate"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.SiteCreateAction">
+      		<forward name="create" path="/jsp/SiteCreate.jsp" />
+      		<forward name="manage" path="/jsp/SiteManage.jsp" />
+     </action>
+
+     <action
+      	parameter="method"
+      	path="/SiteTemplate"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.SiteTemplateAction">
+      		<forward name="create" path="/jsp/SiteCreate.jsp" />
+      		<forward name="manage" path="/jsp/SiteManage.jsp" />
+     </action>
+     <action
+      	parameter="method"
+      	path="/register"
+      	scope="request"
+      	type="cn.vlabs.duckling.vwb.ui.action.RegistAction">
+     </action>
+     
+     <action
+      	parameter="method"
+      	name="policyManageForm"
+      	path="/PolicyManage"
+      	scope="request"
+      	validate="false"
+      	type="cn.vlabs.duckling.vwb.ui.action.PolicyManageAction">
+      		<forward name="manage" path="/jsp/PolicyManage.jsp" />
+     </action>
+     
+     
+     <action
+      path="/ImgScrService"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.ImgScrServiceAction">
+      <forward name="ok" path="/scripts/fckeditor/editor/dialog/fck_imagescroll.jsp"/>
+    </action>
+    <action
+      attribute="pluginForm"
+      name="pluginForm"
+      path="/plugin"
+      scope="request"
+      type="cn.vlabs.duckling.vwb.ui.action.PluginAction" />
+     
+  </action-mappings>
+
+  <message-resources parameter="templates.default" />
+</struts-config>
+

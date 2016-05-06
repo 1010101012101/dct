@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- System JDBC Connection -->
+	<context:property-placeholder
+		location="${dct.root}/WEB-INF/conf/vwbconfig.properties" />
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${c3p0.driverClass}" />
+		<property name="jdbcUrl" value="${c3p0.url}" />
+		<property name="user" value="${c3p0.username}" />
+		<property name="password" value="${c3p0.password}" />
+		<property name="initialPoolSize" value="${c3p0.initialPoolSize}" />
+		<property name="maxPoolSize" value="${c3p0.maxPoolSize}" />
+		<property name="minPoolSize" value="${c3p0.minPoolSize}" />
+		<property name="acquireIncrement" value="${c3p0.acquireIncrement}" />
+		<property name="maxStatements" value="${c3p0.maxStatements}" />
+		<property name="preferredTestQuery" value="${c3p0.preferredTestQuery}" />
+		<property name="maxConnectionAge" value="${c3p0.maxConnectionAge}" />
+		<property name="testConnectionOnCheckout" value="${c3p0.testConnectionOnCheckout}" />
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!-- Contianer Abstarct -->
+	<bean id="baseDAO" abstract="true">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="falconCache"
+		class="net.duckling.falcon.api.cache.impl.MemcachedCacheService"
+		init-method="doInit" destroy-method="doDestroy">
+		<property name="memcachedURL" value="${memcache.url}"/>
+	</bean>
+	<bean id="cacheService" scope="prototype" class="cn.vlabs.duckling.vwb.service.cache.CacheService">
+		<property name="cacheProvider" ref="falconCache"/>
+	</bean>
+	<!-- Container Providers -->
+	<bean id="dbProperty" class="cn.vlabs.duckling.vwb.service.config.provider.CachedReader">
+		<property name="propertiesProvider" ref="propertiesProvider" />
+		<property name="cacheService" ref="cacheService" />
+	</bean>
+	<bean id="fileProperty"
+		class="cn.vlabs.duckling.vwb.service.config.provider.PropertiesFileReader">
+		<constructor-arg>
+			<value>${dct.root}/WEB-INF/conf/vwbconfig.properties</value>
+		</constructor-arg>
+	</bean>
+	<bean id="systemProperty"
+		class="cn.vlabs.duckling.vwb.service.config.provider.SystemPropertyReader" />
+	<bean id="domainProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.config.provider.DomainProvider" />
+	<bean id="siteMetaInfoProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.site.impl.SiteMetaInfoProvider" />
+	<!-- Container Services -->
+	<bean id="fetchParams" class="cn.vlabs.duckling.vwb.FetchToSession">
+		<constructor-arg>
+			<value>${duckling.fetch.params}</value>
+		</constructor-arg>
+		<property name="ddlService" ref="ddlService"/>
+	</bean>
+	<bean id="newUserService" class="cn.vlabs.duckling.vwb.service.user.UserServiceImpl"
+		init-method="init">
+		<property name="vmtUrl" value="${duckling.vmt.site}" />
+		<property name="localName" value="${duckling.dct.localName}" />
+		<property name="keyDir" value="${dct.root}/WEB-INF/conf/DucklingkeysDir" />
+	</bean>
+
+	<bean id="containerConfig"
+		class="cn.vlabs.duckling.vwb.service.config.impl.ContainerConfig"
+		init-method="init" destroy-method="destroy">
+		<property name="globalProperty" ref="fileProperty" />
+		<property name="systemProperty" ref="systemProperty" />
+		<property name="configFile">
+			<value>${dct.root}/WEB-INF/conf/vwbconfig.properties</value>
+		</property>
+
+	</bean>
+	<bean id="ducklingMessages" class="cn.vlabs.duckling.vwb.service.i18n.DucklingMessage">
+		<property name="bundleName" value="${i18n.bundle_name}" />
+	</bean>
+	<!-- RequestMap -->
+	<bean id="AbstractMap" abstract="true">
+		<property name="registable" ref="MapperFactory" />
+		<property name="readOnly" value="${duckling.readonly}" />
+	</bean>
+	<bean id="JSPMapper" parent="AbstractMap"
+		class="cn.vlabs.duckling.vwb.ui.map.JSPRequestMapper">
+	</bean>
+	<bean id="DPageMapper" parent="AbstractMap"
+		class="cn.vlabs.duckling.vwb.ui.map.DPageMapper">
+	</bean>
+	<bean id="PortalMapper" parent="AbstractMap"
+		class="cn.vlabs.duckling.vwb.ui.map.PortalMapper"></bean>
+	<bean id="MapperFactory" class="cn.vlabs.duckling.vwb.ui.map.RequestMapperFactory" />
+	<bean id="timerService" class="cn.vlabs.duckling.vwb.service.timer.TimerService"
+		init-method="init" />
+	<bean id="domainNameService"
+		class="cn.vlabs.duckling.vwb.service.config.impl.DomainServiceImpl">
+		<property name="domainProvider" ref="domainProvider" />
+		<property name="siteManagerService" ref="siteManagerService" />
+		<property name="siteConfig" ref="siteConfig"/>
+		<property name="containerConfig" ref="containerConfig"/>
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="siteManagerService" class="cn.vlabs.duckling.vwb.service.site.SiteManageService">
+		<property name="siteMetaInfoProvider" ref="siteMetaInfoProvider" />
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="initSystem" class="cn.vlabs.duckling.vwb.service.init.SystemInitService"
+		parent="baseDAO">
+		<property name="webRoot">
+			<value>${dct.root}</value>
+		</property>
+	</bean>
+	<bean id="faviconService"
+		class="cn.vlabs.duckling.vwb.service.favicon.FaviconServiceImpl">
+		<property name="clbConnection" ref="clbConnection" />
+		<property name="cacheService" ref="cacheService" />
+		<property name="siteConfig" ref="siteConfig" />
+	</bean>
+	<bean id="flexSessionService" class="cn.vlabs.duckling.vwb.service.flexsession.FlexSessionServiceImpl">
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="loginSessionService" class="cn.vlabs.duckling.vwb.service.flexsession.LoginSessionServiceImpl">
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<!-- Container -->
+	<bean id="container" class="cn.vlabs.duckling.vwb.VWBContainerImpl">
+		<property name="backupDir" value="${dct.root}/WEB-INF/backup" />
+		<property name="remoteTemplateDir" value="${dct.root}/WEB-INF/remote-templates" />
+		<property name="mapFactory" ref="MapperFactory" />
+		<property name="i18nService" ref="ducklingMessages" />
+		<property name="timerService" ref="timerService" />
+		<property name="userService" ref="newUserService" />
+		<property name="siteManagerService" ref="siteManagerService" />
+		<property name="config" ref="containerConfig" />
+		<property name="domainNameService" ref="domainNameService" />
+		<property name="initSystem" ref="initSystem" />
+		<property name="fetcher" ref="fetchParams" />
+		<property name="skinService" ref="fSkinService" />
+		<property name="templateService" ref="templateService" />
+		<property name="attachmentService" ref="attachmentService" />
+		<property name="variableService" ref="variableService" />
+		<property name="DPageService" ref="dpageService" />
+		<property name="viewportService" ref="viewportService" />
+		<property name="mySpaceService" ref="mySpaceService" />
+		<property name="siteConfigService" ref="siteConfig" />
+		<property name="rendableFactory" ref="rendableFactory" />
+		<property name="emailSubscriberService" ref="emailSubscriberService" />
+		<property name="differenceService" ref="differenceService" />
+		<property name="resourceService" ref="resourceService" />
+		<property name="faviconService" ref="faviconService" />
+		<property name="portalPageService" ref="PortalPageService" />
+		<property name="renderingService" ref="renderingService" />
+		<property name="functionService" ref="functionService" />
+		<property name="saveTempDpageService" ref="saveTempDpageService" />
+		<property name="sharePageMailService" ref="sharePageMailService" />
+		<property name="sharePageAccessService" ref="sharePageAccessService" />
+		<property name="authenticationService" ref="authenticationService" />
+		<property name="authorizationService" ref="authorizationService" />
+		<property name="siteInitService" ref="initSite" />
+		<property name="backupService" ref="backupService" />
+		<property name="bannerService" ref="bannerService" />
+		<property name="pluginService" ref="dpagePluginService"/>
+		<property name="flexSessionService" ref="flexSessionService"/>
+		<property name="loginSessionService" ref="loginSessionService"/>
+		<property name="cacheService" ref="cacheService" />
+		<property name="DDLService" ref="ddlService"/>
+	</bean>
+
+	<!-- Site Abstract -->
+
+	<!-- Site Providers -->
+	<bean id="viewportProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.viewport.providers.ViewPortProviderImp">
+		<property name="cache" ref="cacheService" />
+	</bean>
+	<bean id="treeViewProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.viewport.providers.TreeViewProviderImpl"
+		init-method="init">
+	</bean>
+	<bean id="aclProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.auth.impl.ACLProviderImpl">
+		<property name="cache" ref="cacheService" />
+	</bean>
+	<bean id="dpageProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.dpage.provider.DPageProviderImpl" />
+	<bean id="dpageProviderCache"
+		class="cn.vlabs.duckling.vwb.service.dpage.provider.DPageProviderCache">
+		<property name="dpageProvider" ref="dpageProvider" />
+		<property name="cache" ref="cacheService" />
+	</bean>
+	<bean id="diffProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.diff.impl.TraditionalDiffProvider">
+	</bean>
+	<bean id="bannerProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.banner.provider.BannerProviderImpl" />
+	<bean id="PortalPageProvider" parent="baseDAO"
+		class="org.apache.pluto.driver.config.db.PortalPageProvider" />
+	<bean id="PortalPortletsProvider" parent="baseDAO"
+		class="org.apache.pluto.driver.config.db.PagePortletProvider" />
+	<bean id="emailSubscriberProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.emailnotifier.dao.EmailSubscriberProviderImpl" />
+	<bean id="jdbcCLBProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.attach.clb.JDBCCLBProvider" />
+	<bean id="mySpaceProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.myspace.provider.MySpaceProvider" />
+	<bean id="sharePageAccessProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.share.impl.SharePageAccessProviderImpl" />
+	<!-- 自动部署配置 -->
+
+	<bean id="propertiesProvider" parent="baseDAO"
+		class="cn.vlabs.duckling.vwb.service.config.provider.VWBPropertiesProvider" />
+	<!-- Site Services -->
+	<bean id="sharePageMailService"
+		class="cn.vlabs.duckling.vwb.service.share.impl.SharePageMailServiceImpl">
+		<property name="mailService" ref="sendmailservice" />
+		<property name="siteConfig" ref="siteConfig" />
+		<property name="renderService" ref="renderingService" />
+	</bean>
+	<bean id="sharePageAccessService"
+		class="cn.vlabs.duckling.vwb.service.share.impl.SharePageAccessServiceImpl">
+		<property name="provider" ref="sharePageAccessProvider" />
+		<property name="expiredPeriod" value="${duckling.sharepage.expireperiod}" />
+		<property name="siteConfig" ref="siteConfig"/>
+	</bean>
+	<bean id="siteConfig" class="cn.vlabs.duckling.vwb.service.config.impl.SiteConfig" init-method="init">
+		<property name="globalProperty" ref="fileProperty" />
+		<property name="systemProperty" ref="systemProperty" />
+		<property name="dbProperty" ref="dbProperty"/>
+	</bean>
+	<bean id="functionService"
+		class="cn.vlabs.duckling.vwb.service.resource.impl.VWBFunctionService"
+		init-method="init">
+		<property name="viewportService" ref="viewportService" />
+		<property name="funcXml" value="${dct.root}/WEB-INF/conf/functions.xml" />
+	</bean>
+	<bean id="viewportKeyGenerator"
+		class="cn.vlabs.duckling.vwb.service.idgen.LocalGeneratorService">
+		<property name="maxIdReader" ref="viewportProvider" />
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="myisamKeyGenerator" class="cn.vlabs.duckling.vwb.service.idgen.MyisamKeyGenerator" parent="baseDAO">
+		<property name="maxIdReader" ref="viewportProvider" />
+	</bean>
+	<bean id="viewportService"
+		class="cn.vlabs.duckling.vwb.service.viewport.impl.VWBViewPortService">
+		<property name="viewPortProvider" ref="viewportProvider" />
+		<property name="treeViewProvider" ref="treeViewProvider" />
+		<property name="keyGenerator" ref="myisamKeyGenerator" />
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="authenticationService"
+		class="cn.vlabs.duckling.vwb.service.login.AuthenticationServiceImpl">
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="policyProvider"
+		class="cn.vlabs.duckling.vwb.service.auth.policy.PolicyProviderImpl"
+		parent="baseDAO" />
+	<bean id="authorizationService"
+		class="cn.vlabs.duckling.vwb.service.auth.impl.AuthorizationServiceImpl">
+		<property name="viewPortService" ref="viewportService" />
+		<property name="cacheService" ref="cacheService" />
+		<property name="policyProvider" ref="policyProvider" />
+		<property name="aclProvider" ref="aclProvider" />
+	</bean>
+
+	<bean id="rendableFactory"
+		class="cn.vlabs.duckling.vwb.service.render.impl.RendableFactoryImpl">
+		<property name="viewportService" ref="viewportService" />
+		<property name="siteConfig" ref="siteConfig" />
+	</bean>
+
+	<bean id="variableService"
+		class="cn.vlabs.duckling.vwb.service.variable.VariableServiceImpl">
+		<property name="skinService" ref="fSkinService" />
+		<property name="siteConfig" ref="siteConfig" />
+		<property name="faviconService" ref="faviconService" />
+		<property name="DDLService" ref="ddlService"/>
+	</bean>
+	<bean id="tempPageProvider"
+		class="cn.vlabs.duckling.vwb.service.dpage.provider.TempPageProvider"
+		parent="baseDAO" />
+	<bean id="saveTempDpageService"
+		class="cn.vlabs.duckling.vwb.service.dpage.impl.SaveTempDpageServiceImpl">
+		<property name="tempPageProvider" ref="tempPageProvider" />
+	</bean>
+	<bean id="pageLockService" class="cn.vlabs.duckling.vwb.service.dpage.impl.PageLockService">
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="dpageService"
+		class="cn.vlabs.duckling.vwb.service.dpage.impl.DPageServiceImpl">
+		<property name="dpageProvider" ref="dpageProviderCache" />
+		<property name="continuationEditMinutes" value="${continuationEditMinutes}" />
+		<property name="viewPortService" ref="viewportService" />
+		<property name="pageLockService" ref="pageLockService"/>
+	</bean>
+	<bean id="dpagePluginService"
+		class="cn.vlabs.duckling.vwb.service.plugin.impl.PluginServiceImpl"
+		init-method="init">
+		<property name="pluginSearchPath" value="${dpage.plugin.searchPath}" />
+	</bean>
+	<bean id="renderingService"
+		class="cn.vlabs.duckling.vwb.service.dml.impl.RenderingServiceImpl">
+		<property name="dpageService" ref="dpageService" />
+	</bean>
+	<bean id="resourceService"
+		class="cn.vlabs.duckling.vwb.service.resource.impl.ResourceService">
+		<property name="dpageService" ref="dpageService" />
+		<property name="viewportService" ref="viewportService" />
+		<property name="functionService" ref="functionService" />
+		<property name="portalPageService" ref="PortalPageService" />
+	</bean>
+
+	<bean id="differenceService"
+		class="cn.vlabs.duckling.vwb.service.diff.impl.DifferenceServiceImpl">
+		<property name="provider" ref="diffProvider" />
+	</bean>
+	<bean id="simpleClbClient"
+		class="cn.vlabs.duckling.vwb.service.banner.provider.SimpleClbClient">
+		<property name="conn" ref="clbConnection" />
+	</bean>
+	<bean id="bannerService"
+		class="cn.vlabs.duckling.vwb.service.banner.impl.BannerServiceImpl">
+		<property name="bannerProvider" ref="bannerProvider" />
+		<property name="simpleClbClient" ref="simpleClbClient" />
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+	<bean id="PortalPageService" class="org.apache.pluto.driver.config.db.DBPortalPageService">
+		<property name="pageProvider" ref="PortalPageProvider" />
+		<property name="portletsProvider" ref="PortalPortletsProvider" />
+		<property name="cacheService" ref="cacheService" />
+	</bean>
+	<bean id="attachmentService"
+		class="cn.vlabs.duckling.vwb.service.attach.clb.AttachmentServiceImpl"
+		init-method="init">
+		<property name="provider" ref="jdbcCLBProvider" />
+		<property name="clbConnection" ref="clbConnection" />
+		<property name="cacheService" ref="cacheService" />
+	</bean>
+	<bean id="sendmailservice" class="cn.vlabs.duckling.vwb.service.mail.impl.MailServiceImpl">
+		<property name="siteConfig" ref="siteConfig" />
+	</bean>
+	<bean id="notifierTask"
+		class="cn.vlabs.duckling.vwb.service.emailnotifier.task.NotifierTask"
+		init-method="init" destroy-method="destroy">
+		<property name="sendOffset">
+			<value>${emailnotifier.sendOffset}</value>
+		</property>
+		<property name="dpageService" ref="dpageService" />
+		<property name="mailService" ref="sendmailservice" />
+		<property name="siteManagerService" ref="siteManagerService" />
+		<property name="subscriberService" ref="emailSubscriberService" />
+		<property name="viewportService" ref="viewportService" />
+		<property name="siteConfig" ref="siteConfig" />
+		<property name="timerService" ref="timerService" />
+		<property name="renderingService" ref="renderingService" />
+	</bean>
+
+	<bean id="emailSubscriberService"
+		class="cn.vlabs.duckling.vwb.service.emailnotifier.impl.EmailSubscriberServiceImpl">
+		<property name="provider" ref="emailSubscriberProvider" />
+	</bean>
+
+	<bean id="mySpaceService"
+		class="cn.vlabs.duckling.vwb.service.myspace.provider.MySpaceServiceImpl"
+		init-method="init">
+		<property name="mySpaceProvider" ref="mySpaceProvider" />
+		<property name="viewportService" ref="viewportService" />
+		<property name="cacheService" ref="cacheService" />
+	</bean>
+	<!-- Site -->
+	<bean id="templateMySpaceProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.MySpaceProvider"
+		parent="baseDAO" />
+	<bean id="templateSkinsProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.SkinProvider"
+		parent="baseDAO" />
+	<bean id="templatePortalsProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.PortalsProvider"
+		parent="baseDAO" />
+	<bean id="templateDPagesProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.DPagesProvider"
+		parent="baseDAO" />
+	<bean id="templateFunctionsProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.FunctionsProvider"
+		parent="baseDAO" />
+	<bean id="templateVWBBannerProvider" class="cn.vlabs.duckling.vwb.service.backup.provider.VWBBannersProvider" parent="baseDAO" >
+		<property name="simpleClbClient" ref="simpleClbClient" />
+	</bean>
+	<bean id="templateSiteProvider"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.SiteProvider"
+		parent="baseDAO" />
+	<bean id="backupService"
+		class="cn.vlabs.duckling.vwb.service.backup.provider.BackupServiceImpl">
+		<property name="backupProviders">
+			<list>
+				<ref local="templateSkinsProvider" />
+				<ref local="templateSiteProvider" />
+				<ref local="templatePortalsProvider" />
+				<ref local="templateFunctionsProvider" />
+				<ref local="templateDPagesProvider" />
+				<ref local="templateVWBBannerProvider" />
+				<ref local="templateMySpaceProvider" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Falcon化的服务 -->
+	<!-- CLB Connection -->
+	<bean id="clbPasswordInfo" class="cn.vlabs.clb.api.CLBPasswdInfo">
+		<property name="username">
+			<value>${duckling.clb.appname}</value>
+		</property>
+		<property name="password">
+			<value>${duckling.clb.password}</value>
+		</property>
+	</bean>
+	<bean id="clbConnection" class="cn.vlabs.clb.api.CLBConnection"
+		destroy-method="releaseConnection">
+		<constructor-arg>
+			<value>${duckling.clb.service}</value>
+		</constructor-arg>
+		<constructor-arg ref="clbPasswordInfo" />
+	</bean>
+
+	<!-- SiteInit Service -->
+	<bean id="bannerInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.BannerInitProvider"
+		parent="baseDAO">
+		<property name="simpleClbClient" ref="simpleClbClient" />
+	</bean>
+	<bean id="dpageInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.DPageInitProvider"
+		parent="baseDAO" />
+	<bean id="jspInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.JspInitProvider"
+		parent="baseDAO" />
+	<bean id="myspaceInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.MyspaceInitProvider"
+		parent="baseDAO" />
+	<bean id="originInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.OriginDataProvider"
+		parent="baseDAO" />
+	<bean id="policyInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.PolicyInitProvider"
+		parent="baseDAO" />
+	<bean id="portalInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.PortalInitProvider"
+		parent="baseDAO" />
+	<bean id="sitepropInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.SitePropertiesInitPorvider"
+		parent="baseDAO" />
+	<bean id="skinInitProvider"
+		class="cn.vlabs.duckling.vwb.service.init.provider.SkinInitProvider"
+		parent="baseDAO" />
+	<bean id="databaseDao" class="cn.vlabs.duckling.vwb.service.init.DatabaseDAO"
+		parent="baseDAO" />
+	<bean id="initSite" class="cn.vlabs.duckling.vwb.service.init.SiteInitService">
+		<property name="defaultDataPath">
+			<value>${dct.root}/WEB-INF/conf</value>
+		</property>
+		<property name="databaseDAO" ref="databaseDao" />
+		<property name="providers">
+			<list>
+				<ref local="sitepropInitProvider" />
+				<ref local="originInitProvider" />
+				<ref local="dpageInitProvider" />
+				<ref local="jspInitProvider" />
+				<ref local="portalInitProvider" />
+				<ref local="bannerInitProvider" />
+				<ref local="myspaceInitProvider" />
+				<ref local="skinInitProvider" />
+				<ref local="policyInitProvider" />
+				<ref local="myisamKeyGenerator"/>
+			</list>
+		</property>
+	</bean>
+
+	<!-- TemplateService -->
+	<bean id="templateDAO" class="cn.vlabs.duckling.vwb.service.template.impl.TemplateDAO"
+		parent="baseDAO" />
+	<bean id="templateService"
+		class="cn.vlabs.duckling.vwb.service.template.impl.TemplateServiceImpl">
+		<property name="clbConnection" ref="clbConnection" />
+		<property name="templateDAO" ref="templateDAO" />
+		<property name="templateRoot" value="${dct.root}/WEB-INF/templates" />
+		<property name="remoteTemplateRoot" value="${dct.root}/WEB-INF/remote-templates" />
+		<property name="tempPath" value="${dct.root}/WEB-INF/temp" />
+	</bean>
+
+	<!-- SkinService -->
+	<bean id="skinDao" class="cn.vlabs.duckling.vwb.service.skin.impl.SkinDAO"
+		parent="baseDAO" />
+	<bean id="skinInClB"
+		class="cn.vlabs.duckling.vwb.service.skin.impl.RemoteSkinRepository">
+		<property name="clbConnection" ref="clbConnection" />
+	</bean>
+	<bean id="fSkinService" class="cn.vlabs.duckling.vwb.service.skin.impl.SkinServiceImpl">
+		<property name="skinDao" ref="skinDao" />
+		<property name="remoteRepository" ref="skinInClB" />
+		<property name="clbStaticBaseUrl" value="${duckling.clb.static}" />
+		<property name="sharedSkinPath" value="${dct.root}/WEB-INF/sharedSkins" />
+		<property name="siteConfig" ref="siteConfig"/>
+	</bean>
+	
+	<!-- DDL Service -->
+	<bean id="ddlSpaceDAO" class="cn.vlabs.duckling.vwb.service.ddl.DDLSpaceDAO" parent="baseDAO"/>
+	<bean id="ddlEncryptor" class="cn.vlabs.duckling.vwb.service.ddl.TokenEncryptor">
+		<constructor-arg value="${ddl.service.key}"/>
+	</bean>
+	<bean id ="ddlService" class="cn.vlabs.duckling.vwb.service.ddl.DDLServiceImpl">
+		<property name="encryptor" ref="ddlEncryptor"/>
+		<property name="teampSpaceDAO" ref="ddlSpaceDAO"/>
+		<property name="siteConfig" ref="siteConfig"/>
+		<property name="baseUrl" value="${ddl.service.api}"/>
+		<property name="cacheService" ref="cacheService"/>
+	</bean>
+</beans>

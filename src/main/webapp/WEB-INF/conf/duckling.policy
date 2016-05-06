@@ -1,0 +1,13 @@
+grant principal  cn.vlabs.duckling.vwb.service.auth.Role "All" {
+    permission  cn.vlabs.duckling.vwb.service.auth.permissions.PagePermission "*", "view"; 
+    permission  cn.vlabs.duckling.vwb.service.auth.permissions.VWBPermission "*", "login";
+    permission  cn.vlabs.duckling.vwb.service.auth.permissions.VWBPermission "*", "portlet";
+};
+
+grant principal  cn.vlabs.duckling.vwb.service.auth.Role "root.组管理员" {
+    permission  cn.vlabs.duckling.vwb.service.auth.permissions.AllPermission "*";
+};
+
+grant principal  cn.vlabs.duckling.vwb.service.auth.UserPrincipal "admin@root.umt" {
+    permission  cn.vlabs.duckling.vwb.service.auth.permissions.AllPermission "*";
+};

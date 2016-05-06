@@ -1,0 +1,41 @@
+<h2>
+会议新闻
+</h2>
+
+<p>
+ 
+</p>
+
+<ul>
+    
+<li>
+<D_Link href="65560" class="DPage" title="借力科研信息化提高国际会议服务水平">
+<span style="font-size: 13px;">
+<span style="color: rgb(128, 128, 128);">
+借力科研信息化提高国际会议服务水平
+</span>
+</span>
+</D_Link>
+</li>
+    
+<li>
+<D_Link href="65561" class="DPage" title="中科院国际会议服务平台CSP助力PRAGMA20会议">
+<span style="font-size: 13px;">
+<span style="color: rgb(128, 128, 128);">
+中科院国际 会议服务平台CSP助力PRAGMA20会议
+</span>
+</span>
+</D_Link>
+</li>
+    
+<li>
+<D_Link href="65564" class="DPage" title="中科院国际会议服务平台上线运行">
+<span style="font-size: 13px;">
+<span style="color: rgb(128, 128, 128);">
+中科院国际会 议服务平台上线运行
+</span>
+</span>
+</D_Link>
+</li>
+
+</ul>

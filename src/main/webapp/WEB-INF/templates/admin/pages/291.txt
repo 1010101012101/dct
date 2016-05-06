@@ -1,0 +1,143 @@
+<div style="border-bottom: rgb(241,240,240) 1px solid; border-left: rgb(241,240,240) 1px solid; height: auto; border-top: rgb(241,240,240) 1px solid; border-right: rgb(241,240,240) 1px solid" class="zhongxin_center_cen_right">
+
+<p style="text-align: center">
+<span style="font-size: 16px">
+<strong>
+常见问题
+</strong>
+</span>
+</p>
+
+<p style="text-align: center">
+解答用户在创建会议网站系统中遇到的各种问题
+</p>
+
+<div style="border-bottom: rgb(204,204,204) 1px solid; width: 730px; height: 2px; margin-left: 10px">
+ 
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+1、注册功能，如何开放？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+26
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：则需要配置注册费后才能看到参会代表注册页面，不然系统默认为配置不完全，注册为关闭状态。
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+2、忘记密码，如何找回？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+20
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：如果参会代表在注册会议后，忘记了登录密码，则需要点击登录界面上“忘记密码”链接，然后在    跳转页面输入邮件地址（即注册帐号）  和验证码后，系统会发一封重置密码的邮件，用户打开邮件中修   改密码的链接即可进行密码重置。
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+3、独立域名，如何设置？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+16
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：当需要设置独立域名时，首先在“网站配置”中的查看网站IP地址，然后在域名服务器上将新域名指向此IP地址后，在“网站配置”中的网   站域名处修改成新域名后保存即可。
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+4、页面设计，如何排版？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+11
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：当设计的页面需要排版对齐显示时，可以在页面中插入一张表格，分块来填写各部分内容，编辑好内容后把表格的边框设置为0，这样保存   后，既看不到表格，各部分的内容也可以分块对齐显示
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+5、页面链接，如何制作？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+8
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：如何做连接，当需要把一段文字制作成链接时，首先需要在编辑状态下，选中需要制作链接的文字，然后点击工具栏第一排的“Insert Link”来制作链接，链接的类型：1、当需要链接到一个已存在的页面，只需要输入“页面名称”后保存。2、当需要链接到一个外部链接，只需要输入链接的“URL”后保存。3、当需要制作成一个邮件链接，只需要输入“邮件地址”后保存。
+</div>
+
+<div class="ditu_1">
+
+<div class="ditu_1_l">
+6、会务邮箱，如何配置？
+</div>
+
+<div class="ditu_1_r">
+关注人数：
+<span style="color: rgb(255,102,0)">
+5
+</span>
+</div>
+
+</div>
+
+<div class="ditu_text">
+答：会务中所有邮件通知都是通过此邮箱来发送，所以请确保此邮箱是真实而且可以正常收发邮件，因为会务中涉及的邮件较多，建议参会者不要使用个人邮箱。在“会议管理”的邮件配置中配置帐号、密码、收发协议，保存即可。
+<br/>
+ 
+</div>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

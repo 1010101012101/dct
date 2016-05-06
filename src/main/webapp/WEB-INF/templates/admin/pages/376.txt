@@ -1,0 +1,43 @@
+<p style="text-align: center; ">
+<span style="font-size: 18px; ">
+<strong>
+ 国际会议服务平台试运行一年服务189个会议
+</strong>
+</span>
+</p>
+
+<p style="text-align: center; ">
+2011-12-08
+</p>
+
+<table width="90%" border="0" cellspacing="1" cellpadding="1" align="center" class="DCT_oldtable">
+    
+<tbody>
+        
+<tr>
+            
+<td>
+            
+<p>
+       中科院国际会议服务平台（CSP，
+<D_Link href="http://csp.escience.cn" target="_blank">
+http://csp.escience.cn
+</D_Link>
+）是在中国科学院国际合作局的支持下，由中科院网络中心承担建设和服务的会议管理平台。该平台基于中科院“十一•五”信息化建设专项中的研究成果Duckling（
+<D_Link href="http://duckling.escience.cn" target="_blank">
+http://duckling.escience.cn
+</D_Link>
+）协同工作环境套件研发，采用云服务的模式提供在线服务，自2010年8月提供试运行以来，已成功运行一年三个月。截止到目前为止，共有65个研究所使用，创建国际国内学术会议189个，与会人员达到14308人。
+</p>
+            
+<p>
+      自2011年3月29日开始，在中科院国际合作局的组织下，会议服务平台研讨会分别在北京分院、上海分院、广州分院、昆明分院、长春分院、沈阳分院、西安分院等各个分院展开，来自80多个研究所的200多名专业办会人员出席会议，与会人员结合各所实际情况，围绕平台功能进行了讨论，提出了具体需求和改进建议。2011年12月，中科院国际会议服务平台将发布新版，正式提供上线服务。新版CSP将全面优化软件系统功能，涵盖会议注册、在线支付、摘要提交、摘要审核、酒店预订等诸多功能，将更好的为院内各所办会人员提供便捷、高效、稳定的网站建设和会务管理信息化服务。
+</p>
+            
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>

@@ -1,0 +1,95 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<p style="text-align: center;">
+<D_Link href="65588" title="1">
+Welcome Letter from the xxxxx Committee
+</D_Link>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+On  behalf of Pacific Rim Applications and Grid Middleware Assembly  (XXXXXX) and the XXXXXX 18 Organizing Committee, it is our privilege to  invite you to the 
+<D_Link href="http://pragma18.pragma-grid.net/">
+18th XXXXXX Workshop
+</D_Link>
+,  March 3-4, 2010, in San Diego, California, USA! We are honored to host  this event, for the 3rd time (XXXXXX 1, 7, and now 18), and look forward  to welcoming our friends and colleagues from around the Pacific Rim. 
+</span>
+<font>
+<br/>
+
+</font>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+The theme of XXXXXX 18 is 
+<strong>
+Culture, Cultivation, Computing, and Collaboration
+</strong>
+,  and our meeting activities reflect these four elements: Culture in what  we hope to share, both in our social activities and in new areas where  our technologies can support a sharing of culture; Cultivation in the  activities we plan to develop with our next generation of contributors,  students, as well as developing new technologies and applications;  Computing as a means of driving forward diverse applications impacting  our lives in academic and social functions, and embracing new  technologies in a XXXXXXtic fashion; and Collaboration, the hallmark of  XXXXXX permeating through all our activities. As a particularly relevant  example, the XXXXXX 18 website is powered by the Duckling software  developed by CNIC, host of XXXXXX 6 in May, 2004.
+</span>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+<span style="color: rgb(51, 51, 51);">
+The  Program Committee has set broad objectives for this workshop, to allow  XXXXXX to explore each of the thematic elements, building upon concrete  success from XXXXXX 17 in Hanoi, and laying out plans to be carried out  before XXXXXX 19 in Changchun, Jilin, China. 
+</span>
+<span style="color: rgb(51, 51, 51);">
+In the past four and a half
+<span>
+ 
+</span>
+years  since the workshop was last hosted in San Diego, XXXXXX has continued  to expand to more than 30 institutions. It has created a new working  group on Global Earth Observation (GEO) and has built strong  collaborations with key applications: antivirals for pandemic influenza;  environmental observation in lakes; and extension of telescience  capabilities to education and new means of sharing content.
+<span>
+ 
+</span>
+At  this meeting we will continue to advance these activities, and actively  explore the role of virtualization of resources in advancing computing  and data technologies, and the role of advanced visualization in every  aspect of our activities, through diverse, cutting edge and crucial  scientific application drivers.
+</span>
+</span>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+On  March 2, a XXXXXX Institute on Implementation will include a focused  in-person collaboration to actually build and disseminate software from  the XXXXXX community. A much anticipated XXXXXX 18 reception starts in  the evening, the Eve of XXXXXX 18. The XXXXXX 18 program features  keynote speeches from Prof. Thomas DeFanti, a world expert on advanced  visualization, and from Prof. Larry Smarr, a tireless advocate of  advanced networking, computing, and visualization in modern society. On  March 5-6, a workshop follows on technologies for coral reef observation  and environmental protection.
+</span>
+<font>
+<br/>
+
+</font>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+While  attending XXXXXX 18 in San Diego we hope that you feel completely at  home, as we try our best to match the hospitality offered by earlier  hosts of XXXXXX workshops. We have planned several social and cultural  events for you to enjoy and learn more about America, well known for her  own cultural diversity. We hope that you will take the opportunity to  socialize and network with new acquaintances, and build upon those  relationships which have already been established
+</span>
+<span style="color: rgb(51, 51, 51);">
+ to sustain our collaboration. 
+<strong>
+Registration is open on January 18, 2010, and hotel reservation may be made directly with the hotel by phone or email.
+</strong>
+  We extend the warmest welcome to all, and hope that you enjoy XXXXXX  18, the associated XXXXXX Institute and the Coral Reef Workshop in San  Diego.
+</span>
+</p>
+
+<p class="MsoNormal">
+<span style="color: rgb(51, 51, 51);">
+Wilfred Li, UCSD, USA
+<br/>
+
+</span>
+<span style="color: rgb(51, 51, 51);">
+Chair, XXXXXX 18 Program Committee
+</span>
+<br/>
+
+<span style="color: rgb(51, 51, 51);">
+on behalf of the XXXXXX 18 Committee Members
+</span>
+</p>
+
+</div>
+
+</div>

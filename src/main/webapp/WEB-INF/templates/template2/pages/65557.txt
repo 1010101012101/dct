@@ -1,0 +1,13 @@
+<h1>
+<strong>
+Sponsors
+</strong>
+</h1>
+
+<p>
+<u>
+<em>
+Edit sponsors here.
+</em>
+</u>
+</p>

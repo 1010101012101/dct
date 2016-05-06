@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-config>
+	<vo>
+		<name>default</name>
+		<credence>
+			<username>dct</username>
+			<password></password>
+		</credence>
+		<config-file>WEB-INF/spaces/default.xml</config-file>
+		<service-access-point>
+			<name>CLB</name>
+			<type>CLB</type>
+			<uri></uri>
+		</service-access-point>
+		<service-access-point>
+			<name>UMT_AVLAB</name>
+			<type>UMT</type>
+			<uri>http://localhost:8080/clb</uri>
+		</service-access-point>
+	</vo>
+	<vo>
+		<name>cerc</name>
+		<credence>
+			<username>dct</username>
+			<password></password>
+		</credence>
+		<config-file>WEB-INF/spaces/default.xml</config-file>
+		<service-access-point>
+			<name>CLB</name>
+			<type>CLB</type>
+			<uri></uri>
+		</service-access-point>
+		<service-access-point>
+			<name>UMT_AVLAB</name>
+			<type>UMT</type>
+			<uri>http://localhost:8080/clb</uri>
+		</service-access-point>
+	</vo>
+	<service-type>
+		<name>CLB</name>
+		<version>1.0</version>
+		<factory-class>cn.vlabs.vwb.container.config.TestFactory</factory-class>
+	</service-type>
+</vo-config>

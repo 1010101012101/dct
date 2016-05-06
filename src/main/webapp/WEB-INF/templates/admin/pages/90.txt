@@ -1,0 +1,45 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h3>
+可否设置多个会议管理人员？如何操作？
+</h3>
+
+<p>
+答：每个会议可以拥有多个管理人员，具体操作办法如下：
+</p>
+
+<ol>
+    
+<li>
+点击页面底部 的“Conference Admin”按钮，进入会议管理系统
+</li>
+    
+<li>
+点击界面中“General  Configuration”选项
+</li>
+    
+<li>
+在页面底部“Administrators”栏目中，输入相关人员的系统注册id
+</li>
+    
+<li>
+点击添加按钮即可 
+</li>
+
+</ol>
+
+<p>
+ 
+</p>
+
+<p style="text-align: center;">
+<D_Link href="../../../page/65550" class="DPage">
+返回问题列表&gt;&gt;
+</D_Link>
+</p>
+
+</div>
+
+</div>

@@ -1,0 +1,56 @@
+<div style="border: 1px solid rgb(241, 240, 240); height: auto;" class="zhongxin_center_cen_right">
+<br/>
+
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h2 style="text-align: center;">
+<span style="color: rgb(0, 0, 255);">
+<D_Link href="65591" title="用户管理">
+用户管理
+</D_Link>
+      
+<D_Link href="65592" title="投稿管理">
+投稿管理
+</D_Link>
+      
+<D_Link href="65593" title="酒店预订管理">
+酒店预订管理
+</D_Link>
+      
+<D_Link href="65594" title="用户反馈">
+用户反馈
+</D_Link>
+      
+<D_Link href="65595" title="财务管理">
+财务管理
+</D_Link>
+ 
+</span>
+</h2>
+
+</div>
+
+</div>
+
+<br/>
+
+<p style="text-align: center;">
+<span style="font-size: 14px;">
+<strong>
+<br/>
+
+</strong>
+</span>
+</p>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

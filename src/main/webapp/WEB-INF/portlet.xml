@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at 
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed  under the  License is distributed on an "AS IS" BASIS,
+WITHOUT  WARRANTIES OR CONDITIONS  OF ANY KIND, either  express  or
+implied.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<portlet-app
+    xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+    version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+  
+  <portlet>
+    <description>AboutPortletDescription</description>
+    <portlet-name>AboutPortlet</portlet-name>
+    <display-name>About Portlet</display-name>
+    <portlet-class>org.apache.pluto.driver.portlets.AboutPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>About Apache Pluto</title>
+    </portlet-info>
+  </portlet>
+  
+    <portlet>
+        <description>Used to administer pluto pages</description>
+        <portlet-name>PlutoPageAdmin</portlet-name>
+        <display-name>Pluto Page Administration Portlet</display-name>
+        <portlet-class>org.apache.pluto.driver.portlets.PageAdminPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>HELP</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Pluto Page Administrator</title>
+        </portlet-info>
+    </portlet>   
+   <!--VWBLoginPortlet   -->
+  <portlet>
+    <description>vwb login portlet Application</description>
+    <portlet-name>VWBLoginPortlet</portlet-name>
+    <display-name>VWBLoginPortlet</display-name>
+    <portlet-class>cn.ac.ntarl.portlet.sso.portlet.LoginPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>VWB登录</title>
+    </portlet-info>
+    <expiration-cache>-1</expiration-cache>
+  </portlet>
+  
+  <filter>
+  
+    <description>
+        This filter should be applied both the JSR 286
+        test portlet as well as its helper portlet.
+    </description>
+    
+    <display-name>Wildcard Mapped Filter</display-name>
+      
+    <filter-name>WildcardMappedFilter</filter-name>
+    <filter-class>org.apache.pluto.testsuite.test.jsr286.filter.WildcardMappedFilter</filter-class>
+    
+    <lifecycle>ACTION_PHASE</lifecycle>
+    <lifecycle>RENDER_PHASE</lifecycle>
+    <lifecycle>EVENT_PHASE</lifecycle>
+    <lifecycle>RESOURCE_PHASE</lifecycle>
+  
+  </filter>
+
+  <filter>
+    
+    <description>
+        This filter implements portlet filter methods for all four
+        lifecycle phases and is used in the various portlet filter tests.
+    </description>
+    
+    <display-name>Test Portlet Filter</display-name>
+    
+    <filter-name>TestFilter</filter-name>
+    <filter-class>org.apache.pluto.testsuite.test.jsr286.filter.TestFilter</filter-class>
+  
+    <lifecycle>ACTION_PHASE</lifecycle>
+    <lifecycle>RENDER_PHASE</lifecycle>
+    <lifecycle>EVENT_PHASE</lifecycle>
+    <lifecycle>RESOURCE_PHASE</lifecycle>
+    
+  </filter>
+
+  <filter-mapping>
+    <filter-name>WildcardMappedFilter</filter-name>
+    <portlet-name>286*</portlet-name>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>TestFilter</filter-name>
+    <portlet-name>286TestPortlet</portlet-name>
+  </filter-mapping>
+
+  <!-- JSR 286 Portlet Coordination Definitions -->
+
+  <default-namespace>http://portals.apache.org/pluto/testsuite</default-namespace>
+  
+  <event-definition>
+  	<name>trigger-event-phase</name>
+  	<value-type>java.lang.String</value-type>
+  </event-definition>
+
+  <event-definition>
+    <name>event-with-simple-value</name>
+    <value-type>java.lang.String</value-type>
+  </event-definition>
+
+  <event-definition>
+    <name>event-with-complex-value</name>
+    <value-type>org.apache.pluto.testsuite.test.jsr286.event.ComposedObject</value-type>
+  </event-definition>
+  
+  <event-definition>
+  	<qname xmlns:pluto="http://portals.apache.org/pluto/altns">event-with-qname</qname>
+  	<value-type>java.lang.Integer</value-type>	
+  </event-definition>
+
+  <public-render-parameter>
+  	<identifier>public-render-param1</identifier>
+  </public-render-parameter>
+
+</portlet-app>
+
+

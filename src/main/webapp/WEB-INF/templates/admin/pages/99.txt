@@ -1,0 +1,45 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h2 style="text-align: center;">
+中科院国际会议服务平台CSP助力PRAGMA20会议
+</h2>
+
+<p>
+　 　2011年3月2日至4日，PRAGMA（Pacific Rim Applications and Grid Middleware  Assembly，环太平洋网格应用与中间件联盟）第20次工作组会议暨香港大学百周年科技大会（HKU Centennial IT  Conference）在中国香港举行。中国科学院网络中心协同工作环境研究中心南凯主任等三人参加了会议。
+<br/>
+
+<br/>
+        本次会议由香港大学主办，中科院 国际会议服务平台（以下简称CSP）为会议提供了网站支持（
+<D_Link href="http://pragma20.pragma-grid.net/">
+http://pragma20.pragma-grid.net
+</D_Link>
+  ）。在会上，协同中心刘光远以“Conference Service Platform: Architecture and  Implementation”为题做了主题演讲，介绍了CSP的主要功能、技术架构和具体实现，并演示了软件各个功能。会议期间，协同中心还展出了同名 CSP海报。日本AIST（先进工业科学技术研究所）代表下一届PRAGMA21会议主办方希望中科院网络中心能继续为会议提供会议网站支持。同时，协同 工作环境研究中心董科军副主任受邀担任PRAGMA21会议程序委员会Co-Chair。
+<br/>
+
+<br/>
+        中科院国际会议服务平台（CSP）是在中国科学院国 际合作局的支持下由中国科学院计算机网络信息中心协同工作环境研究中心研究开发，它基于中科院“十一•五”信息化建设专项中的研究成果Duckling协 同工作环境套件（
+<D_Link href="http://duckling.escience.cn/">
+http://duckling.escience.cn/
+</D_Link>
+）， 采用云服务的模式提供在线服务。用户在会议服务平台门户网站（
+<D_Link href="#">
+http://csp.escience.cn
+</D_Link>
+） 即时注册账号即可方便的创建、管理属于自己的会议网站，可以自主设计网站外观、发布会议信息、定制会议服务、管理会务信息，同时为参会人员提供了会议注 册、在线支付、摘要提交、摘要审核、酒店预订等诸多功能。
+<br/>
+
+<br/>
+        该平台从2010年8月开始提供试用，2010年12月正式发布，在中国科学院三十 多个研究所得到初步应用，已创建会议七十多个，积累用户两千余名，有效降低国际会议的建设成本，有效提高国际会议举办、管理的效率与水平。
+</p>
+
+<p style="text-align: right;">
+2011年3月7日
+<br/>
+协同工作环境研究中心
+</p>
+
+</div>
+
+</div>

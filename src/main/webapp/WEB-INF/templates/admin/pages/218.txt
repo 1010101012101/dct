@@ -1,0 +1,199 @@
+<div class="zhongxin_center_top">
+ 
+</div>
+
+<div class="zhongxin_center_cen">
+
+<div class="zhongxin_center_cen_left">
+
+<div class="left_topf">
+
+<div class="left_topf_a">
+
+<ul style="margin-top: 0px; padding-left: 0px" class="DCT_leftmenu_mutex">
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="65570" class="DPage" title="了解会议平台">
+了解会议平台
+</D_Link>
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="65571" class="DPage" title="帐号管理">
+帐号管理
+</D_Link>
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="http://csp.escience.cn/dct/page/65572">
+我要办会
+</D_Link>
+    
+<ul style="display: block">
+        
+<li>
+<D_Link href="#" class="DPage">
+创建会议
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+网站配置
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+会议信息管理
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+我组织的会议
+</D_Link>
+</li>
+    
+</ul>
+    
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="http://csp.escience.cn/dct/page/65573">
+我要参会
+</D_Link>
+    
+<ul style="display: block">
+        
+<li>
+<D_Link href="#" class="DPage">
+在线注册
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+摘要提交
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+在线支付
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="#" class="DPage">
+酒店预定
+</D_Link>
+</li>
+    
+</ul>
+    
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="http://csp.escience.cn/dct/page/65574">
+常见问题
+</D_Link>
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="http://csp.escience.cn/dct/page/65575">
+用户手册下载
+</D_Link>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="zaixian">
+
+<div class="zaixian_t">
+<D_Link href="#">
+点击在线留言
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_2">
+
+<div class="zaixian_t">
+<D_Link href="#">
+010-58812345
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_3">
+
+<div class="zaixian_t">
+<D_Link href="#">
+csp@cnic.cn
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_4">
+
+<div class="zaixian_t">
+<D_Link href="#">
+QQ群：7669910
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+</div>
+
+<div style="border-bottom: #f1f0f0 1px solid; border-left: #f1f0f0 1px solid; height: 800px; border-top: #f1f0f0 1px solid; border-right: #f1f0f0 1px solid" class="zhongxin_center_cen_right">
+
+<p>
+<span style="color: rgb(255,0,0)">
+内容建设中……
+</span>
+</p>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

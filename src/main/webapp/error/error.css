@@ -1,0 +1,72 @@
+body {
+	background: url(../images/bg1.png) repeat-x;
+}
+
+.footer {
+	background: url(../images/line.png) repeat-x;
+}
+
+.box {
+	margin-top: 15px;
+	border: 1px solid #A0A0A0;
+	background: url(../images/top_line.gif) no-repeat;
+	height: 25px;
+	color: #CC0000;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+
+.box2 {
+	padding: 1px;
+	background: url(../images/caution.png) no-repeat;
+}
+
+.box3 {
+	background: url(../images/text.png) no-repeat;
+	padding-top: 100px;
+}
+.box3 dl{
+	margin-left:100px;
+}
+
+.text {
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "宋体", "Verdana";
+	color: #CC0000;
+	line-height: 150%;
+}
+
+#shadow-container {
+	position: relative;
+	left: 3px;
+	top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+#shadow-container .shadow2,#shadow-container .shadow3,#shadow-container .container
+	{
+	position: relative;
+	left: -1px;
+	top: -1px;
+}
+
+#shadow-container .shadow1 {
+	background: #F1F0F1;
+}
+
+#shadow-container .shadow2 {
+	background: #DBDADB;
+}
+
+#shadow-container .shadow3 {
+	background: #B8B6B8;
+}
+
+#shadow-container .container {
+	background: #ffffff;
+	border: 1px solid #848284;
+	padding: 10px;
+}

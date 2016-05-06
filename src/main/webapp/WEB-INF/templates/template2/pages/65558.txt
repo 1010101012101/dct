@@ -1,0 +1,34 @@
+<h1>
+<strong>
+Call for paper
+</strong>
+</h1>
+
+<ul>
+    
+<li>
+<span style="color: rgb(255,0,0)">
+The deadline of abstract submission is 01, July
+</span>
+</li>
+    
+<li>
+Abstracts must be submitted online. Please follow the rules and guidelines before submitting your abstract.
+</li>
+    
+<li>
+Abstract will be as posts, and the Organizing Committee will select some abstracts as oral presentation.
+</li>
+    
+<li>
+Please click 
+<D_Link href="65552" class="Portal" title="CSPAbstracts">
+<span style="color: rgb(255,0,0)">
+here
+</span>
+</D_Link>
+(require login) to submit abstract.
+</li>
+
+</ul>
+

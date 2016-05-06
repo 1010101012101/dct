@@ -1,0 +1,1442 @@
+﻿
+
+                               版本更新历史
+            注：vwbconfig.properties/dct.sql/portals.xml/functions.xml文件如有变化，请在此说明！
+            ===========================================================================
+csp-dct 5.3.40
+2016-4-29 xiejj@cstnet.cn
+* 修改了在chrome下, 在一个内部内容为空格的Link中，上传新文件，只更新URL，不写入文件名，导致误以为文件没上传成功的BUG
+例：
+	<p><a href="http://ddltest.escience.cn/f/bDKP">&nbsp;</a></p>
+当光标在该链接中，Chrome下选择上传新文件时，HTML变成
+    <p><a href="http://ddltest.escience.cn/f/NEW_SHAREID">&nbsp;</a></p>
+期望是同时更新a元素内部的HTML成文件名，已避免用户误认为没有上传成功。
+
+已知BUG：
+	上传文件名带单引号的文件，会引起无法正确写入链接到页面内容中的BUG。
+	例：在<p></p> 这个段落中上传 xi'an.pdf，
+	期望的HTML是
+	<p><a href="URL_TO_FILE">xi'an.pdf</a></p>
+	实际会得到
+	<p></p>
+    
+csp-dct 5.3.39
+-------------------------------------------
+2016-3-15 xiejj@cstnet.cn
+* 修正了Chrome、Firefox下编辑器无法正确调整文字大小的BUG。
+
+  csp-dct 5.3.38
+-------------------------------------------      
+ 2016.3.10 xuzhijian
+ 1.httpclient 使用disableCookieManagement()  解除session保持
+ 2.commonheader.jsp 中加入<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+ 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+ --------------------------------------------------------
+2016年1月21日 xiejj@cstnet.cn  
+1. 修改上传附件到DDL。新增一个数据库表 vwb_ddl_space
+	CREATE TABLE `vwb_ddl_space` (
+	  `siteId` int(11) NOT NULL DEFAULT '0',
+	  `code` varchar(255) DEFAULT NULL,
+	  PRIMARY KEY (`siteId`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+	新增配置项 ddl.service.baseurl， 指向DDL API 服务的开始地址
+2. 修改编辑器的IE11兼容性
+3. 修改编辑器的附件链接按钮为从DDL选取文件
+4. 新增SiteSession变量 teamCode, token
+	teamCode为该会议对应的DDL空间名称，token为用户当前登录的token
+5. 修改配置文件，新增配置项
+############################################
+#			DDL Service Config			   #
+############################################
+ddl.service.base =  http://ddltest.escience.cn
+ddl.service.api  =  ${ddl.service.base}/api/v1
+ddl.service.key = rqlL7XdfcMvfHLeJklB85w==
+
+dct_csp 5.3.36 2015-5-28 diaozhenyong@cstnet.cn   
+1。修改下载附件，中文附件名乱码问题
+
+
+ --------------------------------------------------------
+dct_csp 5.3.35 2015-5-28 xuzhijian@cstnet.cn   
+1.添加cps接口
+修改vwbconfig.properties  修改duckling.fetch.params 改为
+duckling.fetch.params = vendor:cps_adv
+2.修改顶菜单默认模板
+
+
+
+ --------------------------------------------------------
+dct_csp 5.3.34 2015-4-8 xuzhijian@cstnet.cn              
+1.创建新会议 未发布站点-欢迎页面 联系人信息会议地点会议时间错误 bug
+
+ --------------------------------------------------------
+dct_csp 5.3.33 2015-3-10 xuzhijian@cstnet.cn              
+1.主站点csp.escience.cn 子站点a.csp.escience.cn  b.csp.escience.cn  ie内核浏览器 浏览主站点 然后会议查询点开子站点a并登陆编辑页面 然后点开b站点 则a中的权限会串到b  导致用户可编辑b站点页面
+	原因是由于ie内核浏览器会使用朱站点sessionId来访问子站点
+
+ --------------------------------------------------------
+dct_csp 5.3.32 2015-3-3 xuzhijian@cstnet.cn              
+1.修改左菜单模板去掉first announcement
+
+ --------------------------------------------------------
+dct_csp 5.3.31 2015-1-20 xuzhijian@cstnet.cn              
+1.修改底部版本号 添加"中科院国际会议服务平台"
+
+ --------------------------------------------------------
+dct_csp 5.3.30 2015-1-13 xuzhijian@cstnet.cn              
+1.更新第三套模板banner图片
+2.修改type3.jsp页面，修正宽屏banner闪动
+
+
+
+ --------------------------------------------------------
+dct_csp 5.3.29 2014-11-27 xuzhijian@cstnet.cn              
+  1.修改登录使passport界面可以根据用户选择的语言进行中英文显示
+  2.建会模板2及模板3创建会议后欢迎页信息不对，bug
+  
+
+ --------------------------------------------------------
+dct_csp 5.3.28 2014-11-27 xuzhijian@cstnet.cn              
+  1.添加首页访问来源日志，及创建会议来源日志
+  2.对应passport更新，修改登出操作
+
+ --------------------------------------------------------
+dct_csp 5.3.27 2014-10-23 xuzhijian@cstnet.cn  
+  1.UMT2LoginAction.java 中makeSSOLoginURL 去掉拼接的sid
+  2.修改DCT支持OAuth登录认证(xiejj@cstnet.cn)
+  3.更新Frmwork包，支持Https链接(xiejj@cstnet.cn)
+    修改vwbconfig.properties如下：
+	1.删除掉下面这些项
+		duckling.umt.site = http://passport.escience.cn
+		duckling.umt.login = ${duckling.umt.site}/login
+		duckling.umt.publicKey=${duckling.umt.site}/getUMTPublicKey
+		duckling.autodeploy.upload = appwars
+		duckling.autodeploy.retrycount = 20
+	2.修改如下值
+		找到 duckling.umt.ssl.site 改为 duckling.umt.site
+		oauth.umt.client_id 改为oauth.umt.client_id=63838
+		oauth.umt.client_secret 改为oauth.umt.client_secret=oqJvzNimb72J8g8fr3UkJLdc7DRol2rz
+		oauth.umt.access_token_URL 改为 oauth.umt.access_token_URL=${duckling.umt.site}/ouath2/token
+		oauth.umt.authorize_URL 改为oauth.umt.authorize_URL=${duckling.umt.site}/oauth2/authorize
+		oauth.umt.redirect_uri 改为    oauth.umt.redirect_uri=http://csp.escience.cn/dct/login
+
+	  
+  
+  --------------------------------------------------------
+dct_csp 5.3.26 2014-9-10 xuzhijian@cstnet.cn  
+1.修改404页面，新添加500页面
+2.修改皮肤上传页面bug(具体会议站点上传不了皮肤)
+  
+  dct_csp5.3.25 2014-8-25 xuzhijian@cstnet.cn
+  -----------------------------------------------------------------     
+ 1.修改相关接口，使模板与皮肤相关联，（上传皮肤界面添加下拉框当上传共享皮肤时选择该皮肤对应的模板）
+ 2.新增加两套建会模板template2
+
+ 数据库更改  dct升级.sql
+alter table vwb_skin add column forTemplate varchar(45) default 'conference';
+update vwb_skin set forTemplate='admin' where siteId=1;
+insert into vwb_properties(`strName`, `strValue`, `iSiteNum`) select distinct 'duckling.template.name','conference',iSiteNum from vwb_properties b;
+update vwb_properties set strValue='admin' where strName='duckling.template.name' and iSiteNum=1;          
+            
+            
+ 
+dct_csp5.3.24 2014-7-25 xuzhijian@cstnet.cn
+-----------------------------------------------------------------     
+1.登录框中鼠标移到人像上弹出提示"什么是中国科技网通行证"
+   修改dct 配置文件 vwbconfig.properties 文件  将oauth.umt.theme=embed 改为oauth.umt.theme=csp
+            
+dct_csp5.3.23 2014-6-17 xuzhijian@cstnet.cn
+-----------------------------------------------------------------
+1.更新memcache jar包 修改/META-INF/context.xml文件       将customConverter修改为 customConverter="de.javakaffee.web.msm.serializer.kryo.JodaDateTimeRegistration,net.duckling.serializer.CustomKryoRegistration"
+ 从http://ci.cerc.cnic.cn/job/falcon-common/ws/tomcat-msm/msmlib-1.8.1/*zip*/msmlib-1.8.1.zip 下载压缩包,
+  将tomcat目录下msmlib下jar删除并将解压后的msmlib-1.8.1.zip放入msmlib
+ 
+
+dct_csp5.3.22 2014-6-3 xuzhijian@cstnet.cn
+-----------------------------------------------------------------
+1.修改页面设置-页面权限设置-添加权限 权限树不显示bug（由于获得树数据的json未对数据进行转义）
+2.修改paypal通过页面添加form方式提交校验 如果用户手工编辑采用这种方式 提价非法不可添加
+ 
+
+dct_csp5.3.21 2014-5-20 xuzhijian@cstnet.cn
+----------------------------------------------------
+1.修改会议参数保存 数据库保存重复  且某些保存值只取第一条数据 导致读取不正确
+2.bug--由于<link rel="shortcut icon" type="image/x-icon" href="${favicon}" />  commonheader.jsp中该数据${favicon} 为空 导致页面加载完成后会重新请求一次连接
+	(详情访问http://www.cnblogs.com/pkurain/archive/2009/12/15/1624672.html)
+3.为解决启动中访问dct产生问题将tomcat 下shardedlb下pluto-container-api-2.0.2.jar  换为pluto-container-api-2.0.3.jar
+
+
+
+
+
+
+dct_csp5.3.20 2014-04-23 xuzhijian@cstnet.cn
+----------------------------------------------------
+1.新建的会议去掉底部浏览器兼容的提示"It's recommended that you access this website using IE7 or Firefox"
+
+
+dct_csp5.3.19 2014-04-1 xuzhijian@cstnet.cn
+----------------------------------------------------
+1.修改bannner 相关 添加参数 module available 以支持如果没有配置模块隐藏
+2.修改接口 添加返回oauth登录框URL
+3.vwbconfig.properties中添加oauth相关配置参数
+4.添加oauth 配置文件中添加
+#oauth-umt
+duckling.umt.ssl.site =https://passport.escience.cn
+oauth.umt.client_id=87586
+oauth.umt.client_secret=KS24P8EMkBhChxHIhGazc6WLrtrr5gUo
+oauth.umt.redirect_uri=http://csp.escience.cn/dct/receiveLoginInfo.do
+oauth.umt.access_token_URL=${duckling.umt.ssl.site}/ouath2/token
+oauth.umt.authorize_URL=${duckling.umt.ssl.site}/oauth2/authorize
+oauth.umt.scope=
+oauth.umt.theme=embed
+
+
+dct_csp5.3.18 2014-03-21 xuzhijian@cstnet.cn
+----------------------------------------------------
+1.修复banner更新 失效bug(删除掉原来bannerProvider中的本地缓存bannerCache)
+2.打开皮肤引用js
+3.删除站点备份bug
+
+
+dct_csp5.3.17 2013-09-13 xuzhijian@cstnet.cn
+----------------------------------------------------
+2013-09-4 xuzhijian@cstnet.cn
+1.修改version.jsp 修改了dct的链接为（escience.cn） 新添加csp版本链接（csp.escience.cn）
+
+
+dct5.3.16 xiejj@cstnet.cn
+
+-------------------------------------------------------------------------------------------------------------
+2013-08-08 xiejj@cstnet.cn
+* 修改了部分类的日志提供者，增加了调试日志，同时增加一个可动态切换Log Level的JSP  toggleLogLevel.jsp（只可以在本机调用）
+2013-08-07 xiejj@cstnet.cn
+* 修改了在访问不存在的页面版本的时候，抛出空指针异常的BUG。
+            
+ ------------------------------------------------------------------------------------------------------------
+ dct5.3.15 2013-6-24 xuzhijian@cstnet.cn
+-------------------------------------------------------------------------------------------------------------
+
+
+dct5.3.14 2013-04-09 xiejj@cstnet.cn
+----------------------------------------------------
+2013-04-16 xiejj@cstnet.cn
+* 修改了Version.jsp中的版本信息，改为显示CSP的版本。
+
+2013-04-11 xiejj@cstnet.cn
+* 修改了皮肤设置，现在在管理站点可以更新/删除/创建全局的皮肤。
+* 修正了修改皮肤名称以后依旧报皮肤已存在的BUG(http://svn.cerc.cnic.cn/trac/csp/ticket/1060)。
+
+2013-04-09 xiejj@cstnet.cn
+* 修改了DCT，增加了维护模式，当dct的配置文件中 duckling.readonly=true时，系统进入维护模式。系统只能浏览，不能编辑、和设置
+* 修改了全局皮肤的下载链接设置错误的BUG(http://svn.cerc.cnic.cn/trac/csp/ticket/1061)。
+
+2013-04-02 xiejj@cstnet.cn
+* 修改了皮肤的应用方案，现在用户上传的皮肤都送到CLB上，并从CLB下载使用。并增加了新的数据表
+	CREATE TABLE `vwb_skin` (
+	  `id` int(11) NOT NULL auto_increment,
+	  `siteId` int(11) NOT NULL default '0',
+	  `name` varchar(255) NOT NULL default '',
+	  `clbId` int(11) NOT NULL default '0',
+	  `space` varchar(255) default NULL,
+	  PRIMARY KEY  (`id`),
+	  UNIQUE KEY `name` (`name`,`siteId`)
+	) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+* 模板结构进行了调整，原来Skins目录下的文件，只保留包含皮肤内容的zip，并将每个zip命名成皮肤的名字。
+* 修改了模板的应用方案，现在用户新创建的模板、删除站点的备份模板都会被导入CLB。并增加了新的数据表
+	CREATE TABLE `vwb_template` (
+	  `id` int(11) NOT NULL auto_increment,
+	  `name` varchar(255) default NULL,
+	  `clbId` int(11) default NULL,
+	  `type` varchar(64) default NULL,
+	  PRIMARY KEY  (`id`),
+	  UNIQUE KEY `name` (`name`)
+	) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+* 修改了附件上传的机制，使用CLB 6.1.0版的API接口。并暂时取消了图片簿的功能。
+* 由于使用了新版的CLB，编辑时的从以前文档链接的功能，只提供最近上传的文档功能。
+* 更新了vmt api的包，以兼容新版的frmwork-0.96.jar。
+* 更新了layout.jsp以提供单点登录的功能，同时增加了extra.jsp，请将CNZZ等代码复制到这个文件中，避免更新 layout.jsp覆盖这部分代码。
+* 修正了访问某些不完整链接引起系统错误的BUG
+		http://${host}/site/1
+		http://${host}/site
+* 修改了配置文件,增加了配置项
+	duckling.clb.static =http://dev.clb.cn
+	duckling.clb.appname=csp_xiejj
+	duckling.clb.password=tesr98
+  修改了配置项
+  	duckling.clb.url成为实际使用的clb
+
+dct 5.3.13 2013-02-21 xiejj@cstnet.cn
+-------------------------------------------------
+2013-02-21 xiejj@cstnet.cn
+* 修改了欢迎页面的现实逻辑，现在只要拥有页面的编辑权限，或Portal页面的配置权限就不显示欢迎页面。
+* 整理了DCT中的权限类别
+	所有人		可以查看页面，访问Portlet
+	参会人员		可以查看页面，访问Portlet，可以使用注册以后的功能（由CSP决定）
+	会议管理人员	可以编辑页面，配置Portal页面
+	超级用户		可以访问所有功能
+* 因UMT未更新，dct5.3.12中新增的单点登录支持，暂取消。
+* 修改了当不显示Userbox时，英文/中文链接菜单失效的BUG。
+	在顶菜单加显示中文或者英文的菜单方法：在需要修改语言的菜单链接中增加 DCT_zhcn或者DCT_enus 的class即可，例：
+		<a class="DPage DCT_zhcn" href="http://bismis.csp.escience.cn/dct/page/65578">中文</a>
+		<a class="DPage DCT_enus" href="http://bismis.csp.escience.cn/dct/page/65578">中文</a>
+	
+
+dct 5.3.12 2013-01-28 xiejj@cstnet.cn
+--------------------------------------------------
+* 增加了新的单点登录的支持
+
+dct 5.3.11 xiejj@cstnet.cn
+-----------------------------------------------------
+2013-01-18 xiejj@cstnet.cn
+* 修改了Portlet的页面设置的权限，现在改为需要管理员才能修改。
+* 修改了整个系统初始化时无法正确初始化的BUG(由上次在站点初始化时添加匿名用户到社区引起）。
+* 修改了Banner的管理权限，现在要求管理员权限才能执行。
+* 创建了一个新的权限策略，在新策略下，只有 csp@root.umt,admin@root.umt才能修改系统配置，而只有VO的管理员可以编辑页面。
+
+dct 5.3.10 xiejj@cstnet.cn
+-----------------------------------------------------
+2013-01-10 xiejj@cstnet.cn
+* 修改了站点设置页面，增加了可以设置站点图标的功能(http://${host}/dct/page/5026)。
+	 注意，上传的图标必须是ico格式的，目前未作格式类型检查。
+2013-01-06 xiejj@cstnet.cn
+* 修改了IE9下，看不到编辑框里的Flash插件的BUG。
+* 修改了IE9下，在编辑状态下对页面进行编辑，点击“模板”和“工具”，弹出的选择窗口在IE9浏览器下无滚动条的BUG。
+
+2012-12-31 xiejj@cstnet.cn
+* 修改了IE9下，文件上传对话框无法使用的BUG。
+* 修改了IE下，下拉菜单无法覆盖Flash的BUG。
+
+
+dct 5.3.9 2012-12-17 xiejj@csetnet.cn
+-----------------------------------------------------
+2012-12-24 xiejj@cstnet.cn
+* 修改了图片簿的功能，现在使用浏览器端的缓存作为图片簿的功能.
+2012-12-17 xiejj@cstnet.cn
+* 更新了vmt api jar包。该包增加了一个批量查询用户身份的接口
+2012-12-11 xiejj@cstnet.cn
+* 删除了JSONSearch 工具，这部分功能已不再有用。
+
+dct 5.3.8 2012-11-22 xiejj@cstnet.cn
+-----------------------------------------------------
+2012-11-28 xiejj@cstnet.cn
+* 修改了DiffTag，以去除日志中版本号为-1时的错误信息。
+2012-11-22 xiejj@cstnet.cn
+* 修改了DCT的API接口，增加了新的域名访问接口
+2012-11-21 xiejj@cstnet.cn
+* 修改了删除站点时，如果没有sites目录下的文件会导致删除站点失败的BUG。
+2012-11-12 xiejj@cstnet.cn
+* 修改了DCT的代码，使得创建站点时，系统缺省使CLB可以支持匿名用户下载。
+
+2012-09-07 xiejj@cnic.cn
+* 修改了BUG，创建的站点，删除以后，用同样的域名再次创建，将会失败(在CSP中调用）。
+
+2012-09-03 xiejj@cnic.cn
+* 更新了API中，站点未找到时的日志信息（增加了更详细的信息）。
+
+dct 5.3.7 2012-06-08 xiejj@cnic.cn
+------------------------------------------------------
+2012-06-08 xiejj@cnic.cn
+* 更新了layout.jsp, 修正了在Firefox 12.0中无法正常显示左菜单的编辑按钮。
+  原来的代码，显示菜单使用onmousemove事件，这在firefox 12.0中不再正常工作，应替换为onmouseover事件
+
+2012-05-24 xiejj@cnic.cn
+* 更新了jsp/Search.jsp，以纠正搜索时无法支持中文的Bug
+
+dct 5.3.6 2012-05-18 xiejj@cnic.cn
+-------------------------------------------------------
+2012-05-18 xiejj@cnic.cn
+* 更新了CLB API包，并修改了调用代码。修正了，使用匿名帐号或csp@root.umt类帐号
+    （此类帐号参加了大量的社区）下载文件等待时间过长的问题。
+* 更新了Sharelib，修正了Portlet在Action操作中创建RenderURL时会携带多余参数的BUG
+
+dct 5.3.5 2012-05-10 xiejj@cnic.cn
+-------------------------------------------------------
+2012-05-10 xiejj@cnic.cn
+* 更新了UMT API 包, 同时修改了vwbconfig.properities的配置项
+	为duckling.umt.service.url=${duckling.umt.site}
+
+dct 5.3.4 (2012-05-04) xiejj@cnic.cn
+--------------------------------------------------------
+2012-05-04 xiejj@cnic.cn
+* 修改了DCT的编译环境包，使用新的Tomcat7的Servlet-api和JSP-API包
+* 修改了web.xml，指定vwb.tld的装载位置，防止在Tomcat7下，误装载错误的TLD。
+
+dct 5.3.3 (2012-04-25) xiejj@cnic.cn
+---------------------------------------------------------
+2012-04-25 xiejj@cnic.cn
+* 更新了API Jar包
+
+dct 5.3.2 (2012-04-10) xiejj@cnic.cn
+---------------------------------------------------------
+
+2012-04-10 xiejj@cnic.cn
+* 修改了Duckling-Common包中，Base64.encode方法的语义。在缺省情况下，将不再自动换行。
+  如需自动换行，请调用Baes64.String encode(byte[] pBuffer, int pOffset, int pLength,
+								int pLineSize, String pSeparator)方法。
+  该方法影响UMT的登录。
+  注意：Sharelib有改动。
+  
+dct5.3.1 (2012-03-31) by xiejj@cnic.cn
+----------------------------------------------------------
+
+2012-03-26 xiejj@cnic.cn
+* 修改了Base64Util.java，以解决有时，无法在Windows环境下，正确登录的问题。
+* 修改了Duckling的版本号至2.3
+
+dct5.3.0 (20120322) by kevin
+----------------------------------------------------------
+20120322基础环境升级（tomcat7/jdk1.7/eclipse3.7.2）
+
+2012-03-07 xiejj@cnic.cn
+* 修改了URLParser代码，解决了访问http://${host}/dct/page 这样的URL时，系统出错的Bug
+
+2012-02-24 xiejj@cnic.cn
+* 修改了PortalURL编码和解码代码，以便能正确的解释abc@xao.cn类似的参数。
+	编码算法，参数首先被URLEncode一遍。然后下面列表里的元字符被替换成右边列的编码。
+	    private static final String[][] ENCODINGS = new String[][] {
+            new String[] { "_",  "0x1" },
+            new String[] { ".",  "0x2" },
+            new String[] { "/",  "0x3" },
+            new String[] { "\r", "0x4" },
+            new String[] { "\n", "0x5" },
+            new String[] { "<",  "0x6" },
+            new String[] { ">",  "0x7" },
+            new String[] { " ",  "0x8" },
+            new String[] { "#",  "0x9" },
+            new String[] { "?",  "0xa" },
+            new String[] { "\\", "0xb" },
+            new String[] { "%",  "0xc" },
+            new String[] {"x", "0xd"}
+    };
+    出Bug的原因是0x本身没有被转义，解决办法是将0x转义成0xd，
+ 出错时的编解码过程：
+ 	abc@xao.cn->abc%40xao.cn->abc0xc40xao0x2cn 		->abc%4?o.cn   ->URLDecode的时候出错。
+  	abc@xao.cn->abc%40xao.cn->abc0xc40xdao0x2cn		->abc%40xao.cn ->abc@xao.cn
+   
+
+dct5.2.11 (20120216) by yhw
+2012-2-16 yhw
+* 修改了type3.jsp增加了三个标题的显示
+
+dct5.2.10 (20120211) by yhw
+2012-2-10 yhw
+* 修正了Banner.java类的中的logger问题，logger已经去除，该问题会影响模板导出时
+  banner.xml的内容，进而导致模板使用错误。
+* 修正了有关banner模板功能的代码，包括生成模板与应用模板
+  
+  
+dct5.2.9 (20120206) by kevin
+----------------------------------------------
+2012-2-6 yhw
+* 增加量vwbconfig.properties配置项支持csp的登录功能
+#csp login menu item on top menu
+#Begin
+duckling.csp.login = true
+#MySpace portlet pageId
+duckling.csp.loginPage=65574  
+#End
+
+
+dct 5.2.8(2012-01-16)
+---------------------------------------------------------
+2012-01-16 xiejj@cnic.cn
+* 修改了jsp/page/pageSetting.jsp，以保持对tomcat 5.5.34的兼容(JSP Tag中的属性引用内嵌的引号必须和外边的使用的形式错开)。
+	错误的例子：<fmt:message key="<%=request.getAttribute("a")%>"/> 
+	需改成<fmt:message key="${a}"/>
+	
+dct 5.2.7(2012-01-12)
+---------------------------------------------------------
+2012-01-12 yhw@cnic.cn
+* 回退了type3.jsp，的Banner方案，保证其能自适应图片高度
+
+dct 5.2.6(2012-01-12)
+----------------------------------------------------------
+2012-01-12 xiejj@cnic.cn
+* 修改了fckdialog的html，原始用的html ID  header变为de_header
+* 修改了欢迎页面的布局
+
+dct 5.2.5 (2012-01-09)
+-------------------------------------------------------
+2012-01-10 yhw@cnic.cn
+* 修改了sitePublish相关服务，增加了查询site状态的功能
+* 修改了banner service相关的类，修正banner为null的bug
+* 修改了WEB-INF/banner/jsp/type3.jsp，增加了css对title的支持
+
+2012-01-09 xiejj@cnic.cn
+* 修改了欢迎页面的风格，删除了之前的欢迎页面相关的CSS和图片
+
+dct 5.2.4 (2012-01-06)
+--------------------------------------------------------
+2012-01-05 xiejj@cnic.cn
+* 修改了欢迎页面的逻辑，在vwbconfig.properties文件中，增加了配置项welcome.ignore.list。
+   所有在这个配置项中的页面都会被跳过欢迎页面的逻辑。在配置项中的页面ID，以“:”做分隔。
+* 在全局的Css中加入了，欢迎页面的缺省CSS。   
+
+dct5.2.3 (2011-12-27)
+------------------------------------------------------------
+2011-12-27 xiejj@cnic.cn
+* 删除了自动部署的页面添加到菜单的选项。
+* 增加了新的配置项
+	plugin.root，指向插件的目录
+* 修改了参数名称
+	duckling.fetch.params
+* 在admin的创建模板里恢复了站点管理的个功能链接。
+
+dct5.2.2 (2011-12-23)
+---------------------------------------------------------
+2011-12-23 kevin
+* 修改WEB-INF\template\admin\appinfo.xml
+2011-12-22 xiejj@cnic.cn
+* 修改了新建插件的TopMenu的Html生成，直接为D_Link以避免无法随着BaseUrl修改。
+* 更新vmt的API包
+
+dct5.2.1 (2011-12-19) 
+--------------------------------------------
+2011-12-19 by xiejj@cnic.cn
+* 修正了tablesTemplate.sql。其中vwb_app_info表发生了变化，增加了新的字段。
+	CREATE TABLE `$vwb_portal_portlets` (
+	  `id` int(11) NOT NULL auto_increment,
+	  `resourceId` int(11) default NULL,
+	  `context` varchar(255) default NULL,
+	  `name` varchar(255) default NULL,
+	  PRIMARY KEY  (`id`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+* 修正了多站点的一个bug，修改了src\cn\vlabs\duckling\vwb\services\site\SiteMetaInfoProvider.java文件
+
+dct5.2.0 (2011-12-19 ) by kevin Duckling2.2
+-----------------------------------------
+2011-12-13 xiejj@cnic.cn
+* 重写了应用插件自动部署的代码，并增加了一个功能应用的DashBoard(${duckling.baseURL}/page/5030)。
+* 在配置项中增加了一项plugin.root，需要指向安装插件所需的目录
+
+2011-12-5 yhw@cnic.cn
+* skin API中的SkinItem对象增加了一个Attribute：currentSkin boolean
+
+2011-11-21 xiejj@cnic.cn
+* 给WebClipping DML插件增加了一个功能，可以将当前的用户信息以加密的方式传递到URL中。使用方法：
+	给WebClipping 增加一个参数key,输入一个24个字符的密码。
+ 	显示该插件时会在URL中增加一个经过DESede加密过的参数sig,Base64解密以后的格式是一个JSON：
+  	例：{email:'aa@cnic.cn',name:'test',timestamp:1234566}
+
+2011-11-16 xiejj@cnic.cn
+* 给VWBSite增加了一个发布状态，即站点在未发布状态下，普通用户将只能看到一个欢迎页面。
+* 该欢迎页面的ID为22
+
+2011-11-3 yhw@cnic.cn
+* 修改了数据库表vwb_banner，把dirName,leftName,middleName,rightName整合到一个复合字段bannerProfile，并
+     增加了三个字段firstTitle,secondTitle,thirdTitle也一并存储到bannerProfile，格式为json
+     
+--
+--  add three title field to banner and 
+--  assemble fileName etc. into complex field bannerProfile
+-- 
+--
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS `alterBanner` $$
+CREATE PROCEDURE `alterBanner`(dbName char(255))
+BEGIN
+
+declare _tbName,_tbSchema char(255);
+declare stopFlag int;
+
+#declare flag int;
+declare _result_cur cursor for select table_name,table_schema from information_schema.columns where  table_name like '%banner' group by table_name;
+DECLARE CONTINUE HANDLER FOR NOT FOUND set stopFlag=1;
+open _result_cur;
+repeat
+fetch _result_cur into _tbName,_tbSchema;
+
+if(_tbSchema=dbName) then
+
+set @sql = concat('alter table ',_tbName,' add column bannerProfile text');
+set @sql1 = concat('select count(*) into @flag from information_schema.columns where table_name =\'',_tbName,'\' and column_name=\'bannerProfile\'');
+prepare stmt from @sql1;
+execute stmt;
+
+if @flag <1 then
+select @flag;
+prepare stmt1 from @sql;
+execute stmt1 ;
+end if;
+
+set @upsql = concat('update ',_tbName,' set bannerProfile=concat(\'{"dirName":"\',ifnull(dirName,\'\'),\'","leftName":"\',ifnull(leftName,\'\'),\'","middleName":"\',ifnull(middleName,\'\'),\'","rightName":"\',ifnull(rightName,\'\'),\'","firstTitle":"","secondTitle":"","thirdTitle":""}\')');
+prepare stmt2 from @upsql;
+execute stmt2;
+end if;
+UNTIL stopFlag = 1
+end repeat;
+close _result_cur;
+
+END $$
+
+DELIMITER ;
+     
+
+2011-09-26 xiejj@cnic.cn
+* 修改了无法正确保存模板的Bug。
+* 修改了所有的建表SQL,删除了Drop语句，以防止系统意外删除数据表
+* 更新了Sharelib的duckling-common.jar，做升级包时，请注意
+
+2011-09-14 xiejj@cnic.cn
+* 修改动态左菜单和动态顶菜单的生效范围，修改后，动态左菜单可以在系统左菜单位置显示，也可在正文区域显示。
+
+dct5.1.35 (2011-9-8)
+---------------------------------------------------------------
+2011-09-06 xiejj@cnic.cn
+* 修改了DCT的代码，允许配置传递到Portlet的参数列表。
+	配置方式： 在vwbconfig.properties里配置参数 ducling.fetech.params = parama:paramb
+	多个参数间用:分隔。
+	获取方式:request.getSiteSession().getAttribute("vendor");
+	这个变更需要修改Sharelib.
+	
+dct5.1.34 (2011-8-31)
+---------------------------------------------------------------
+2011-08-31 xiejj@cnic.cn
+* 修改了Banner的初始化方式，在CSS中就直接定义好Banner图片的高度，避免二次调整，导致IE6,7屏幕闪动的问题。
+* 修改了顶菜单和左菜单的二级菜单在IE6，7中屏幕闪烁的问题。改动的代码包括css.css, duckling-common.js
+
+------------------------------------------------------
+dct 5.1.33 (2011-07-06)
+2011-07-06 xiejj@cnic.cn
+* 修正了，在站点挂起的情况下无法销毁的Bug。
+
+dct5.1.32 (2011-6-21)
+------------------------------------------
+2011-06-21 xiejj@cnic.cn 
+* 修改了站点销毁的逻辑：在销毁前会自动备份到WEB-INF/backup目录下。
+
+dct5.1.31 (2011.5.17)
+-----------------------------------------
+clb图片访问问题
+
+
+2011-04-08 dct5.1.29 (2011.1.6)
+-----------------------------------------
+2011-04-08
+刘光远、谢建军进行了部分修改，未纳入A1分支中。
+
+2011-01-24 diyanliang
+取消了对表结构的调整 page_order项已经从代码中移除   
+增加了 vwb:SubPage标签,可以根据用户权限和父页面ID来显示子页面列表<vwb:SubPage pageid="1(7,6,5,4,3);2"/> “;”隔开父页面 （）里面是子页面的排序顺序
+            
+2011-01-24 xiejj 需更新ShareLib !!!
+* 修改了PortletRequest，现在可以获得当前页面的ID，并调整了SiteContext，增加了构造简单URL的方法。调用方法如下：
+	request.getPageId();
+  可以使用当前的pageid构造一个简单访问的URL。调用方式：
+    SiteContext siteContext = request.getSiteSession().getSiteContext();
+    String simpleURL = siteContext.getSimpleURL(pageid, params);
+ 在SiteSession中获取其他站点的SiteContext方法：
+ 	SiteContext siteContext = request.getSiteSession().getSiteContext(siteId);
+ 	
+2011-01-20 xiejj
+* 更新了Framework包、XStream包、CLB的API包，新的Framework包升级到了0.9版本，部分提高了API调用的速度
+  同样的CLB,UMT,VMT的framework包也做了升级
+* 修改了AttachmentServlet的Cachable机制，对于已缓存的文件，不再下载完整的附件内容。
+* 修改了在多线程环境下，AttachmentService的Bug（对同一个用户创建多个CLB连接）
+* 修改了错误页面的展现方式，现在错误页面也通过layout.jsp来展现了。
+* 修改了错误页面，无法正确导航到用户设置的首页的Bug。
+* 修改了VWBDriverServlet。将该类中，需要调用获取站点首页的链接地址的地方，改为直接调用Site类的对应方法。
+  不再由VWBDriverServlet自己拼接。
+
+2010-01-17 diyanliang
+针对科技网的项目做了表结构的调整
+1、修改了userbox.jsp
+2、增加了了SubPageTag
+3、修改了表结构alter table vwb_dpage_content_info add COLUMN (page_order int(11));
+4、修复用户计数器插件的缩略图及显示名称
+
+2011-01-15 fred
+* 站点对登录但未加入站点的用户处理功能
+    判定根据站点参数vwb.site.checkuser
+   （1） vwb.site.checkuser=add   系统自动把登录但未加入站点的用户加入站点
+   （2） vwb.site.checkuser=apply 系统把登录但未加入站点的用户申请加入站点
+   （3） vwb.site.checkuser=none 或不设置该参数  系统不做任何处理
+2011-01-13 fred
+* sharelib 下的duckling-common.jar包更新
+2011-01-09 xiejj
+* 修改了Portlet的URL映射功能，现在提供简单URL映射方式。
+  原来使用标签方式创建的URL，可以通过构造简单的URL方式访问同样的功能。
+  例：http://localhost/dct/portal/65534?action=success，等同于调用标签
+	<portlet:renderURL var="success">
+		<portlet:param name="action" value="success"/>
+	</portlet:renderURL>
+  产生的URL的访问地址。
+  通过简单URL访问的地址，将会有一次重定向（简单URL只能访问RenderURL)
+  
+2010.1.7 zzb(2010.2.25补)
+* 修改Lucene索引时文件打开数过多的错误
+	
+
+dct5.1.29 (2011.1.6)
+---------------------------------------------------
+2010.01.05 fred
+* 添加记录用户访问站点个数的插件
+
+2010.12.16 zzb
+* 修改Lucene索引时没有解锁的bug
+
+
+dct5.1.28 (2010.12.16) (需要更新sharedlib)
+----------------------------------------------------
+2010.12.13 xiejj
+* 修改了logout方法，现在支持指定退出以后显示的页面
+	调用方式 site.getURL(VWBContext.PLAIN, "logout", "next=encodedURL");
+	其中encodedURL是用UTF-8编码的目标URL(你想指定的退出以后的URL)
+	最后重定向到这种方式产生的URL，就可以完成预定的功能
+* 完成了对UMT失败页面的重定向，现在应用插件可以完整的控制登录过程。
+* Portal容器增加了登录服务，调用方式是从ActionResponse中调用doLogin方法
+* 对PortalSession进行重构，PortletRequest增加了获取SiteSession服务的方法。
+  相应的PortalSession的获取方式已不再建议使用。
+* 原Portal的URLService，现在可以从PortletResponse中获取
+	例：portletResponse.getViewURL(pageid, params);
+
+2010.12.9 fred
+* API修改获取站点状态的bug
+* 添加登录后重定向到指定的地址  ，需要指定参数returnURL
+   使用例子：
+   dct的登录连接 http://127.0.0.1:8080/dct/site/1/login
+   登录成功后重定向到指定的地址http://127.0.0.1:8080/dct/site/1/page/9
+   
+   http://127.0.0.1:8080/dct/site/1/login?returnURL=http://127.0.0.1:8080/dct/site/1/page/9
+
+dct5.1.27 (2010.12.03)
+-----------------------------------------------------
+2010.12.8 xiejj
+* 修改了Portlet容器，增加了对跨Portlet的支持（需要更新Sharelib)
+  使用方法：在JSP中引入Portlet 2.0的Taglib(在更新的sharelib中可以找到）
+  portlet:renderURL增加四个参数page, context, portlet, sequence
+  同Web应用中的其他Portlet  <portlet:renderURL portlet="OtherPortletName"/>
+  跨Web应用中的其他Portlet  <portlet:renderURL portlet="OtherPortletName" context="/OtherApp"/>
+  已知页面和Portlet在页面中的需要方式
+   <portlet:renderURL portlet="OtherPortletName" context="/OtherApp" page="2502" sequence="0"/>
+2010.12.01
+*添加配置项
+duckling.umt.service.url=${duckling.umt.site}/ServiceServlet
+*支持dct注册功能
+*在functions.xml中加了5029的功能，做升级包的时候需要对functions.xml升级
+
+2010.12.1 zzb
+* 修改启动时lucene一直报空指针错的bug            
+            
+2010.11.30 xiejj
+* 由于CLB API提供了对Session的管理，DCT对相应修改代码进行了修改，删除了为了解决第一次上传的Bug，而强制加入的 login操作(AttachmentService.createDocument)。
+
+2010.11.17 xiejj
+* 修改了某些情况下，页面的权限设置无效的Bug。产生该Bug的原因是权限设置页面，没有按照继承的方式显示当前页面的权限。已修改。
+  升级程序中，应将有ACL设置的ViewPort项的acl标志位设成1
+* 修改了权限服务，如需打印权限判断的调试信息，请在conf/log4j.properties文件中将级别调成DEBUG
+
+2010.11.16 xiejj
+* 修改了附件下载时的出错处理方式，对于需要在页面中显示的内容（cachable方式访问的），直接显示没有权限。
+  对于需要下载的附件(attach方式)，如果访问者是未登录状态，将会要求用户先登录。
+* 修改了http://${domain}/site/${id}/attach/${hash}类URL方式下，如果没有权限无法正确重定向的Bug
+
+2010.11.12 kevin
+* 修改admin的默认site.properties，将默认vo从Duckling修改成VO
+
+2010.11.12 xiejj
+* 增加了一种新的附件下载方式(http://domain.name/dct/cachable)。这种方式下，附件被允许最多缓存8个小时。
+  页面上的嵌入图片，Flash，都将使用这种方式。原附件下载方式(http://domain.name/dct/attach)，将要求浏览器每次都检查附件是否更新。
+
+dct5.1.26 (2010.11.11) 需要修改sharedlib
+-------------------------------------------
+2010.11.11 xiejj
+* 修改了在多站点模式下(site/id这类URL下)，无法更新附件的Bug
+* 修改了comm-manager.js,修正了在线人员的Popup菜单无法正常工作的情况。
+* 修改了附件的缓存机制，使用Last-Modified来决定附件是否更新，解决了更新附件以后，无法看到更新内容的Bug
+
+2010.11.11 xiejj
+* 修正了用户修改了邮件通知模板无法生效的Bug
+
+2010.11.11 fred
+* 在api中添加支持传principals[]，修改sharedlib
+2010.11.11
+编辑器中的链接增加根据class切换语言栏功能，目前只支持手动录入class其中DCT_enus可以切换到英文DCT_zhcn可以切换到中文
+          
+2010.11.9  zzb
+修改linux下duckling的lucene文件读取过多的bug
+
+2010.11.09 fred
+* 在sql文件 tablesTemplate.sql中
+    1） 修改表vwb_dpage_content_info，把列change_by的长度修改为255
+    2） 修改表vwb_clb，把列change_by的长度修改为255
+2010.11.5 xiejj
+* 修改了AdminPortlet，在所有的JavaScript操作的DOM对象前加入了<portlet:namespace/>,
+  以避免因为名字空间的问题导致javascript失效
+
+dct5.1.25(2010.11.5)
+-----------------------------------------------------
+2010.11.5  xiejj
+* 修正了第一次上传图片无法正确上传的错误。
+	AttachMentServiceImpl中CreateDocument方法的 if (conn==null && !conn.login()) return;改为
+	if (conn==null) return; 
+	if (!conn.login()) return;
+2010.11.03 fred
+* 修改销毁站点bug
+* 修改VWBContainer.java 中的方法名 getAdminDoamin---->getDefaultDomain
+
+dct5.1.24(2010.11.03)
+-----------------------------------------------------
+2010.11.01 fred
+* 修改bug：应用签名次数过多出现内存溢出
+2010.10.29 fred
+* 修改bug 邮箱订阅管理中的组合条件查询无法实现
+* 修改bug 顶级页面可以设置“继承上级页面的当前位置”的选项
+* 修改bug dlog统计查询出现错误
+2010.10.28 fred
+*修改bug统计参数设置不能修改
+   在configStasticsEvents.jsp文件中 $('cmd').value = 'save'语句改成$("#cmd").val("save");
+*修改bug利用自己保存的模板创建子站点显示不正常
+   原因：由于资源的banner除了inherit,yes,no,还有使用皮肤里的banner。当保存成模板的时候，由于-2没有对应的值，都设置成no。
+         
+
+dct5.1.23(2010.10.26)
+-----------------------------------------------------
+2010.10.26
+* 更新vmt-api.jar文件
+* 删除vwbconfig.properties文件中duckling.vmt.keyCenter，duckling.vmt.api.service两个配置项
+
+dct5.1.22(2010.10.19)
+-------------------------------------------------------
+2010.10.18 fred
+* 所有模块使用cerc-cred.jar 来进行身份认证，把duckling-common.jar移除。sharedlib包需要更新
+2010.10.18 zzb
+* 修改站点参数设置时的用户社区ID设置对新umt无效
+2010.10.13 fred
+*  添加启动站点，关闭站点，查询站点状态的api接口    
+*  允许指定的ip访问dct api，指定的IP在WEB-INF/conf/accessIPs.txt中配置
+2010.10.11 xiejj
+* 为了兼容以前Plugin.jsp的功能，现在增加一个系统功能(5001)，使用方法和效果，同以前的Plugin.jsp一样。
+  使用示例: http://127.0.0.1/dct/page/5001?target=a.jsp，这将使页面中间区域显示a.jsp。
+  如需加入额外的参数，则在这个URL继续按照参数的构造规则加入即可(http://127.0.0.1/dct/page/5001?target=a.jsp&param1=a)。
+  这条修改需要在数据库表vwb_resource_info中增加一条
+  insert into vwb_resource_info(id, type,title,parent,create_time,creator)
+  values(5001,'JSP','plugin.jsp',65535,now(),'System');
+  ********************注意***********************
+  这条修改对所有的站点资源表都起作用。补丁包需要对所有的站点都执行一遍。
+  
+2010.10.9 xiejj
+* 修改了PageContent.jsp和PortletContent.jsp,在编辑模式时，更多菜单的遮盖层使用的URL.
+  修改后使用一个静态页面作遮盖层， 而不是原来的指向不存在的页面的方式。修改后，可略微缩短编辑模式下页面加载速度。
+2010.9.30 zzb
+* 修改当前时间插件为动态时间         
+
+dct5.1.21(2010.9.29)
+-----------------------------------------------------
+2010.9.29 dylan
+*DEmap增加可以自己设置图标的功能
+            
+2010.9.29 fred
+* 添加设置站点默认语言的api接口    
+2010.9.19 xiejj
+* 修改编辑页面时，第一次上传附件失败的Bug，解决方法是在AttachmentService的上传文件方法中，增加预先登录的操作
+2010.9.17
+* SimpleUploaderServer.java中恢复授权给“all”的代码，解决图片等无法访问的问题（这个问题在新的clb中需要重新考虑）
+2010.9.7 kevin
+* 整理所有默认模板的innerBanner样式，去掉absolute属性，解决IE7下banner中文字显示的bug。 
+
+dct5.1.20 (2010.9.7)
+-----------------------------------------------------
+* 调用clb、dlog等兼容新老接口两种方法。
+* API中增加销毁站点的接口
+* 在sharedlib中增加两个jar包。duckling-common.jar和bcprov-jdk15-129.jar
+* vwbconfig.properties中增加了新旧umt/vmt使用的注释性配置
+
+--------------------------------------------------------
+dct5.1.19 (Duckling版本修改为2.1)
+*去掉站点设置中的文档管理工具配置，增加“是否公开文档库”一项，
+（如果修改为公开，提交后自动在umt/vmt的相应社区中加入anonymous@root.umt用户；
+如果修改为不公开，提交后将umt/vmt中相应社区中退出anonymous@root.umt用户）。    
+2010-8-26 kevin
+增加站点首页功能，可以指定页面（包括插件页面）为站点首页。并解决当站点首页修改为其它页面后，注销时返回页面不正确的bug                      
+2010-8-24 kevin
+解决未登录状态下下载需授权文件报错的bug。
+2010-8-23 fred
+1:在dct中集成新老umt(还需调整)
+2010-8-12 fred
+增加了DCT默认语言配置功能，每一个站点的管理员均可指定用户进入该站点时的默认语言。                     
+
+dct5.1.18
+----------------------------------------------------------
+2010-8-12 dylan
+1、修复图片薄插件后缀过滤的bug
+2、修复图片薄插件没有过滤非图片文件的bug
+3、编辑器内外效果调整一致
+2010-8-11 dylan
+1、修复图片插件多站点bug
+2、Utility增加查询vodisplayname的功能
+3、解决在DE编辑器的添加附件链接功能中可能因voname和vodisplayname不一样导致的clb目录获取不到的bug。
+
+2010-8-10 dylan
+DEMap增加默认显示地图类型功能，增加鼠标右键查看属性时候根据用户定位的中心点和地图类型改变属性图的功能
+
+dct5.1.17(2010.08.09)
+-----------------------------------------------------------
+2010.8.9 dylan
+1、图片滚动插件修复过滤后缀功能。
+2、更改DEMap页面的编码为Utf-8
+3、修复DEMap的js使之支持多个地图同时显示
+
+2010.8.9 dylan
+DE编辑器增加DEMap功能，用户可以在系统参数设置里面录入google map key
+
+2010.8.6 kevin
+* 将匿名下载的anonymous connection修改成一个session共享，部分解决CLOSE_WAIT的问题。
+
+dct5.1.16(2010.08.04)
+--------------------------------------------------------------
+2010.8.3 dylan
+1、对clb到dct的数据流左缓存检查处理，如果lastUpdate与客户端Last-Modified一致,强制返回304
+2、图片薄插件以clb为存储介质
+
+2010.8.2 kevin
+在下载clb附件的servlet(CLBAttachmentServlet)中增加cache缓存时间属性，默认为1天。
+
+dct5.1.15(2010.08.02)
+-------------------------------------------------------------
+2010.7.30 dylan
+1、修复bug1997共享页面外部地址不正确的时候，系统提示不友好 
+2、配置文件中增加新内容duckling.robots=true
+3、站点参数设置中增加了keywords descriptions robots设置项
+
+2010.7.29 dylan
+1、增加图片薄插件，并在编辑器中增加按钮，使用时管理员需要在WebRoot\imagesdata下的相关站点的文件夹中建立自定义文件夹来上传图片
+用户可以通过拖拽来改变大小，可以通过设置样式名来改变样式，可以设置间隔时间，如果不设置高宽，图片会自动变化大小
+对图片下载模式调优，如果图片不更新不更新浏览器缓存
+2、修复bug 1982、 2009、 2090
+2010.7.27
+修复默认首页不为1时，自动进入portlet管理界面的bug（DCTDriverServlet）。
+
+dct5.1.14(2010.7.27)
+--------------------------------------------------------------
+2010.7.27 dylan
+1\左菜单增加互斥功能  需要使用class="DCT_leftmenu_mutex"
+2\增加配置项duckling.defaultpage  默认首页id  如果没有该项默认为1
+
+2010.7.26 dylan
+1\修复bug:
+在D.E.编辑器中增加可配置bodyid的选项，默认和浏览模式下的容器id相同(FCKConfig.ducklingbodyid='DCT_viewcontent';)
+并在编辑器外部增加div id="pagecontent",将编辑器效果元素与浏览模式下的效果元素统一，解决编辑器，和浏览模式下效果不一样的bug.
+2\左菜单默认打开效果:将需要默认打开的左菜单class设为DefaultShow即可
+     
+2010.7.23
+lib目录中删除spring相关包commons-attributes-api.jar/commons-attributes-compiler.jar/spring-beans.jar/spring-context.jar/spring-core.jar。
+
+2010.7.23 dylan
+调整为页面只有使用皮肤自带banner时候才会使用站点名称作为banner显示文字
+更新了vwbconfig.properties  删除了duckling.bannertitle属性
+
+2010.7.22 dylan
+修复编辑模式下flash挡住更多菜单的bug，并将遮罩js修改的更通用
+
+dct5.1.13(2010.7.22)
+--------------------------------------------------------------
+2010.7.22 sunp
+policy错误权限过滤
+
+2010.7.22
+修复ie7下“共享页面”功能无法使用的bug （替换原mootools tabmenu方法）
+左上角searchbox结果集改为原lucene结果集
+2010.7.21
+添加red/skyblue两个皮肤，并将“使用皮肤banner”设置为默认方式。
+2010.7.21
+1\修复ie下新建页面弹出框无法使用的bug (增加String.prototype.trim替代原有mootools的trim方法)
+2\上传附件显示不出来的bug  (将原调用mootools的wiki初始化方法变为不依赖mootools)
+          
+dct5.1.12(2010.7.20)
+--------------------------------------------------            
+2010.7.20 dylan
+统一在commonheader中加载jquery基库,去掉下列jsp中的加载的jquery基库(如有问题请及时与我联系)
+WebRoot\jsp\autodeploy\appsManager.jsp、WebRoot\jsp\page\portalsetting.jsp、WebRoot\jsp\PolicyManage.jsp
+WebRoot\jsp\SiteCreate.jsp、WebRoot\jsp\SiteManage.jsp、WebRoot\WEB-INF\fragments\admin\page\view.jsp
+WebRoot\SearchBox.jsp
+      
+2010.7.20 dylan
+1、在dct中取消加载mootools
+2、jquery自动补全增加参数keyControl:true//是否支持键盘控制 默认true;
+3、替换原mootools方法（页面设置、原自动补全bug修复）
+    mootools的String.extend(localize:)方法改为String.prototype.localize
+
+2010.7.19 fred
+* 修改api， BasedDpage类中添加author 和 lastModified属性
+
+2010.7.19 dylan
+1、jquery自动补全增加参数resultsClass:"ac_results",//显示区css 默认是ac_results
+2、替换原mootools方法（searchbox不能使用bug）
+	searchbox基础库由原来mootools改为jquery
+
+dct5.1.11(2010.7.16)
+--------------------------------------------------
+2010-7-16 fred
+* 增加API接口，可通过页面ID得到子页面列表
+
+2010-7-16 Dylan
+增加下来顶菜单功能，修改左菜单展开功能,并简化用户使用方法
+使用方法如下：
+1、用户在编辑其中编辑左菜单或者顶菜单，编辑方法和以前一样（使用列表按钮）
+2、把需要作为下拉或者展开的菜单做成下级列表（使用缩进量按钮）
+3、在最上级ul里面加上class="DCT_topmenu"或者class="DCT_leftmenu"即可
+
+2010.7.15 kevin
+* 修改default皮肤的DCT_body的宽度为1002px，以后所有皮肤宽度建议均为1002px。
+
+2010-7-15 dylan
+1、修改了做菜单效果的用例
+2、dml对A元素增加ID属性
+
+
+dct5.1.10(2010.7.15)
+-------------------------------------------------
+2010-7-14 dylan（ 此使用方法已经作废！！！）
+增加左菜单树形展开功能，使用方法如下：
+1、如果要使用该功能用户需要在skin里面增加skin.js。该js可以在skin模板中下载
+2、用户可以根据展开后的效果在编辑器中直接编辑左菜单的一级菜单二级菜单， 系统会在左菜单浏览时自动隐藏二级菜单
+3、要求一级菜单链接元素(A)的class必须为DCT_leftmenu_lvl1并且id必须以DCT_leftmenu_lvl开头，例如（DCT_leftmenu_lvl_info）
+3、要求二级菜单列表元素(UL)的class必须为DCT_leftmenu_lvl2并且id必须以DCT_leftmenu_lv2开头，并且后缀名必须与需要关联的一级菜单后缀名相同，例如（DCT_leftmenu_lv2_info）
+4、一级菜单和二级菜单可以直接用编辑器的li,ul功能完成,id和class的填写需要在编辑器源代码模式下添加
+5、用户可以在skin.css中设置一级二级左菜单的样式
+6、左菜单例子如下,用户可以直接复制这段内容到编辑器，然后调整css和文字即可:
+<ul>
+    <li>
+    <a class="DCT_leftmenu_lvl1" id="DCT_leftmenu_lvl1_test1" href="#">主菜单</a>
+    <ul id="DCT_leftmenu_lvl2_test1" class="DCT_leftmenu_lvl2">
+        <li><a href="#">子菜单1</a></li>
+        <li><a href="#">子菜单2</a></li>
+    </ul>
+    </li>
+    <li>
+    <a class="DCT_leftmenu_lvl1" id="DCT_leftmenu_lvl1_test2" href="#">主菜单2</a>
+    <ul id="DCT_leftmenu_lvl2_test2" class="DCT_leftmenu_lvl2">
+        <li><a href="#">子菜单21</a></li>
+        <li><a href="#">子菜单22</a></li>
+    </ul>
+    </li>
+</ul>
+
+2010-7-8 dylan
+修复SubDpageFilterPlugin更多不能使用，hr显示错误的bug
+
+dct5.1.9(2010.7.2)
+-------------------------------------------------
+2010-7-2
+修改API接口
+FCK返回的html里，增加了对a的class属性的类型区分，包括dpage、portal、jsp、attachment四种。
+            
+2010-6-30 kevin
+更新dpages.xml，修改Main主页，banner、左菜单等采用继承方式（实际为继承101 root页面）。
+
+dct5.1.8(2010.6.30)
+--------------------------------------------------
+2010-6-29 dylan
+1\加入banner随皮肤变化的功能（可根据站点设置，页面设置来设置是否使用该功能）
+2\站点名称作为banner文字，并链接到首页
+3\皮肤中默认banner图片名为banner.gif
+4\美工修改皮肤时候可以直接用default或者默认下载的skin.zip样例页面skin.html把banner也制作好
+5\vwbconfig.properties加入duckling.bannertitle项，请更新vwbconfig.properties
+
+2010-6-24 dylan
+DMLData多站点应用完善
+
+dct5.1.7(2010.6.23)
+--------------------------------------------------
+2010-6-17
+DMLData移植完毕
+2010-6-12
+编辑器字号修正为数字字号
+2010.6.10 sunp
+*“系统设置”内容分类整理
+*修改v5.1.6的bug若干，包括：
+1.权限设置功能验证
+2.多站点的邮件订阅通知不能发送问题
+3.参数设置和权限设置里的VO数据一致问题
+4.站点创建刷新重复提交问题
+
+dct5.1.6(2010.6.7)
+-------------------------------------------------
+2010.6.03 sunp
+*皮肤blue中的图标整合成完整图片
+*调整站点权限设置中policy preview的样式
+
+2010.6.02 sunp
+*站点管理功能批操作及操作的前台验证
+           
+2010.5.25 sunp
+*重构页面共享功能，改hash文件数据库为mysql库  
+            
+2010.5.24 fred
+* 域名重置
+* 目录插件嵌套调用bug
+*
+
+dct5.1.5(2010.5.24)
+----------------------------------------------------------------
+2010.5.24 zzb
+* 添加模板备份的功能。
+* 添加policy的修改保存功能。
+* 修改索引单线程支持多站点，在内存中维持索引文件。
+
+
+2010.5.24 xiejj
+* 修正了因为权限触发登陆的时候，丢失URL参数的Bug。但是对于表单提交的参数还是未做处理。
+  例：在编辑需要登录的系统中，未登录状态下，输入 http://${your.domain}/dct/page/1?a=edit
+  登录完成以后可以正确的返回编辑状态。
+* 修正了在线用户插件的BUG. 修改以后，可以正确的只显示当前站点的在线用户了。
+
+dct5.1.4(2010.5.21)
+----------------------------------------------------------------
+
+2010.5.23 sunp
+*duckling.policy中的默认vo名由CERC改为Duckling,与管理站点默认时建立使用vo名称相同
+*改写AclEntryImpl中的setPrincipal函数，使其可以使其可以修改principal
+*页面导出在linux下有路径问题，功能已验证
+*邮件订阅已验证。修改系统时间后需要重启，并在整点后等待1分钟。
+
+2010.5.20 sunp
+*权限检查增加editProfile(个人设置)选项
+*创建站点时站点名称的特殊字符校验
+*站点管理中的重置域名功能
+*站点管理的列显示调整
+*站点管理中操作的访问控制（根据服务器状态的不同）
+*页面共享功能debug
+
+2010.5.21 xiejj
+* 修改了layout.jsp，这样layout.jsp不再自己处理错误了，错误日志将正确的记录到日志文件中。
+* 修改了URL解析功能，现在对于含有多于'/'的URL也能正确的解析了。
+	例:http://localhost/dct//page/1
+* 增加了一个site.js, 以后在JS中拼写URL可以使用site对象完成
+	getViewURL(pageid)		返回页面浏览的URL
+	getEditURL(pageid)		返回页面编辑的URL
+	getJSPURL(jsp)			返回JSP类型的URL
+* 修改了页面权限设置中，如果使用的是site/id 的方式访问时，无法正确获取用户组的Bug.
+* 修改了OSCache的使用机制，增加了WEB-INF/conf/OSCache.properties配置文件
+* 修改了VWBContainer的查找方式，现在寻找Container不再需要ServletContext，也不会因为寻找Container产生额外的Session
+* 修改了多站点方式下，Cookie改写的规则。现在判定依据是是否为管理域名，并加入了忽略列表(VWBFilter的初始化参数中配置, 以分号做分隔)
+  忽略改写的列表为API做服务，可调用API时做一定的验证。
+  
+* 修改了系统404(页面未找到),500(系统内部错误),403(没有权限)错误时，没有正确重定向的Bug.
+	修改前：
+	系统对设有域名站点可以正确重定向回首页。
+	对于以site/id方式的访问，会把用户重定向到管理站点首页。
+	修改后:
+	现在，如果是特定站点里触发的问题，会正确的重定向回该站点的首页(不论是否以site/id方式访问)。
+	对于未知站点是哪个的访问，会重定向回管理站点首页。
+
+2010.5.20 sunp
+*Policy部分问题
+  非界面可编辑区域的权限设置不会被覆盖
+  VOGroup名称替换
+
+2010.5.20 xiejj
+* 修改了系统错误以后无法正确重定向回当前站点首页的Bug (没有权限访问，内部代码错误和页面未找到)
+
+dct5.1.3(2010.5.20)
+-------------------------------------------------
+2010.5.20 xiejj
+* 修改了页面无法删除的Bug
+* 修改了如果该页面是个人主页时无法删除的Bug
+* 删除页面权限未检查的Bug.
+
+2010.5.20 sunp
+*站点管理界面的bug：
+  国际化不完整
+  firefox表单刷新自动填充问题
+  域名存在验证和有效性ajax后台验证信息合并到同一个区域显示
+            
+2010.5.18 xiejj
+* 修改了容器代码，现在支持单域名下的多站点。例如：
+	http://${admin.domain}/dct/site/1
+	http://${admin.domain}/dct/site/2
+   可以独立登录，互不干扰对方的Session.
+   另：vwbconfig.properties中加入管理域名(duckliing.domain)
+   	任何通过管理域名的访问都只能以http://${admin.domain}/dct/site/id方式访问。
+   	管理域名将不再允许服务站点使用。
+* 修改了容器Driver, 现在如果访问是以辅助域名方式访问的情况下，系统将自动重定向到主域名方式访问。
+* 修改了vwb_email_notify表格，删除了冗余字段page_title，修改后代码将从vwb_resource_info表中读取
+	alter table vwb_email_notify drop column page_title;
+
+dct5.1.2(2010.5.17)
+----------------------------------------------
+2010.5.17 sharedlib中的SimpleAuth有变化
+
+2010.5.17 zhangkong
+* 远程站点名字修改，域名检查，资源banner更新
+* 添加创建站点日期,管理站点页面显示的站点列表以站点创建时间先后的顺序排列，修改了数据库表vwb_site
+	alter table vwb_site add column create_time datetime default NULL;
+	update vwb_site set create_time=now();
+
+2010.5.17 xiejj
+* 修改Portal容器提供的功能, 在PortalSession中，增加获取其他站点的URL(需要修改Sharelib)
+
+dct5.1.1(2010.5.15)
+---------------------------------------------
+* 修正创建站点的bug
+* 修改创建站点API
+* 修改sharedlib库
+            
+dct5.1.0(2010.5.14)
+-----------------------------------------------
+2010-5-14
+加入多站点功能包括：
+1）管理站点可创建多个服务站点。
+2）可对服务站点进行管理，包括暂停、恢复、删除等。
+3）可将某一个服务站点导出成模板，在创建新服务站点时使用。
+4）增加创建站点的API功能。
+
+2010-5.14
+实现站点userbox和searchbox可配置成是否显示（全局）。
+实现站点banner、当前位置、footer的继承属性功能，并且可以配置是否设置。
+站点的全局配置（policy文件和properties文件）实现动态配置，并增加了UI界面。
+
+2010-5-13 dylan
+保存页面时对不存在的资源id将连接地址指向本页
+           
+2010.5.10 kevin
+subdPagePlugin增加hastitle、nextpage、dateformat等参数
+
+2010.5.5 zhangkong
+sql重构
+
+2010.5.5 sunp
+1.页面共享
+a).增加配置项
+#######pdf###########
+duckling.pdf.cache = pdfcache
+b).增加jar包   Tidy.jay,core-renderer.jar,iText-2.0.8.jar,iTextAsian.jar
+2.MailService发送附件功能
+3.共享页面的DView（不包括userbox和searchbox）
+
+
+dct5.0.9(2010.5.5)
+-------------------------------------------------
+2010.4.26 sunp
+修复skin右键菜单的图标显示问题          
+            
+2010.4.24
+dDataForm跳转页面增加了自动补全的功能，并且修复了bug            
+2010.4.21 diyanliang
+DE编辑器插入编辑页面链接按钮 对dpage的操作增加了键盘控制，并且限制了显示出的title长度，并增加了了提示
+
+2010.4.21  xiejj
+* 修改了英文环境下，页面权限设置中，权限操作(Add Privileges)按钮显示不全的Bug(增加了显示宽度）
+* 修正了页面权限设置中，用户左侧的额外空白的Bug。
+* 修改了API接口定义。抽象了一个接口。
+
+dct5.0.8 (2010.4.20)
+----------------------------------------------
+2010.4.26 sunp
+portal应用自动部署功能相关配置更改：
+
+1.数据库
+DROP TABLE IF EXISTS `vwb_app_info`;
+CREATE TABLE `vwb_app_info` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `context` varchar(45) NOT NULL,
+  `description` text NOT NULL,
+  `issys` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `vwb_app_map`;
+CREATE TABLE `vwb_app_map` (
+  `resourceId` int(10) unsigned NOT NULL,
+  `context` varchar(45) NOT NULL,
+  `pageId` varchar(45) NOT NULL,
+  PRIMARY KEY  (`resourceId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `vwb_app_info` (`id`,`context`,`description`,`issys`) VALUES 
+ (1,'/dct','应用插件管理',1),
+ (2,'/clb','文档库插件',0);
+ 
+升级包注意：
+INSERT INTO `vwb_resource_info` (`id`,`type`,`title`,`trail`,`parent`,`left_menu`,`top_menu`,`footer`,`banner`,`create_time`,`creator`,`acl`) VALUES 
+ (5023,'JSP','应用自动部署',-1,65535,0,0,0,0,'2010-04-26 15:44:51','System',0);
+
+2.配置文件
+#######autodeploy###########
+duckling.autodeploy.upload = appwars
+duckling.autodeploy.retrycount = 20
+
+2010.4.20 sunp
+portal应用自动部署数据不一致及部署异常完善等bug            
+
+2010.4.20 xiejj
+* (Bug 1500)修改了页面当前位置显示，现在，显示第一级和最后四级路径，其余部分被省略。
+  以前 前四级和最后一级路径被显示。
+
+2010-4-19 diyanliang
+1、对被flash挡住的更多菜单的做了处理
+2、编辑器中增加了Protal链接添加功能
+
+dct5.0.7 (2010.4.19)
+----------------------------------------------
+2010-4-16 diyanliang
+1修复bug 带form及DML数据集的页面预览后显示错乱，点击“保存并退出”系统提示错误
+2修复bug 带form及DML数据集的页面，预览后继续编辑DML数据集丢失
+3修复bug多人编辑同一页面或页面自动备份，冲突编辑及恢复备份内容时系统显示若干代码提示
+4修复bug页面自动备份后，用户再次编辑页面，系统显示用户上次编辑内容的时间不正确
+2010.4.16 zhangkong
+* 编辑模式下对portal页面的设置
+2010.4.16 sunp
+portal应用自动部署
+
+dct5.0.6
+-------------------------------------------
+2010.4.15 zhangkong
+portal页面设置
+2010.4.14 diyanliang
+1、修改了编辑器链接部分的文字描述
+2、修改自动保存和用户主动保存状态下对dData建表的处理
+2010.4.14 xiejj
+* 修改了Pluto容器，保证在ResourceURL的情况下，不在保留以前浏览的参数信息。
+* 修改Portal容器，增加对旧接口获取社区信息的兼容。这个接口将在下个版本中移除。 
+
+2010 4.13 diyanliang
+1、Dml中不保留 title
+2、清除ext的s.gif
+3、修复ducklinglink里面的自动查询显示内容
+4、skin中加入dml_rs默认样式
+5、Dml保存时候修复某些情况下ie浏览器产生的连接错误
+
+2010.4.13 zhangkong
+* 修改可不设置dlog的记录
+* 编辑添加页面时，自动补全选中显示去掉id
+
+2010.4.13 xiejj
+* 增加了对旧页面模式的兼容，增加了Wiki.jsp，现在可以继续使用Wiki.jsp?page=${page_name}的方式访问升级前创建的页面。
+* 修改了在使用固定宽度的Banner时，容易出现导航栏不显示的Bug.
+* 修改了BaseURL读取规则，现在系统的URL不会出现多于的斜杠(例：http://wiki.cerc.cnic.cn/dct//page/1);
+
+2010 4.12 diyanliang
+编辑器中增加了下方提交按钮      
+2010.4.9 张孔
+修改个人主页，创建个人主页的时候，如果个人主页资源不存在就创建，否则不创建
+2010.4.9 sunp
+vwb_email_notify和vwb_resource_info左连接查询，解决pageTitle不一致问题
+2010.4.8 张孔
+修改dlog，可以更新dctdlog.jar的传送
+dct5.0.5
+----------------------------------------------
+2010.4.7 xiejj
+* 修改了cn.vlabs.duckling.dct.common.UserNameUtil类，对Username为空的情况做了特殊处理。
+* 修改了Policy文件解析的代码，现在除了空格符以外，还支持\n\t\f\r作为Policy文件的分隔符。
+* 修改了VOtree.jsp的访问方式，现在的访问方式为page/id?a=share&method=showVO
+* 修改了LinkTag.java 在多参数的情况下，无法正确拼接URL的问题
+
+
+dct5.0.4
+------------------------------------
+ 2010.4.2 zhangkong
+* 修改：删除dpage的时候不删除资源，只删除原信息
+* 修改：个人主页bug
+* 修改：页面的banner，left，top等原信息继承性的修改
+2010.4.2 xiejj
+* 修改了最近更新插件, 对于没有父页面的附件，也可以正常显示。
+* 修改了default/skin.css, 修正了IE下, 顶层用户栏(UserBox), 显示不正常的问题。
+2010.4.2 diyanliang
+1、插件名称修改
+2、修复了上传附件链接在报错后出错的bug
+
+dct5.0.3
+------------------------------------
+2010-4-2 sunp
+1.邮件订阅问题修复，已验证（今后测试时，请在修改系统时间后，重启服务器）
+2.dData系统配置管理页面移植
+3.dLog 分页查询bug
+4.附件上传用户授权bug
+
+2010-4-2 diyanliang
+1、dData已经整合到dct开源项目中
+2、修复在编辑器模式下 左菜单的插件只显示图片的Bug
+3、修复了恢复版本时候有 插件消失的bug
+4、修复模板中链接的错误
+5、上传附件签名问题已经解决(柯勇)
+6、baseurl 的路径由 http://yoururl/dct/page改为http://yoururl/dct/
+2010.4.1 xiejj
+* 修改了Configmenu.jsp, 修改了其中图片的指向，解决图片未找到问题。
+* 修改了DPageServiceImpl.java的getDpageVersionContent方法，对于版本号小于1(版本号永远大于等于1)的，直接返回null.
+* 修改了PageContent.jsp 增加了对当前页面存在与否的检查(vwb:PageExists)。
+* 修改了VWBSession的初始化代码，现在不再向Portal容器中注入未登录状态下的Principal.
+* 修改了UserBox.jsp，浏览模式/编辑模式的切换按钮，将只出现在页面浏览和Portlet浏览的时候。
+* 修改了TriaditionalDiffProvider类，给该类的查询语句加了前缀。以后将内容查询委托给DPage相关的功能。
+* 修改了ViewPort类，增加了isInherit判断。并修正了ViewportService中，getMappedView无法正确获得父页面的Trail设置的Bug
+
+dct5.0.2
+------------------------------------------------
+
+
+
+2010.3.31 sunp
+修改了vwb_email_notify表的resourceId字段为Varchar类型。
+
+
+       
+2010-3-25 diyanliang	
+提交个人主页代码
+添加vwb_my_space数据库表,更新代码的同志需要记得更新数据库
+dct5.0.1                  
+-----------------------------------------------
+恢复了dlog功能
+增加了供其他模块或插件使用的API
+
+2010-3-25
+修改了编辑器中上传附件取消以后链接不消失的bug
+2010-3-22 xiejj
+数据库表名修改：
+	修改resource_info表为vwb_resource_info
+	修改dpage_content_info表为vwb_dpage_content_info
+	修改dct_clb表位 vwb_clb
+修改Config.java类的Bug，现在配置项中，可以支持多个变量(例：${duckling.umt.site}/index.jsp?vo=${duckling.umt.vo})。
+修改注销链接中(http://localhost/dct/logout?null)多于的(?null)。
+
+Duckling2.0
+-------------------------------------------------
+dct/clb/umt/dlog版本均为5.0.0
+
+2010-2-25 diyanliang	
+提交dPageRender相关代码
+                         
+2010-2-24 diyanliang	
+提交Dml解析代码及dData代码
+
+2010-2-4 fred
+添加了treeviewprovider的实现
+
+2010-2-4 kevin
+增加了默认的page信息，并用ResourceID替换。（但未转化为DML格式）
+
+2010-2-4 zzb
+增加VWB容器中相关权限判断逻辑，提供AuthorizationService的实现
+
+2010-2-3 zzb
+增加policy文件解析模块
+
+2010-2-3 sunp
+clb服务重构
+
+2010-2-2 fred
+dlog服务重构，umt服务部分重构
+
+2010-2-2 Yong Ke
+增加配置文件信息模块
+增加I18n资源管理模块
+
+2010-2-2 xiejj
+增加AbstractService,如需要配置文件的，请从该类继承。
+修改了Config，取消了单例模式
+           
+2010-02-01 kevin
+初始化changelog

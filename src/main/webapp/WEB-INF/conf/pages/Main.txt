@@ -1,0 +1,201 @@
+﻿<div style="text-align: center;">
+ 
+</div>
+
+<div style="text-align: center;">
+<span style="color: rgb(255, 0, 0);">
+<span style="font-size: medium;">
+<b>
+欢迎使用基于Duckling的实验室协作系统(dLab)
+</b>
+</span>
+</span>
+<span style="color: rgb(255, 0, 0);">
+<span style="font-size: medium;">
+<b>
+！
+</b>
+</span>
+</span>
+<span style="font-size: medium;">
+<b>
+ 
+</b>
+</span>
+</div>
+
+<blockquote style="background-color: #EFEFEF;">
+
+<h3>
+<span style="font-size: 12px;">
+       dLab(Duckling Laboratory)实验室协作系统是一个面向科研活动的、满足中小团队高效工作的实验室协同工作与交流管理平台，可满足实验室日常科研的活动组织、知识管理、团队日程管理、项目任务管理、WEB短信服务、科研成果管理、科研数据采集及管理的科研工具集合。该系统基于
+</span>
+<D_Link href="http://duckling.escience.cn" target="_blank">
+<span style="font-size: 12px;">
+协同工作环境开源软件Duckling
+</span>
+</D_Link>
+<span style="font-size: 12px;">
+开发。
+</span>
+</h3>
+
+</blockquote>
+
+<h2>
+基本设置三部曲：
+<span style="font-size: 14px;">
+ 
+</span>
+</h2>
+
+<p>
+<span style="font-size: 14px;">
+1、页面在线编辑 
+</span>
+</p>
+
+<p>
+<span style="font-size: 14px;">
+       dLab提供了在线所见即所得编辑器，系统中的所有页面，包括顶菜单、左菜单等，均可以通过编辑器实现内容编辑和实时发布，您可以点击
+</span>
+<span style="font-size: 14px;">
+屏幕右上方链接
+</span>
+<span style="font-size: 14px;">
+进入
+</span>
+<D_Link href="baseurl://page/1?m=1" class="DPage">
+<span style="font-size: 16px;">
+编辑模式
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+。常用操作包括：
+</span>
+<D_Link href="baseurl://page/1?a=edit" class="DPage">
+<span style="font-size: 16px;">
+编辑本页面
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+，
+</span>
+<D_Link href="baseurl://page/3?a=edit" class="DPage">
+<span style="font-size: 16px;">
+编辑顶菜单
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+，
+</span>
+<D_Link href="baseurl://page/2?a=edit" class="DPage">
+<span style="font-size: 16px;">
+编辑左菜单
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+，
+</span>
+<D_Link href="baseurl://page/4?a=edit" class="DPage">
+<span style="font-size: 16px;">
+编辑页脚
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+ 等。
+</span>
+</p>
+
+<p>
+<span style="font-size: 14px;">
+2、网站基本设置 
+</span>
+</p>
+
+<p>
+<span style="font-size: 14px;">
+       
+</span>
+<span style="font-size: 14px;">
+网站右上角菜单栏的“设置”入口提供了网站的基本设置功能，包括网站皮肤设置、banner设置、插件管理等。常用操作包括：
+<D_Link href="baseurl://page/5006">
+<span style="font-size: 16px;">
+站点名修改
+</span>
+</D_Link>
+，
+</span>
+<D_Link href="baseurl://page/5030">
+<span style="font-size: 16px;">
+插件浏览
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+，
+</span>
+<D_Link href="baseurl://page/5015">
+<span style="font-size: 16px;">
+设置总入口
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+ 等。
+</span>
+<span style="font-size: 14px;">
+<br/>
+
+</span>
+</p>
+
+<p>
+<span style="font-size: 14px;">
+3、用户认证管理 
+</span>
+</p>
+
+<p>
+<span style="font-size: 14px;">
+       dLab的用户是由协同工作环境Duckling中的用户管理系统来完成统一身份认证。如果您是管理员，可以通过首页右上方的“
+</span>
+<D_Link href="baseurl://../vmt">
+<span style="font-size: 16px;">
+我的账户
+</span>
+</D_Link>
+<span style="font-size: 14px;">
+”进入，然后进入我所在社区实现对社区用户的管理。
+</span>
+</p>
+
+<p>
+ 
+</p>
+
+<hr/>
+
+<div>
+<span style="font-size: smaller;">
+【
+</span>
+<span style="font-size: smaller;">
+<b>
+更多问题请联系Duckling支持服务：010-58812345 
+</b>
+</span>
+<b>
+<span style="font-size: smaller;">
+<D_Link href="mailto:vlab@cnic.cn?subject=Duckling User Question" class="external">
+vlab@cnic.cn
+</D_Link>
+<img class="outlink" src="/dct/images/out.png"/>
+</span>
+</b>
+<span style="font-size: smaller;">
+】
+</span>
+<span style="font-size: smaller;">
+<br/>
+
+</span>
+</div>

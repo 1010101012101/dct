@@ -1,0 +1,49 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h3>
+如何进行参会人员摘要提交的选项设置？
+</h3>
+
+<p>
+答：首先应用管理员帐号登陆网站，点击页面底部的 “Conference Admin”按钮，在会议的摘要配置里面可以设置以下几项：
+</p>
+
+<ol>
+    
+<li>
+设置提交摘要的起止日期
+</li>
+    
+<li>
+设置摘要是否需要 全文、关键字等
+</li>
+    
+<li>
+设置摘要提交模式：文本模式、附件模式
+</li>
+    
+<li>
+设置摘要导出时的页面布局
+</li>
+    
+<li>
+设置摘要的分类和投递意向
+</li>
+
+</ol>
+
+<p>
+ 
+</p>
+
+<p style="text-align: center;">
+<D_Link href="../../../page/65550" class="DPage">
+返回问题列表&gt;&gt;
+</D_Link>
+</p>
+
+</div>
+
+</div>

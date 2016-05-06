@@ -1,0 +1,106 @@
+<p>
+<span style="font-family: Arial;">
+<span style="font-size: medium;">
+<span>
+<strong>
+Accommodation
+</strong>
+</span>
+</span>
+</span>
+</p>
+
+<table width="98%" border="0" cellspacing="1" cellpadding="1" class="DCT_oldtable">
+    
+<tbody>
+        
+<tr>
+            
+<td class="header">
+            
+<p>
+<span style="font-size: 14px;">
+<span style="font-family: Arial;">
+<span>
+The meeting will be held at the 
+</span>
+</span>
+</span>
+<span style="color: rgb(0, 0, 255);">
+<span style="font-family: Arial;">
+<span style="font-family: Arial;">
+<span style="font-size: 14px;">
+Beijing Hotel
+</span>
+</span>
+</span>
+</span>
+<span style="font-size: 14px;">
+<span style="font-family: Arial;">
+<span>
+, 
+</span>
+</span>
+</span>
+<span>
+<span style="font-size: 14px;">
+<span style="font-family: Arial;">
+Guangzhou
+</span>
+<span style="font-family: Arial;">
+.
+</span>
+<span style="font-family: Arial;">
+The local organizing committee
+</span>
+</span>
+</span>
+<span style="font-size: 14px;">
+<span style="font-family: Arial;">
+<span>
+ has negotiated a preferential rate  for the rooms. 
+</span>
+</span>
+</span>
+</p>
+            
+<p>
+<span style="font-size: 14px;">
+<span style="font-family: Arial;">
+<span>
+If you need our staff to make a reservation for you, please submit your 
+</span>
+</span>
+</span>
+<span style="color: rgb(0, 0, 255);">
+<span style="font-family: Arial;">
+<D_Link href="65553" class="Portal" title="CSPHotel">
+<span style="color: rgb(0, 0, 255);">
+Hotel Reservation Form 
+</span>
+</D_Link>
+</span>
+</span>
+<span style="font-family: Arial;">
+<span style="font-size: 14px;">
+<span>
+<span style="font-family: Arial;">
+(require log in) before
+</span>
+ September 30, 2010. 
+</span>
+</span>
+</span>
+</p>
+            
+</td>
+            
+<td class="header">
+<img src="http://asiaflux2010.csp.escience.cn/dct/attach/Y2xiOmNsYjpqcGc6NTQ2" height="158" width="236"/>
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="patch" default="pack" basedir=".">
+	<target name="pack">
+		<mkdir dir="jar"/>
+		<jar destfile="jar/duckling-license.jar">
+			<fileset dir="WebRoot/WEB-INF/classes">
+				<include name="cn/vlabs/duckling/license/**"/>
+			</fileset>
+			<manifest>
+			    <attribute name="Main-Class" value="cn.vlabs.duckling.license.LicenseUtil"/>
+				<attribute name="Class-Path" value="cerc-utils-0.1.jar"/>
+			</manifest>
+		</jar>
+	</target>
+</project>

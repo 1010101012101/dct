@@ -1,0 +1,274 @@
+<div class="csp_body">
+
+<div class="csp_flash">
+<embed  src="/dct/flash/conf_show.swf" height="189" width="965" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+</embed >
+</div>
+
+<div class="csp_jinqi_huiyi">
+
+<div id="con02">
+
+<div class="tagContent02  selectTag02" id="tagContent020">
+<D_plugin src="$baseurlscripts/fckeditor/editor/images/pluginimages/WebClipping_big.gif" >
+<D_parameter frameborder="0"/>
+<D_parameter width="613"/>
+<D_parameter height="280"/>
+<D_parameter url="http://csp.escience.cn/csp/pages/indexconflist.jsp"/>
+<D_parameter name="WebClipping"/>
+</D_plugin>
+</div>
+
+</div>
+
+<div class="csp_jinqi_huiyi_r">
+
+<div class="csp_notice_line">
+
+<div class="csp_notice_Title">
+<strong>
+通知公告
+</strong>
+                                 
+<D_Link href="65608" class="DPage" title="通知公告">
+ 更多
+</D_Link>
+</div>
+
+<div class="csp_notice_Content">
+
+<ul>
+    
+<li>
+<span style="color: rgb(0,0,0)">
+祝会议服务平台的用户春节快乐！感谢支持!
+</span>
+</li>
+    
+<li>
+<font color="#6b6b6b">
+<span style="font-size: 12px">
+<D_Link href="65612" class="Portal" title="newApplyconf">
+<span style="color: rgb(255,0,0)">
+<strong>
+中科院国际会议服务平台1.3版本发布！
+</strong>
+</span>
+</D_Link>
+<br/>
+    
+</span>
+</font>
+</li>
+    
+<li>
+<D_Link href="65607" class="DPage" title="国际会议服务平台试运行一年服务189个会议">
+中科院会议服务平台试运行一年服务189个会议
+</D_Link>
+</li>
+    
+<li>
+<D_Link href="65609" class="DPage" title="中科院国际会议服务平台研讨会成功召开">
+中科院国际会议服务平台研讨会成功召开
+</D_Link>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guanggao">
+
+<div class="guanggao_1">
+<D_Link href="http://iubs.csp.escience.cn" target="_blank">
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=14897" height="98" width="175"/>
+</D_Link>
+</div>
+
+<div class="guanggao_2">
+<D_Link href="http://issp2012.csp.escience.cn" target="_blank">
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=14898" height="98" width="163"/>
+</D_Link>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="csp_liouchang">
+
+<div class="csp_liouchang_1">
+ 
+</div>
+
+<div class="csp_liouchang_2">
+帐号注册
+</div>
+
+<div class="csp_liouchang_3">
+填写会议信息自动建站
+</div>
+
+<div class="csp_liouchang_5">
+
+<div class="csp_liouchang_5_l">
+发布会议信息
+</div>
+
+<div class="csp_liouchang_5_r">
+配置会议网站
+</div>
+
+</div>
+
+<div class="csp_liouchang_6">
+申请发布会议/等待审批
+</div>
+
+<div class="csp_liouchang_7">
+会议网站发布
+</div>
+
+<div class="csp_liouchang_8">
+管理会议信息
+</div>
+
+</div>
+
+<div class="csp_gongnong">
+
+<div class="csp_gongnong_biao">
+<strong>
+功能介绍
+</strong>
+</div>
+
+<div class="csp_gongnong_neir">
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_1">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+一键式创建会议网站
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+登录会议服务平台，填写会议基本信息，便能够智能创建会议网站，享受“云服务”在线会议系统的高效便捷。
+</span>
+</div>
+
+</div>
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_2">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+服务会议全周期，灵活定制
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+提供全周期的会议网站系统完美解决方案，包括在线注册、提交摘要、在线审稿、酒店预订、旅游和社会活动、在线支付等会议管理的完整流程，并提供丰富的网站个性化定制功能
+</span>
+</div>
+
+</div>
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_3">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+轻松发布会议信息
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+不需要复杂的网页语言，只要会使用Word，您就可以随时更新会议网站的文字、图片、附件、视频。
+</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="csp_gongnong_neir">
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_4">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+流程化的在线审稿
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+分配评审专家 &gt; 专家在线审稿 &gt; 参会代表在线查询结果 &gt; 管理员实时掌握评审进度。
+</span>
+</div>
+
+</div>
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_5">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+自定义的会议通知和反馈
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+定制的会议通知和反馈模板，让您自由选择发送通知的邮件内容，及时有效的邮件系统让您和参会者时时保持畅通交流。
+</span>
+</div>
+
+</div>
+
+<div class="csp_gongnong_neir_1">
+
+<div class="csp_gongnong_tu_6">
+ 
+</div>
+
+<div class="csp_gongnong_font">
+<span style="font-weight: bold">
+安全快速的支付方式
+</span>
+<br/>
+
+<span style="color: rgb(123,123,123)">
+会议支付支持信用卡、银行卡在线即时支付；也提供银行汇款、邮政汇款等离线支付方式，支付完成发送确认通知，保证您的支付安全。
+</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>

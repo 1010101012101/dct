@@ -1,0 +1,27 @@
+<div id="pagecontent">
+
+<div id="DCT_viewcontent">
+
+<h3>
+如何进行参会人员酒店预订的选项设置？
+</h3>
+
+<p>
+答：首先应用管理员帐号登陆网站，点击页面底部的 “Conference Admin”按钮，在会议的酒店预定配置里面可以设置以下几项：
+<br/>
+1.设置酒店预定的起止日期。
+<br/>
+2.设置酒店预定 开放状态。
+<br/>
+3.添加酒店相关信息(包括酒店标准、房型、价格、数量等)。
+</p>
+
+</div>
+
+</div>
+
+<p style="text-align: center;">
+<D_Link href="../../../page/65550">
+返回问题列表&gt;&gt;
+</D_Link>
+</p>

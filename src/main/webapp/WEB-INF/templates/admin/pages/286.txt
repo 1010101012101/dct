@@ -1,0 +1,62 @@
+<div style="border-bottom: rgb(241,240,240) 1px solid; border-left: rgb(241,240,240) 1px solid; height: auto; border-top: rgb(241,240,240) 1px solid; border-right: rgb(241,240,240) 1px solid" class="zhongxin_center_cen_right">
+
+<h1 style="text-align: center">
+用户登录
+</h1>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第一步：
+</strong>
+</span>
+</span>
+<span style="color: rgb(0,0,0)">
+<span style="font-size: 14px">
+<strong>
+找到登录入口
+</strong>
+</span>
+</span>
+</h4>
+
+<p style="text-align: center">
+ 
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=11825" height="200" width="700"/>
+</p>
+
+<p>
+ 
+</p>
+
+<h4>
+<span style="color: rgb(0,0,255)">
+<span style="font-size: 14px">
+<strong>
+第二步：
+</strong>
+</span>
+</span>
+填写帐号密码，
+<span style="font-size: 14px">
+<strong>
+完成登录
+</strong>
+</span>
+</h4>
+
+<p style="text-align: center">
+ 
+<img src="http://clb.csp.escience.cn/getCachedDocument.do?docid=11822" height="380" width="700"/>
+</p>
+
+</div>
+
+<div class="clear">
+ 
+</div>
+
+<div class="zhongxin_center_bottom">
+ 
+</div>

@@ -1,0 +1,121 @@
+<div class="zhongxin_center_cen_left">
+
+<div class="left_topf">
+
+<div class="left_topf_a">
+
+<ul style="margin-top: 0px; padding-left: 0px !important" class="DCT_leftmenu">
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+帐号管理    
+<ul style="padding-left: 1px !important; display: block">
+        
+<li>
+<D_Link href="65571" class="DPage" title="帐号管理">
+帐号注册
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="65579" class="DPage" title="用户登录">
+用户登录
+</D_Link>
+</li>
+        
+<li>
+<D_Link href="65580" class="DPage" title="找回密码">
+找回密码
+</D_Link>
+</li>
+    
+</ul>
+    
+</li>
+      
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+我要参会      
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="65574" class="DPage" title="常见问题">
+常见问题
+</D_Link>
+</li>
+    
+<li style="list-style-type: none; padding-left: 0px; background: none transparent scroll repeat 0% 0%">
+<D_Link href="65575" class="DPage" title="用户手册下载">
+用户手册下载
+</D_Link>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="zaixian">
+
+<div class="zaixian_t">
+<D_Link href="#">
+点击在线留言
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_2">
+
+<div class="zaixian_t">
+<D_Link href="#">
+010-58812345
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_3">
+
+<div class="zaixian_t">
+<D_Link href="#">
+csp@cnic.cn
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+<div class="zaixian_4">
+
+<div class="zaixian_t">
+<D_Link href="#">
+QQ群：7669910
+</D_Link>
+</div>
+
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+
+</div>
+
+</div>

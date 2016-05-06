@@ -1,0 +1,144 @@
+<div class="block-top">
+ 
+</div>
+
+<div class="block-body" id="click">
+
+<div style="background-color: rgb(247, 247, 247); width: 99%; margin-left: 5px;" class="anniu_d">
+
+<div class="anniu">
+
+<div class="anniu_1">
+<D_Link href="9" class="DPage" title="如何创建会议？">
+操作指南
+</D_Link>
+</div>
+
+<div class="anniu_2">
+<D_Link href="65550" class="DPage" title="常见问题">
+常见问题
+</D_Link>
+</div>
+
+<div class="anniu_3">
+<D_Link href="65565" class="DPage" title="用户手册">
+用户手册
+</D_Link>
+</div>
+
+<div class="anniu_4">
+<D_Link href="65565" class="DPage" title="用户手册">
+交流讨论
+</D_Link>
+</div>
+
+</div>
+
+</div>
+
+<h1 style="text-align: center;">
+<span style="color: rgb(0, 0, 0);">
+常见问题解答
+</span>
+</h1>
+
+<p style="text-align: center;">
+<span style="color: rgb(0, 0, 0);">
+解答用户在创建会议网站系统中遇到的各种问题
+</span>
+</p>
+
+<div style="width: 99%; margin-bottom: 10px; margin-left: 5px; border-top: 1px solid rgb(204, 204, 204);">
+ 
+</div>
+
+<table width="950" border="0" cellspacing="1" cellpadding="1" align="center" class="DCT_oldtable">
+    
+<tbody>
+        
+<tr>
+            
+<td class="header" valign="top">
+            
+<p style="font-size: 1.2em;">
+<strong>
+会议创建与帐号管理
+</strong>
+</p>
+            
+<ol>
+                
+<li>
+、关于注册开放，如果在注册配置时选择收费，则需要配置注册费后才能看到参会代表注册页面，不然系统默认为配置不完全，注册为关闭状态。
+</li>
+                
+<li>
+忘记密码，如何找回：如果参会代表在注册会议后，忘记了登录密码，则需要点击登录界面上“忘记密码”链接，然后在跳转页面输入邮件地址（即注册帐号）和验证码后，系统会发一封重置密码的邮件，用户打开邮件中修改密码的链接即可进行密码重置。
+</li>
+                
+<li>
+关于独立域名设置：当需要设置独立域名时，首先在“网站配置”中的查看网站IP地址，然后在域名服务器上将新域名指向此IP地址后，在“网站配置”中的网站域名处修改成新域名后保存即可。
+</li>
+                
+<li>
+关于页面排版（表格分块）
+<br/>
+                当设计的页面需要排版对齐显示时，可以在页面中插入一张表格，分块来填写各部分内容，编辑好内容后把表格的边框设置为0，这样保存后，既看不到表格，各部分的内容也可以分块对齐显示
+</li>
+                
+<li>
+如何做连接，当需要把一段文字制作成链接时，首先需要在编辑状态下，选中需要制作链接的文字，然后点击工具栏第一排的
+<br/>
+                
+<br/>
+                “Insert Link”来制作链接，链接的类型：1、当需要链接到一个已存在的页面，只需要输入“页面名称”后保存。2、当需要链接
+<br/>
+                
+<br/>
+                到一个外部链接，只需要输入链接的“URL”后保存。3、当需要制作成一个邮件链接，只需要输入“邮件地址”后保存。
+</li>
+            
+</ol>
+            
+<br/>
+            
+<p>
+ 
+</p>
+            
+</td>
+            
+<td class="header">
+ 
+</td>
+        
+</tr>
+        
+<tr>
+            
+<td class="lefterevener">
+ 
+</td>
+            
+<td class="evener">
+ 
+</td>
+        
+</tr>
+    
+</tbody>
+
+</table>
+
+<p>
+<span style="color: rgb(51, 102, 255);">
+<br/>
+
+</span>
+</p>
+
+</div>
+
+<div class="block-bottom">
+ 
+</div>

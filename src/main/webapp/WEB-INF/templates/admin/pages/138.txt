@@ -1,0 +1,60 @@
+<div class="block-top">
+ 
+</div>
+
+<div class="block-body color">
+
+<div class="anniu">
+
+<div class="anniu_1">
+<D_Link href="9" class="DPage" title="如何创建会议？">
+操作指南
+</D_Link>
+</div>
+
+<div class="anniu_2">
+<D_Link href="65550" class="DPage" title="常见问题">
+常见问题
+</D_Link>
+</div>
+
+<div class="anniu_3">
+<D_Link href="65565" class="DPage" title="用户手册">
+用户手册
+</D_Link>
+</div>
+
+<div class="anniu_4">
+<D_Link href="65565" class="DPage" title="用户手册">
+交流讨论
+</D_Link>
+</div>
+
+</div>
+
+<p>
+<span style="color: rgb(51, 102, 255);">
+<strong>
+       资料下载
+</strong>
+</span>
+</p>
+
+<ul>
+    
+<li>
+ 
+<D_Link href="attach/Y2xiOmNsYjpwZGY6NTIyNA==" class="attachment">
+<strong>
+国际会议服务平台（CSP）用户手册v2.0
+</strong>
+</D_Link>
+</li>
+
+</ul>
+
+</div>
+
+<div class="block-bottom">
+ 
+</div>

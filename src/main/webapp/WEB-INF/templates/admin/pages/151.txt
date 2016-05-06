@@ -1,0 +1,452 @@
+<div class="zhongxin_center_top">
+</div>
+
+<div class="zhongxin_center_cen">
+     
+<div class="zhongxin_center_cen_left">
+	      
+<div class="left_top">
+		        
+<div class="left_top_a">
+		        
+<ul>
+				
+<li>
+<D_Link href="#">
+了解会议平台
+</D_Link>
+</li>
+				
+<li>
+<D_Link href="#">
+帐号管理
+</D_Link>
+</li>
+				
+<li>
+<D_Link href="#">
+我要办会
+</D_Link>
+</li>
+				
+</ul>
+					
+</div>
+				
+<div class="left_top_b">
+	   				 
+<ul>
+						
+<li>
+<D_Link>
+创建会议
+</D_Link>
+</li>
+						
+<li>
+<D_Link>
+网站配置
+</D_Link>
+</li>
+						
+<li>
+<D_Link>
+会议信息管理
+</D_Link>
+</li>
+						
+<li>
+<D_Link>
+我组织的会议
+</D_Link>
+</li>
+						
+</ul>
+				
+</div>
+										
+<div class="left_top_a">
+				
+<ul>
+									
+<li>
+<D_Link href="#">
+我要参会
+</D_Link>
+</li>
+				
+<li>
+<D_Link href="#">
+常见问题
+</D_Link>
+</li>
+				
+<li>
+<D_Link href="#">
+用户手册下载
+</D_Link>
+</li>
+				
+</ul>
+				
+</div>
+	 		  
+</div>
+		  
+<div class="zaixian">
+		        
+<div class="zaixian_t">
+<D_Link href="#">
+点击在线留言
+</D_Link>
+</div>
+		        
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+		  
+</div>
+		  
+<div class="zaixian_2">
+		        
+<div class="zaixian_t">
+<D_Link href="#">
+010-58812345
+</D_Link>
+</div>
+		        
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+		  
+</div>
+		  
+<div class="zaixian_3">
+		        
+<div class="zaixian_t">
+<D_Link href="#">
+csp@cnic.cn
+</D_Link>
+</div>
+		        
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+		  
+</div>
+		  
+<div class="zaixian_4">
+		        
+<div class="zaixian_t">
+<D_Link href="#">
+QQ群：7669910
+</D_Link>
+</div>
+		        
+<div class="zaixian_b">
+<D_Link href="#">
+如果您遇到坐席忙，不必担心，请您稍后再拨。
+</D_Link>
+</div>
+		  
+</div>
+	 
+</div>
+	 
+<div class="zhongxin_center_cen_right">
+	 
+<div class="right_top">
+	      
+<div class="right_top_t">
+通知公告
+</div>
+		  
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+	 
+</div>
+	 
+<div class="right_center">
+	      
+<ul>
+		  
+<li>
+<D_Link href="#">
+会议虽然结束，网站却会永久开放，网站却会永久开放，为会务组织者、为参会者珍藏美好回忆。
+</D_Link>
+</li>
+		  
+<li>
+<D_Link href="#">
+会议虽然结束，网站却会永久开放，网站却会永久开放，为会务组织者、为参会者珍藏美好回忆。
+</D_Link>
+</li>
+		  
+<li>
+<D_Link href="#">
+会议虽然结束，网站却会永久开放，网站却会永久开放，为会务组织者、为参会者珍藏美好回忆。
+</D_Link>
+</li>
+		  
+<li>
+<D_Link href="#">
+会议虽然结束，网站却会永久开放，网站却会永久开放，为会务组织者、为参会者珍藏美好回忆。
+</D_Link>
+</li>
+		  
+</ul>
+	 
+</div>
+	 	 
+<div class="right_top_2">
+	      
+<div class="right_top_t">
+办会流程
+</div>
+		  
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+	 
+</div>
+	 
+<div class="right_center">
+           
+<div class="banhui_1">
+<D_Link href="#">
+帐号注册
+</D_Link>
+</div>
+		   
+<div class="banhui_2">
+<D_Link href="#">
+填写会议信息自动建站
+</D_Link>
+</div>
+		   
+<div class="banhui_3">
+<D_Link href="#">
+等待审批
+</D_Link>
+</div>
+		   
+<div class="banhui_4">
+		        
+<div class="banhui_4a">
+<D_Link href="#">
+查看会议网站
+</D_Link>
+</div>
+				
+<div class="banhui_4b">
+<D_Link href="#">
+查看会议网站
+</D_Link>
+</div>
+		   
+</div>
+		   
+<div class="banhui_5">
+<D_Link href="#">
+会议网站发布
+</D_Link>
+</div>
+		   
+<div class="banhui_5">
+<D_Link href="#">
+会议信息管理
+</D_Link>
+</div>
+		   
+<div class="banhui_6">
+<D_Link href="#">
+会议信息备份
+</D_Link>
+</div>
+		   
+<div class="clear">
+</div>
+		   
+</div>
+		   		   
+<div class="right_top_2">
+	      
+<div class="right_top_t">
+常见问题
+</div>
+		  
+<div class="right_top_m">
+<D_Link href="#">
+更多
+</D_Link>
+</div>
+	 
+</div>
+	 
+<div class="right_center">
+	          
+<div class="liebiao_l">
+			      
+<ul>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  		  				  
+</ul>
+			 
+</div>
+             
+<div class="liebiao_r">
+			      
+<ul>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+<li>
+<D_Link href="#">
+使用快钱的在线手机充值服务，我每次充值可以充多少钱？
+</D_Link>
+</li>
+				  
+</ul>
+			 
+</div>
+		   
+<div class="clear">
+</div>
+		   
+</div>
+	       
+<div class="kuaisu">
+		   		        
+<div class="kuaisu_1">
+		             
+<div class="kuaisu_a">
+<D_Link href="#">
+帐号管理
+</D_Link>
+</div>
+				     
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+				
+</div>
+								
+<div class="kuaisu_2">
+		             
+<div class="kuaisu_a">
+<D_Link href="#">
+我要办会
+</D_Link>
+</div>
+				     
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+				
+</div>
+								
+<div class="kuaisu_2">
+		             
+<div class="kuaisu_a">
+<D_Link href="#">
+我要参会
+</D_Link>
+</div>
+				     
+<div class="kuaisu_b">
+<D_Link href="#">
+轻松创建会议网站，服务会议全周期定制灵活
+</D_Link>
+</div>
+				
+</div>
+		   
+</div>
+		   		   	 
+</div>
+
+<div class="clear">
+</div>
+
+</div>
+
+<div class="zhongxin_center_bottom">
+</div>

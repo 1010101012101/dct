@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+	    <property name="jdbcUrl">
+	    	<value>jdbc:mysql://localhost:3399/dct?useUnicode=true&amp;characterEncoding=utf8</value>
+	    </property>
+	    <property name="user" value="duckling"/>
+	    <property name="password" value="duckling"/>
+		<property name="initialPoolSize" value="10"/>
+		<property name="maxPoolSize" value="50"/>
+		<property name="minPoolSize" value="10"/>
+		<property name="acquireIncrement" value="5"/>
+		<property name="maxStatements" value="10"/>
+		<property name="preferredTestQuery" value="SELECT 1"/>
+		<property name="maxConnectionAge" value="3600"/>
+		<property name="testConnectionOnCheckout" value="true"/>
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+	<bean id="site" class="cn.vlabs.duckling.vwb.VWBSite4Test" />
+
+	<bean id="skinService" scope="prototype" class="cn.vlabs.duckling.vwb.services.backup.SkinServiceImpl4Test"/>
+	<bean id="bannerProvider" scope="prototype" parent="baseDAO" class="cn.vlabs.duckling.vwb.services.backup.BannerProviderImpl4Test"/>
+	<bean id="bannerService" scope="prototype" class="cn.vlabs.duckling.vwb.services.backup.BannerServiceImpl4Test">
+	   <property name="bannerProvider" ref="bannerProvider"/>
+	</bean>
+	
+	<bean id="templateBannersProvider" class="cn.vlabs.duckling.vwb.services.backup.BannersProvider" parent="baseDAO" scope="prototype"/>
+	<bean id="templateSkinsProvider" class="cn.vlabs.duckling.vwb.services.backup.SkinsProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templatePortalsProvider" class="cn.vlabs.duckling.vwb.services.backup.PortalsProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templateDPagesProvider" class="cn.vlabs.duckling.vwb.services.backup.DPagesProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templateFunctionsProvider" class="cn.vlabs.duckling.vwb.services.backup.FunctionsProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templateVWBBannerProvider" class="cn.vlabs.duckling.vwb.services.backup.VWBBannersProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templateAppinfoProvider" class="cn.vlabs.duckling.vwb.services.backup.VWBAppInfosProvider" parent="baseDAO" scope="prototype" />
+	<bean id="templateSiteProvider" class="cn.vlabs.duckling.vwb.services.backup.SiteProvider" parent="baseDAO" scope="prototype"/>
+	
+	<bean id="baseDAO" abstract="true">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+	
+	<bean id="templateService" class="cn.vlabs.duckling.vwb.services.backup.TemplateServiceImpl4Test">
+		<constructor-arg>
+			<value>zzb</value>
+		</constructor-arg>
+
+		<property name="portalsProvider" ref="templatePortalsProvider" />
+		<property name="dpagesProvider" ref="templateDPagesProvider" />
+		<property name="functionsProvider" ref="templateFunctionsProvider" />
+		<property name="skinProvider" ref="templateSkinsProvider" />
+		<property name="bannerProvider" ref="templateBannersProvider" />
+		<property name="appinfoProvider" ref="templateAppinfoProvider" />
+		<property name="vwbBannerProvider" ref="templateVWBBannerProvider" />
+		<property name="siteProvider" ref="templateSiteProvider" />
+	</bean>
+	
+</beans>

@@ -1,0 +1,158 @@
+<Resources>
+  <Portal>
+    <parent>1</parent>
+    <id>2501</id>
+    <leftMenu>NO</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>NO</trail>
+    <title>Admin</title>
+    <portlet context="/dct" name="PlutoPageAdmin"/>
+    <uri>/WEB-INF/themes/config-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>2502</id>
+    <leftMenu>NO</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>NO</trail>
+    <title>clb</title>
+    <portlet context="/clb" name="CLBPortlet"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>65549</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>apply</title>
+    <portlet context="/csp" name="ApplyConf"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>65552</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPAbstracts</title>
+    <portlet context="/csp" name="Abstracts"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>65553</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPHotel</title>
+    <portlet context="/csp" name="Hotel"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>65554</id>
+    <leftMenu>2</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPRegistration</title>
+    <portlet context="/csp" name="Register"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>65555</id>
+    <leftMenu>NO</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPAdmin</title>
+    <portlet context="/csp" name="Conference"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>65556</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPFeedback</title>
+    <portlet context="/csp" name="Feedback"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>1</parent>
+    <id>65573</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPPayment</title>
+    <portlet context="/csp" name="Order"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>65574</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPMySpace</title>
+    <portlet context="/csp" name="MySpace"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>65575</id>
+    <leftMenu>2</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>CSPAbstractReview</title>
+    <portlet context="/csp" name="AbstractReview"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>70000</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>newAppConf</title>
+    <portlet context="/csp" name="NewApplyConf"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+  <Portal>
+    <parent>2501</parent>
+    <id>70001</id>
+    <leftMenu>INHERIT</leftMenu>
+    <topMenu>INHERIT</topMenu>
+    <banner>INHERIT</banner>
+    <footer>INHERIT</footer>
+    <trail>INHERIT</trail>
+    <title>Navigation</title>
+    <portlet context="/csp" name="Navigation"/>
+    <uri>/WEB-INF/themes/1-theme.jsp</uri>
+  </Portal>
+</Resources>
